@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
-import FMAwardSection from "@/components/FMAwardSection"; 
+import FMAwardSection from "@/components/ach"; 
 import {
   Trophy,
   Users,
