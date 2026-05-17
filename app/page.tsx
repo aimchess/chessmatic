@@ -8,6 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { motion, useInView } from "framer-motion"
 import { Footer } from "@/components/footer"
 import { Navbar } from "@/components/navbar"
+import FMAwardSection from "@/components/FMAwardSection"; 
 import {
   Trophy,
   Users,
@@ -830,6 +831,9 @@ export default function HomePage() {
               </motion.div>
             </div>
           </section>
+
+           <FMAwardSection />
+      
 
           <MinisterFelicitation/>
 
