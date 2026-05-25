@@ -1,56 +1,57 @@
-// app/layout.tsx
 import type React from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
+import { Navbar } from '@/components/navbar';
+import { Footer } from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+// Using Plus Jakarta Sans for that premium "Curved" branding look we established
+const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Genius Chess Academy (International School of Chess) - Learn Chess from Grandmaster Pravin Thipsay',
-    template: '%s | Genius Chess Academy (International School of Chess)',
+    default: 'Chessmatic | Where Mind & Body Train Together | Singapore',
+    template: '%s | Chessmatic Strategic Lab',
   },
   description:
-    'Master chess with Genius Chess Academy (International School of Chess). Learn from Grandmaster Pravin Thipsay with online and offline training at Genius Chess Academy (International School of Chess).',
+    'Singapore’s first hybrid performance lab combining adult chess coaching, physical core wellness (Plank-Chess), and strategic corporate team building.',
   keywords: [
-    'Genius Chess Academy International School of Chess',
-    'Genius Chess Academy',
-    'Genius Chess Academy',
-    'International school of chess',
-    'Chess Udaipur',
-    'Grandmaster Pravin Thipsay',
-    'learn chess',
-    'online chess lessons',
-    'offline chess training',
-    'chess academy',
-    'chess training',
+    'Chessmatic LLP',
+    'Plank-Chess Singapore',
+    'Adult Chess Classes Singapore',
+    'Corporate Wellness Singapore',
+    'Strategic Thinking Workshop',
+    'Mental Fitness',
+    'Executive Coaching Singapore',
+    'Cognitive Training',
+    'Team Building Singapore',
+    'Wagish Chessmatic',
   ],
-  metadataBase: new URL('https://www.thegeniuschessacademy.com'),
+  metadataBase: new URL('https://www.chessmatic.sg'), // Update to your actual domain
   alternates: {
-    canonical: 'https://www.thegeniuschessacademy.com',
+    canonical: 'https://www.chessmatic.sg',
   },
-  authors: [{ name: 'Genius Chess Academy', url: 'https://www.thegeniuschessacademy.com' }],
-  creator: 'Genius Chess Academy',
-  publisher: 'Genius Chess Academy',
+  authors: [{ name: 'Wagish', url: 'https://www.chessmatic.sg' }],
+  creator: 'Chessmatic LLP',
+  publisher: 'Chessmatic LLP',
   robots: {
     index: true,
     follow: true,
   },
   openGraph: {
-    title: 'Genius Chess Academy - Learn Chess from Grandmaster Pravin Thipsay',
-    description: 'World-class chess training academy led by GM Pravin Thipsay.',
-    url: 'https://www.thegeniuschessacademy.com',
-    siteName: 'Genius Chess Academy',
+    title: 'Chessmatic - Strategic Mind & Body Training',
+    description: 'Transform your strategic logic and physical composure in Singapore’s first hybrid training lab.',
+    url: 'https://www.chessmatic.sg',
+    siteName: 'Chessmatic LLP',
     images: [
       {
-        url: 'https://www.thegeniuschessacademy.com/genius.png',
-        width: 800,
-        height: 600,
-        alt: 'Genius Chess Academy Logo',
+        url: 'https://www.chessmatic.sg/og-image.jpg', // Ensure you have an OG image in public
+        width: 1200,
+        height: 630,
+        alt: 'Chessmatic Strategic Lab Singapore',
       },
     ],
-    locale: 'en_IN',
+    locale: 'en_SG',
     type: 'website',
   },
   generator: 'Next.js',
@@ -62,18 +63,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"/>
         <link rel="manifest" href="/site.webmanifest"/>
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#1a365d" /> {/* Brand Navy */}
 
-        {/* JSON-LD Structured Data */}
+        {/* JSON-LD Structured Data for Chessmatic */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -81,38 +80,36 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'Genius Chess Academy (International School of Chess)',
-                url: 'https://www.thegeniuschessacademy.com',
-                logo: 'https://www.thegeniuschessacademy.com/genius.png',
-                description: 'World-class chess training academy led by Grandmaster Pravin Thipsay.',
+                name: 'Chessmatic LLP',
+                url: 'https://www.chessmatic.sg',
+                logo: 'https://www.chessmatic.sg/logo.jpg',
+                description: 'A modern performance lab in Singapore combining chess strategy with physical wellness.',
                 address: {
                   '@type': 'PostalAddress',
-                  streetAddress: 'Sector 3',
-                  addressLocality: 'Udaipur, jaipur',
-                  addressRegion: 'Rajasthan',
-                  postalCode: '313001',
-                  addressCountry: 'IN',
+                  streetAddress: 'Woodlands Studio', // Update with actual full address
+                  addressLocality: 'Woodlands',
+                  addressRegion: 'Singapore',
+                  postalCode: 'XXXXXX',
+                  addressCountry: 'SG',
                 },
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+91-9636809800',
-                  email: 'geniuschessacademy12@gmail.com',
-                },
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '4.9',
-                  reviewCount: '250',
+                  telephone: '+65-XXXX-XXXX',
+                  contactType: 'customer service',
+                  email: 'hq@chessmatic.sg',
                 },
               },
               {
                 '@context': 'https://schema.org',
                 '@type': 'Person',
-                name: 'Grandmaster Pravin Thipsay',
-                jobTitle: 'Head Coach',
-                url: 'https://www.thegeniuschessacademy.com',
+                name: 'Wagish',
+                jobTitle: 'Founder',
+                affiliation: {
+                  '@type': 'Organization',
+                  name: 'Chessmatic LLP',
+                },
                 sameAs: [
-                  'https://en.wikipedia.org/wiki/Pravin_Thipsay',
-                  'https://ratings.fide.com/profile/5001499',
+                  'https://www.linkedin.com/in/wagish-chessmatic', // Update with actual links
                 ],
               },
               {
@@ -121,18 +118,18 @@ export default function RootLayout({
                 mainEntity: [
                   {
                     '@type': 'Question',
-                    name: 'What is Genius Chess Academy?',
+                    name: 'What is Plank-Chess?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Genius Chess Academy is a world-class chess training institute led by Grandmaster Pravin Thipsay offering online and offline chess training.'
+                      text: 'Plank-Chess is Singapore’s first mental and physical hybrid challenge where participants play chess while maintaining a plank position to build focus under pressure.'
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Who is the head coach of Genius Chess Academy?',
+                    name: 'Does Chessmatic offer corporate team building?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'The head coach is Grandmaster Pravin Thipsay, one of India’s top chess grandmasters.'
+                      text: 'Yes, Chessmatic provides tailored corporate wellness workshops and strategic team-building experiences for startups and enterprises.'
                     }
                   }
                 ]
@@ -141,8 +138,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>
+      <body className={`${jakarta.className} bg-white text-[#1a365d] antialiased`}>
+        <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

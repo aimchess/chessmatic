@@ -18,10 +18,10 @@ const nextConfig = {
           {
             type: 'header',
             key: 'host',
-            value: 'thegeniuschessacademy.com',  // Your non-www domain
+            value: 'chessmatic.com',  // Your non-www domain
           },
         ],
-        destination: 'https://www.thegeniuschessacademy.com/:path*',
+        destination: 'https://www.chessmatic.com/:path*',
         permanent: true,
       },
     ];
