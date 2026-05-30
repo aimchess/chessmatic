@@ -72,7 +72,7 @@ export default function ProgramsOverview() {
               The Programs
             </span>
           </div>
-          <h2 className="text-4xl md:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">
+          <h2 className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">
             Training <span style={{ color: cyan }}>Curriculum.</span>
           </h2>
         </div>

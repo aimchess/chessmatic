@@ -40,7 +40,7 @@ export default function CompactCTA() {
                 <span className="text-white text-[10px] font-black tracking-[0.2em] uppercase">Active Lab Slots Available</span>
               </div>
               
-              <h2 className="text-4xl md:text-6xl font-[1000] text-white tracking-tighter leading-none">
+              <h2 className="text-3xl md:text-5xl font-[1000] text-white tracking-tighter leading-none">
                 Ready to Join the <br />
                 <span style={{ color: cyan }}>Strategic Elite?</span>
               </h2>

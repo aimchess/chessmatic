@@ -9,7 +9,7 @@ export default function PlankChessBanner() {
   const cyan = "#0ea5e9"
 
   return (
-    <section className="relative w-full h-screen min-h-[600px] lg:h-[90vh] flex items-center justify-center overflow-hidden bg-slate-950 font-sans">
+    <section className="relative w-full h-screen min-h-[600px] lg:h-[100vh] flex items-center justify-center overflow-hidden bg-slate-950 font-sans">
       
       {/* 1. IMMERSIVE BACKGROUND LAYER */}
       <div 

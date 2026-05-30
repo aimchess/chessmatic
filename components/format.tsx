@@ -93,7 +93,7 @@ export default function TrainingFormatsGrid() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
+            className="text-3xl sm:text-3xl md:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
             Training <span style={{ color: cyan }}>Protocols.</span>
           </motion.h2>

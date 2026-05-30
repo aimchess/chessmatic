@@ -69,7 +69,7 @@ export default function TransformationSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-5xl lg:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none mb-8"
+            className="text-3xl sm:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none mb-8"
           >
             From Tactical Play to <br />
             <span style={{ color: cyan }}>Lifestyle Evolution.</span>

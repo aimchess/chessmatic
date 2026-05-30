@@ -79,7 +79,7 @@ export default function AboutSection() {
                 </span>
               </div>
               
-              <h2 className="text-3xl md:text-5xl lg:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-[1.1] md:leading-[0.95] uppercase italic">
+              <h2 className="text-3xl md:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-[1.1] md:leading-[0.95] uppercase italic">
                 About the <br className="hidden sm:block" />
                 <span style={{ color: cyan }}>Strategic Lifestyle.</span>
               </h2>

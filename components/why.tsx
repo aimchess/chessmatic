@@ -79,7 +79,7 @@ export default function WhyChooseUs() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl lg:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none"
+            className="text-3xl md:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none"
           >
             Why the Modern Thinker <br className="hidden sm:block" />
             <span style={{ color: cyan }}>Chooses Chessmatic.</span>

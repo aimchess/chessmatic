@@ -79,7 +79,7 @@ export default function AdultClassesPage() {
             <div className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6">
               <span className="bg-white px-4 sm:px-6 py-1.5 rounded-full text-[#1a365d] text-[9px] sm:text-[10px] font-[1000] tracking-[0.3em] uppercase shadow-sm">Training Roadmap</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">Strategic <span style={{ color: cyan }}>Phases.</span></h2>
+            <h2 className="text-3xl sm:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">Strategic <span style={{ color: cyan }}>Phases.</span></h2>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
