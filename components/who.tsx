@@ -1,6 +1,6 @@
 "use client"
 
-import { Users, Building2, UserCheck, ArrowRight, Target, Zap, ShieldCheck } from "lucide-react"
+import { Users, Building2, UserCheck, ArrowRight, Zap } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function WhoWeServe() {
@@ -44,65 +44,80 @@ export default function WhoWeServe() {
   ]
 
   return (
-    <section className="py-24 bg-[#f8fafc] overflow-hidden font-sans">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 md:py-24 bg-[#f8fafc] overflow-hidden font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* CENTERED PILL HEADING */}
-        <div className="flex flex-col items-center mb-20 text-center">
-          <div className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6">
-            <span className="bg-white px-8 py-2 rounded-full text-[#1a365d] text-[10px] font-[1000] tracking-[0.25em] uppercase shadow-sm">
+        <div className="flex flex-col items-center mb-12 md:mb-20 text-center">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6"
+          >
+            <span className="bg-white px-4 md:px-8 py-1.5 rounded-full text-[#1a365d] text-[9px] md:text-[10px] font-[1000] tracking-[0.25em] uppercase shadow-sm">
               Target Segments
             </span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none">
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none"
+          >
             Who Trains in {" "}
             <span style={{ color: cyan }}>The Lab.</span>
-          </h2>
+          </motion.h2>
         </div>
 
-        {/* 3-COLUMN GRID */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* RESPONSIVE GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {segments.map((item, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ delay: i * 0.15 }}
-              className="bg-white rounded-[45px] p-3 border border-gray-100 shadow-[0_20px_50px_rgba(0,0,0,0.03)] group hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
+              className="bg-white rounded-[35px] md:rounded-[45px] p-2 md:p-3 border border-gray-100 shadow-[0_10px_40px_rgba(0,0,0,0.03)] group hover:shadow-2xl transition-all duration-500 flex flex-col h-full"
             >
               {/* IMAGE HEADER */}
-              <div className="relative h-64 w-full rounded-[38px] overflow-hidden">
+              <div className="relative h-56 md:h-64 w-full rounded-[30px] md:rounded-[38px] overflow-hidden">
                 <img 
                   src={item.image} 
                   alt={item.title} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d]/60 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d]/80 via-[#1a365d]/20 to-transparent" />
                 
                 {/* Floating Category Tag */}
-                <div className="absolute top-6 left-6 px-4 py-2 bg-white rounded-full shadow-xl flex items-center gap-2">
+                <div className="absolute top-4 left-4 md:top-6 md:left-6 px-3 md:px-4 py-1.5 md:py-2 bg-white rounded-full shadow-xl flex items-center gap-2">
                    <div className="bg-[#f1f3f4] p-1 rounded-md">{item.icon}</div>
-                   <span className="text-[#1a365d] text-[10px] font-black uppercase tracking-widest">{item.group}</span>
+                   <span className="text-[#1a365d] text-[8px] md:text-[10px] font-black uppercase tracking-widest">{item.group}</span>
                 </div>
 
-                <div className="absolute bottom-6 left-8">
-                   <p className="text-white/40 text-[9px] font-black tracking-widest uppercase mb-1">{item.id}</p>
-                   <h3 className="text-white text-2xl font-[1000] tracking-tight">{item.title}</h3>
+                <div className="absolute bottom-5 left-6 md:bottom-6 md:left-8">
+                   <p className="text-white/40 text-[8px] md:text-[9px] font-black tracking-widest uppercase mb-1">{item.id}</p>
+                   <h3 className="text-white text-xl md:text-2xl font-[1000] tracking-tight">{item.title}</h3>
                 </div>
               </div>
 
               {/* CARD CONTENT */}
-              <div className="p-8 flex flex-col flex-1">
-                <p className="text-slate-500 text-sm leading-relaxed mb-8">
+              <div className="p-6 md:p-8 flex flex-col flex-1 relative">
+                {/* TECHNICAL DOT GRID OVERLAY (Only visible on card hover) */}
+                <div className="absolute inset-0 opacity-0 group-hover:opacity-[0.03] pointer-events-none transition-opacity duration-500" 
+                     style={{ backgroundImage: `radial-gradient(${navy} 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
+
+                <p className="text-slate-500 text-sm leading-relaxed mb-6 md:mb-8 relative z-10">
                   {item.desc}
                 </p>
 
                 {/* SEGMENTS LIST (Pill Style) */}
-                <div className="space-y-3 mb-10">
-                   <p className="text-[#1a365d] text-[10px] font-black uppercase tracking-[0.2em] opacity-30">Key Focus Areas</p>
+                <div className="space-y-3 mb-8 md:mb-10 relative z-10">
+                   <p className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-[0.2em] opacity-30">Key Focus Areas</p>
                    <div className="flex flex-wrap gap-2">
                       {item.segments.map((seg, idx) => (
-                        <div key={idx} className="px-4 py-2 rounded-full bg-slate-50 border border-slate-100 text-[#1a365d] text-[11px] font-bold tracking-tight">
+                        <div key={idx} className="px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-slate-50 border border-slate-100 text-[#1a365d] text-[10px] md:text-[11px] font-bold tracking-tight group-hover:bg-sky-50 group-hover:border-sky-100 transition-colors">
                            {seg}
                         </div>
                       ))}
@@ -110,16 +125,16 @@ export default function WhoWeServe() {
                 </div>
 
                 {/* DATA FOOTER */}
-                <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
+                <div className="mt-auto pt-4 md:pt-6 border-t border-slate-50 flex items-center justify-between relative z-10">
                    <div className="flex flex-col">
-                      <span className="text-slate-400 text-[9px] font-black uppercase tracking-widest">Core Benefit</span>
-                      <span className="text-[#1a365d] text-xs font-black">{item.benefit}</span>
+                      <span className="text-slate-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest">Core Benefit</span>
+                      <span className="text-[#1a365d] text-[11px] md:text-xs font-black">{item.benefit}</span>
                    </div>
                    <div className="text-right">
-                      <span className="text-sky-500 text-[9px] font-black uppercase tracking-widest">Impact</span>
-                      <div className="flex items-center gap-1">
+                      <span className="text-sky-500 text-[8px] md:text-[9px] font-black uppercase tracking-widest">Impact</span>
+                      <div className="flex items-center gap-1 justify-end">
                          <Zap size={10} className="text-sky-500 fill-sky-500" />
-                         <span className="text-[#1a365d] text-lg font-black">{item.metric}</span>
+                         <span className="text-[#1a365d] text-base md:text-lg font-black">{item.metric}</span>
                       </div>
                    </div>
                 </div>
@@ -129,12 +144,17 @@ export default function WhoWeServe() {
         </div>
 
         {/* BOTTOM PHILOSOPHY LINE */}
-        <div className="mt-20 text-center">
-          <button className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 hover:text-sky-500 hover:gap-5 transition-all">
+        <motion.div 
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mt-12 md:mt-20 text-center"
+        >
+          <button className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-[10px] md:text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 transition-all hover:text-sky-500 hover:gap-5 group">
             Join the community
-            <ArrowRight size={14} />
+            <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
           </button>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

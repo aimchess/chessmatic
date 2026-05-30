@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, Sparkles, Zap, Target } from "lucide-react"
+import { ChevronDown, Target, Zap } from "lucide-react"
 
 const faqs = [
   {
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     question: "Where are the sessions held in Singapore?",
-    answer: "We operate out of a premium studio environment in central Singapore, and we also offer on-site setups for corporate office sessions."
+    answer: "We operate out of a premium studio environment in Woodlands, and we also offer on-site setups for corporate office sessions."
   }
 ]
 
@@ -33,26 +33,36 @@ export default function FAQSection() {
   const cyan = "#0ea5e9"
 
   return (
-    <section className="py-24 bg-white overflow-hidden font-sans">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 md:py-24 bg-white overflow-hidden font-sans">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* CENTERED HEADER */}
-        <div className="flex flex-col items-center text-center mb-24">
-          <div className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6">
-            <span className="bg-white px-8 py-2 rounded-full text-[#1a365d] text-[10px] font-[1000] tracking-[0.3em] uppercase shadow-sm">
+        <div className="flex flex-col items-center text-center mb-12 md:mb-20">
+          <motion.div 
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6"
+          >
+            <span className="bg-white px-4 sm:px-6 py-1.5 rounded-full text-[#1a365d] text-[9px] sm:text-[10px] font-[1000] tracking-[0.3em] uppercase shadow-sm">
               Strategic Support
             </span>
-          </div>
-          <h2 className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none">
+          </motion.div>
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none"
+          >
             Common <span style={{ color: cyan }}>Enquiries.</span>
-          </h2>
+          </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* LEFT: REFINED FAQ STYLE (7 Cols) */}
-          <div className="lg:col-span-7">
-            <div className="space-y-2">
+          {/* LEFT: REFINED FAQ STYLE */}
+          <div className="lg:col-span-7 order-2 lg:order-1">
+            <div className="space-y-3">
               {faqs.map((faq, idx) => {
                 const isOpen = activeIdx === idx
                 return (
@@ -61,26 +71,26 @@ export default function FAQSection() {
                       initial={false}
                       animate={{ 
                         backgroundColor: isOpen ? "#f8fafc" : "rgba(255,255,255,0)",
-                        paddingLeft: isOpen ? "2rem" : "1rem",
-                        paddingRight: isOpen ? "2rem" : "1rem",
+                        paddingLeft: isOpen ? "1.5rem" : "0.5rem",
+                        paddingRight: isOpen ? "1.5rem" : "0.5rem",
                       }}
-                      className={`rounded-[32px] transition-all duration-500 overflow-hidden ${
+                      className={`rounded-[24px] md:rounded-[32px] transition-all duration-500 overflow-hidden ${
                         isOpen ? "shadow-xl border border-sky-100" : "border-transparent"
                       }`}
                     >
                       <button
                         onClick={() => setActiveIdx(isOpen ? null : idx)}
-                        className="w-full py-8 flex items-center justify-between text-left group"
+                        className="w-full py-6 md:py-8 flex items-center justify-between text-left group"
                       >
-                        <div className="flex items-center gap-6">
-                          <span className={`text-xs font-black tracking-widest ${isOpen ? "text-sky-500" : "text-slate-300"}`}>
+                        <div className="flex items-center gap-4 md:gap-6">
+                          <span className={`text-[10px] md:text-xs font-black tracking-widest ${isOpen ? "text-sky-500" : "text-slate-300"}`}>
                             0{idx + 1}
                           </span>
-                          <span className={`font-bold text-lg tracking-tight transition-colors ${isOpen ? "text-[#1a365d]" : "text-slate-500 group-hover:text-[#1a365d]"}`}>
+                          <span className={`font-bold text-base md:text-lg tracking-tight transition-colors ${isOpen ? "text-[#1a365d]" : "text-slate-500 group-hover:text-[#1a365d]"}`}>
                             {faq.question}
                           </span>
                         </div>
-                        <div className={`transition-transform duration-500 rounded-full p-2 ${isOpen ? "bg-sky-500 text-white rotate-180" : "bg-gray-100 text-slate-400 group-hover:bg-sky-50"}`}>
+                        <div className={`flex-shrink-0 transition-transform duration-500 rounded-full p-2 ${isOpen ? "bg-sky-500 text-white rotate-180 shadow-lg shadow-sky-200" : "bg-gray-100 text-slate-400 group-hover:bg-sky-50"}`}>
                           <ChevronDown size={18} />
                         </div>
                       </button>
@@ -93,9 +103,9 @@ export default function FAQSection() {
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
                           >
-                            <div className="pb-8 pl-14 pr-4">
+                            <div className="pb-8 pl-10 md:pl-14 pr-4">
                               <div className="h-[2px] w-8 bg-sky-500 mb-4 rounded-full" />
-                              <p className="text-slate-500 leading-relaxed font-medium text-md">
+                              <p className="text-slate-500 leading-relaxed font-medium text-sm md:text-md">
                                 {faq.answer}
                               </p>
                             </div>
@@ -105,7 +115,7 @@ export default function FAQSection() {
                     </motion.div>
                     
                     {!isOpen && idx !== faqs.length - 1 && (
-                      <div className="h-[1px] w-[90%] mx-auto bg-gray-100 mt-2" />
+                      <div className="h-[1px] w-[95%] mx-auto bg-gray-100 mt-1" />
                     )}
                   </div>
                 )
@@ -113,17 +123,52 @@ export default function FAQSection() {
             </div>
           </div>
 
-          {/* RIGHT: GIF & FLOATING UI (5 Cols) */}
-          <div className="lg:col-span-5 relative lg:sticky lg:top-32">
-            <div className="relative rounded-[48px] overflow-hidden bg-[#1a365d] p-3 shadow-2xl">
-               {/* Place your GIF in /public folder and update name here */}
+          {/* RIGHT: IMAGE & FLOATING UI */}
+          <div className="lg:col-span-5 relative lg:sticky lg:top-32 order-1 lg:order-2">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="relative rounded-[40px] md:rounded-[48px] overflow-hidden bg-[#1a365d] p-2 md:p-3 shadow-2xl"
+            >
                <img 
                  src="/faq.png" 
-                 alt="Chessmatic Dashboard Visual"
-                 className="w-full h-[550px] object-cover rounded-[36px] opacity-100"
+                 alt="Chessmatic FAQ Visual"
+                 className="w-full h-[350px] md:h-[550px] object-cover rounded-[32px] md:rounded-[36px] opacity-90"
                />
                
-            </div>
+               <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-transparent to-transparent opacity-40 pointer-events-none" />
+
+               {/* FLOATING BADGE 1: MOBILE SCALED */}
+               <motion.div 
+                 animate={{ y: [0, -10, 0] }}
+                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                 className="absolute -top-4 -right-2 md:-top-6 md:-right-6 bg-white p-3 md:p-5 rounded-[20px] md:rounded-[28px] shadow-2xl border border-gray-100 flex items-center gap-3 md:gap-4 z-20"
+               >
+                  <div className="p-2 md:p-3 bg-sky-500 rounded-xl md:rounded-2xl shadow-lg shadow-sky-100">
+                    <Target className="text-white w-4 h-4 md:w-5 md:h-5" />
+                  </div>
+                  <div className="pr-2">
+                    <p className="text-[#1a365d] text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none mb-1">Focus Zone</p>
+                    <p className="text-slate-400 font-bold text-[10px] md:text-[11px]">Ready to Train</p>
+                  </div>
+               </motion.div>
+
+               {/* FLOATING BADGE 2: MOBILE SCALED */}
+               <motion.div 
+                 animate={{ y: [0, 10, 0] }}
+                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                 className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 bg-[#1a365d] p-3 md:p-5 rounded-[20px] md:rounded-[28px] shadow-2xl border border-white/10 flex items-center gap-3 md:gap-4 z-20"
+               >
+                  <div className="p-2 md:p-3 bg-amber-500 rounded-xl md:rounded-2xl shadow-lg shadow-amber-900/20">
+                    <Zap className="text-white w-4 h-4 md:w-5 md:h-5" />
+                  </div>
+                  <div className="pr-2">
+                    <p className="text-white/40 text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none mb-1">Body Status</p>
+                    <p className="text-white font-bold text-[10px] md:text-[11px]">Stable Core</p>
+                  </div>
+               </motion.div>
+            </motion.div>
           </div>
 
         </div>

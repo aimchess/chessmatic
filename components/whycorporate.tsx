@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { 
   Target, Brain, Zap, Users, 
-  ShieldCheck, Heart, TrendingUp, CheckCircle2 
+  ShieldCheck, Heart, CheckCircle2 
 } from "lucide-react"
 
 export default function WhyCompaniesChoose() {
@@ -34,82 +34,83 @@ export default function WhyCompaniesChoose() {
   ]
 
   return (
-    <section className="py-24 bg-white font-sans overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-16 md:py-24 bg-white font-sans overflow-hidden px-4 sm:px-6">
+      <div className="max-w-7xl mx-auto">
         
-        <div className="bg-white rounded-[60px] p-4 lg:p-12 shadow-[0_30px_100px_rgba(0,0,0,0.04)] border border-slate-50 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="bg-white rounded-[40px] md:rounded-[60px] p-6 md:p-10 lg:p-16 shadow-[0_30px_100px_rgba(0,0,0,0.04)] border border-slate-50 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
           
           {/* LEFT SIDE: CURVED IMAGE VIEWPORT */}
           <div className="w-full lg:w-[45%] relative">
             <motion.div 
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="relative z-10 rounded-tr-[120px] rounded-bl-[120px] rounded-tl-[40px] rounded-br-[40px] overflow-hidden shadow-2xl border-4 border-slate-50"
+              viewport={{ once: true }}
+              className="relative z-10 rounded-tr-[80px] md:rounded-tr-[120px] rounded-bl-[80px] md:rounded-bl-[120px] rounded-tl-[30px] md:rounded-tl-[40px] rounded-br-[30px] md:rounded-br-[40px] overflow-hidden shadow-2xl border-4 border-slate-50"
             >
               <img 
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1000&auto=format&fit=crop" 
                 alt="Corporate Strategy Team" 
-                className="w-full h-[600px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                className="w-full h-[400px] md:h-[600px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
               />
               <div className="absolute inset-0 bg-[#1a365d]/10 mix-blend-multiply" />
             </motion.div>
 
-            {/* BRAND ANCHOR ICON (Like the green cross in ref) */}
-            <div className="absolute -bottom-10 -left-10 z-20 w-32 h-32 bg-[#1a365d] rounded-3xl flex items-center justify-center shadow-2xl">
-               <Target size={60} className="text-sky-400 opacity-20 absolute" />
-               <CheckCircle2 size={48} className="text-white" />
+            {/* BRAND ANCHOR ICON - Responsive Sizing */}
+            <div className="absolute -bottom-6 -left-4 md:-bottom-10 md:-left-10 z-20 w-24 h-24 md:w-32 md:h-32 bg-[#1a365d] rounded-2xl md:rounded-3xl flex items-center justify-center shadow-2xl">
+               <Target size={40} className="text-sky-400 opacity-20 absolute md:w-[60px] md:h-[600px]" />
+               <CheckCircle2 className="text-white w-10 h-10 md:w-12 md:h-12" />
             </div>
           </div>
 
           {/* RIGHT SIDE: CONTENT & BENEFITS GRID */}
-          <div className="w-full lg:w-[55%] space-y-10">
+          <div className="w-full lg:w-[55%] space-y-8 md:space-y-10 text-center lg:text-left">
             <div className="space-y-6">
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center lg:justify-start gap-3">
                  <div className="w-4 h-4 bg-sky-500 rounded-sm" />
-                 <span className="text-[#1a365d] text-xs font-black uppercase tracking-[0.3em]">The B2B Protocol</span>
+                 <span className="text-[#1a365d] text-[10px] font-black uppercase tracking-[0.3em]">The B2B Protocol</span>
               </div>
               
-              <h3 className="text-3xl md:text-3xl font-[1000] text-[#1a365d] tracking-tighter leading-tight italic uppercase">
-                When You <span className="bg-sky-500 text-white px-5 py-1 rounded-2xl not-italic inline-block mx-1">Need</span> Performance <br />
-                <span className="bg-[#1a365d] text-white px-5 py-1 rounded-2xl not-italic inline-block mt-2">Strategic Lab</span>
-              </h3>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-tight italic uppercase">
+                When You <span className="bg-sky-500 text-white px-4 md:px-5 py-1 rounded-xl md:rounded-2xl not-italic inline-block mx-1">Need</span> Performance <br className="hidden sm:block" />
+                <span className="bg-[#1a365d] text-white px-4 md:px-5 py-1 rounded-xl md:rounded-2xl not-italic inline-block mt-2">Strategic Lab</span>
+              </h2>
 
-              <p className="text-slate-500 text-lg font-medium leading-relaxed max-w-xl">
+              <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
                 Chessmatic LLP delivers a modern performance concept to Singapore. We don't just facilitate workshops; we rewire team logic through high-intensity mental and physical fusion.
               </p>
             </div>
 
-            {/* BENEFITS GRID (Ref Style) */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 pt-4">
+            {/* BENEFITS GRID (Ref Style) - Stacks on mobile */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-8 md:gap-y-12 pt-4 text-left">
                {benefits.map((item, i) => (
                  <motion.div 
                    key={i}
                    initial={{ opacity: 0, y: 10 }}
                    whileInView={{ opacity: 1, y: 0 }}
+                   viewport={{ once: true }}
                    transition={{ delay: i * 0.1 }}
-                   className="flex items-start gap-5 group"
+                   className="flex items-start gap-4 md:gap-5 group"
                  >
-                    {/* REFERENCE STYLE ICON BOX */}
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center shrink-0">
                        <div className="p-1 group-hover:scale-110 transition-transform">
                           {item.icon}
                        </div>
-                       <div className="w-10 h-[2px] bg-sky-500 mt-4 opacity-30" />
+                       <div className="w-8 md:w-10 h-[2px] bg-sky-500 mt-4 opacity-30" />
                     </div>
                     
-                    <div className="space-y-2">
-                       <h4 className="text-[#1a365d] text-xl font-[1000] tracking-tight uppercase">{item.title}</h4>
-                       <p className="text-slate-400 text-xs font-bold leading-relaxed">{item.desc}</p>
+                    <div className="space-y-1 md:space-y-2">
+                       <h4 className="text-[#1a365d] text-lg md:text-xl font-[1000] tracking-tight uppercase leading-none">{item.title}</h4>
+                       <p className="text-slate-400 text-[11px] md:text-xs font-bold leading-relaxed">{item.desc}</p>
                     </div>
                  </motion.div>
                ))}
             </div>
 
-            {/* INCLUSIVE TAG */}
-            <div className="pt-8 border-t border-slate-100">
-               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-[#f8fafc] border border-slate-100">
-                  <ShieldCheck size={18} className="text-sky-500" />
-                  <p className="text-[#1a365d] text-[10px] font-black uppercase tracking-widest">
+            {/* INCLUSIVE TAG - Centered on mobile */}
+            <div className="pt-8 border-t border-slate-100 flex justify-center lg:justify-start">
+               <div className="inline-flex items-center gap-3 px-5 md:px-6 py-3 rounded-xl md:rounded-2xl bg-[#f8fafc] border border-slate-100">
+                  <ShieldCheck size={18} className="text-sky-500 shrink-0" />
+                  <p className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-widest text-left">
                     Safe & Inclusive for <span className="text-sky-500">All Fitness Levels</span>
                   </p>
                </div>

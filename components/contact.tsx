@@ -55,7 +55,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-[9px] font-black uppercase tracking-widest mb-1">Email Protocol</p>
-                    <p className="text-white font-bold text-sm">hq@chessmatic.sg</p>
+                    <p className="text-white font-bold text-sm">admin@intchess.com.sg</p>
                   </div>
                 </div>
 
@@ -65,7 +65,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-[9px] font-black uppercase tracking-widest mb-1">Direct Line</p>
-                    <p className="text-white font-bold text-sm">+65 XXXX XXXX</p>
+                    <p className="text-white font-bold text-sm">+65 8430 2326</p>
                   </div>
                 </div>
 

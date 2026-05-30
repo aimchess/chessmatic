@@ -94,9 +94,9 @@ export default function RootLayout({
                 },
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+65-XXXX-XXXX',
+                  telephone: '+65-8430-2326',
                   contactType: 'customer service',
-                  email: 'hq@chessmatic.sg',
+                  email: 'admin@intchess.com.sg',
                 },
               },
               {

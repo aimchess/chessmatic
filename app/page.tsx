@@ -9,6 +9,7 @@ import TransformationSection from "@/components/impact"
 import FAQSection from "@/components/faq"
 import CompactCTA from "@/components/cta"
 import { motion } from "framer-motion"
+import AwardSection from "@/components/award"
 
 export default function HomePage() {
   
@@ -27,7 +28,7 @@ export default function HomePage() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+65-XXXX-XXXX",
+      "telephone": "+65-8430-2326",
       "contactType": "Customer Service"
     },
     "aggregateRating": {
@@ -68,6 +69,8 @@ export default function HomePage() {
 
           {/* 5. IMPACT: The Proof */}
           <TransformationSection />
+
+          <AwardSection/>
 
           {/* 6. FAQ: The Clarity */}
           <FAQSection />
