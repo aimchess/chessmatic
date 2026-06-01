@@ -30,7 +30,7 @@ export default function AdultClassesPage() {
         "Essential Checkmate Patterns"
       ],
       footer: "Small group sessions — adult environment.",
-      image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?q=80&w=800"
+      image: "/chess1.jpg"
     },
     {
       level: "PHASE 02",

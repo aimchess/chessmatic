@@ -75,20 +75,7 @@ export default function SignatureExperience() {
               </div>
             </div>
 
-            {/* Floating Stats Badge */}
-            <motion.div 
-              animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-6 -right-6 z-20 bg-white p-5 rounded-[35px] shadow-2xl border border-gray-100 flex items-center gap-4"
-            >
-              <div className="bg-amber-500 p-3.5 rounded-2xl shadow-lg shadow-amber-200">
-                <Rocket className="text-white w-6 h-6" />
-              </div>
-              <div className="pr-4">
-                <p className="text-[10px] font-black text-[#1a365d] uppercase tracking-tighter leading-none mb-1">Viral Challenge</p>
-                <p className="text-sky-500 font-[1000] text-lg italic leading-none">10x Intensity</p>
-              </div>
-            </motion.div>
+            
 
             {/* Background Decor Grid */}
             <div className="absolute -bottom-10 -left-10 w-40 h-40 opacity-[0.1] -z-10" 

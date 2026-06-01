@@ -35,7 +35,7 @@ const blogs = [
     excerpt: "Why Fortune 500 executives are returning to the board to sharpen their competitive edge.",
     category: "Corporate ROI",
     readTime: "5 min",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800",
+    image: "/comp.png",
     impact: "Strategic"
   },
   {
@@ -53,7 +53,7 @@ const blogs = [
     excerpt: "Breathing techniques and mental anchors used by professional players.",
     category: "Wellness",
     readTime: "10 min",
-    image: "https://images.unsplash.com/photo-1511891811-227657e60924?q=80&w=800",
+    image: "/adult2.png",
     impact: "-30% Cortisol"
   },
   {

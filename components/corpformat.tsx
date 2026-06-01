@@ -14,7 +14,7 @@ const experiences = [
     tag: "Module 01",
     desc: "Interactive workshops designed to sharpen strategic thinking, improve decision-making abilities, and develop planning techniques through real-world chess-inspired exercises and corporate problem-solving activities.",
     icon: <Presentation size={20} />,
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800"
+    image: "/comp.png"
   },
   {
     title: "Team Challenges",
@@ -28,21 +28,21 @@ const experiences = [
     tag: "Module 03",
     desc: "Premium in-house chess tournaments and branded corporate events designed to strengthen workplace culture, employee engagement, and healthy competition among teams.",
     icon: <Trophy size={20} />,
-    image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800"
+    image: "company.png"
   },
   {
     title: "Executive Sessions",
     tag: "Module 04",
     desc: "Focused leadership sessions tailored for executives and managers to improve cognitive performance, mental resilience, strategic foresight, and high-pressure decision-making skills.",
     icon: <Brain size={20} />,
-    image: "/exe.jpg"
+    image: "/exe.png"
   },
   {
     title: "Social Chess Events",
     tag: "Module 05",
     desc: "Casual and wellness-focused social gatherings that combine chess, networking, mindfulness, and interactive activities to create a relaxed yet intellectually stimulating atmosphere.",
     icon: <Coffee size={20} />,
-    image: "/plank.png"
+    image: "/plank1.png"
   }
 ]
 

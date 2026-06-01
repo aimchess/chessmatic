@@ -14,7 +14,7 @@ export default function TargetCohorts() {
       tag: "FOUNDATION",
       desc: "Never played before? We build your tactical foundation from zero with structured logic.",
       focus: "Fundamental Rules & Ethics",
-      image: "/adult3.jpg",
+      image: "/adult3.png",
       icon: <Shield size={18} className="text-sky-400" />
     },
     {
@@ -23,7 +23,7 @@ export default function TargetCohorts() {
       tag: "REACTIVATION",
       desc: "Reignite your passion. Get back into the game with modern opening theory and tactical reviews.",
       focus: "Pattern Recognition Recovery",
-      image: "/adult2.jpeg",
+      image: "/adult2.png",
       icon: <RotateCcw size={18} className="text-amber-400" />
     },
     {
@@ -32,7 +32,7 @@ export default function TargetCohorts() {
       tag: "PERFORMANCE",
       desc: "Optimized for tournament players. Deep dive into deep calculation, endgame mastery, and ELO growth.",
       focus: "Tournament Prep & Analysis",
-      image: "/adult1.webp",
+      image: "/adult1.png",
       icon: <Trophy size={18} className="text-rose-400" />
     },
     {
@@ -41,7 +41,7 @@ export default function TargetCohorts() {
       tag: "STRATEGY",
       desc: "Translating chess logic into business ROI. Use the board to sharpen executive decision-making.",
       focus: "Strategic Thinking & Logic",
-      image: "/adult.webp",
+      image: "/adult.png",
       icon: <Briefcase size={18} className="text-emerald-400" />
     }
   ]

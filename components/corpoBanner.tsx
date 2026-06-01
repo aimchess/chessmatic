@@ -15,7 +15,7 @@ export default function CorporateBanner() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ 
-          backgroundImage: `url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2000&auto=format&fit=crop')`, 
+          backgroundImage: `url('/comp.png')`, 
         }}
       >
         {/* Navy Depth & Professional Spotlight Overlay */}

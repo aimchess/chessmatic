@@ -38,7 +38,7 @@ export default function AboutSection() {
               className="absolute -bottom-12 -right-2 md:-right-4 z-20 w-[60%] rounded-[20px] md:rounded-[40px] overflow-hidden border-4 md:border-8 border-white shadow-2xl"
             >
               <img 
-                src="/about2.jpg" 
+                src="/about2.png" 
                 alt="Physical Core Activation" 
                 className="w-full h-auto"
               />

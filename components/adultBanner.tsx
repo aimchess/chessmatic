@@ -15,7 +15,7 @@ export default function AdultClassesBanner() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ 
-          backgroundImage: `url('/adult.jpeg')`, 
+          backgroundImage: `url('/adult4.png')`, 
         }}
       >
         {/* Navy Depth & Strategic Spotlight */}

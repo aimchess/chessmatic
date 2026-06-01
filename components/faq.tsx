@@ -139,35 +139,9 @@ export default function FAQSection() {
                
                <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-transparent to-transparent opacity-40 pointer-events-none" />
 
-               {/* FLOATING BADGE 1: MOBILE SCALED */}
-               <motion.div 
-                 animate={{ y: [0, -10, 0] }}
-                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                 className="absolute -top-4 -right-2 md:-top-6 md:-right-6 bg-white p-3 md:p-5 rounded-[20px] md:rounded-[28px] shadow-2xl border border-gray-100 flex items-center gap-3 md:gap-4 z-20"
-               >
-                  <div className="p-2 md:p-3 bg-sky-500 rounded-xl md:rounded-2xl shadow-lg shadow-sky-100">
-                    <Target className="text-white w-4 h-4 md:w-5 md:h-5" />
-                  </div>
-                  <div className="pr-2">
-                    <p className="text-[#1a365d] text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none mb-1">Focus Zone</p>
-                    <p className="text-slate-400 font-bold text-[10px] md:text-[11px]">Ready to Train</p>
-                  </div>
-               </motion.div>
+              
 
-               {/* FLOATING BADGE 2: MOBILE SCALED */}
-               <motion.div 
-                 animate={{ y: [0, 10, 0] }}
-                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                 className="absolute -bottom-4 -left-2 md:-bottom-6 md:-left-6 bg-[#1a365d] p-3 md:p-5 rounded-[20px] md:rounded-[28px] shadow-2xl border border-white/10 flex items-center gap-3 md:gap-4 z-20"
-               >
-                  <div className="p-2 md:p-3 bg-amber-500 rounded-xl md:rounded-2xl shadow-lg shadow-amber-900/20">
-                    <Zap className="text-white w-4 h-4 md:w-5 md:h-5" />
-                  </div>
-                  <div className="pr-2">
-                    <p className="text-white/40 text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none mb-1">Body Status</p>
-                    <p className="text-white font-bold text-[10px] md:text-[11px]">Stable Core</p>
-                  </div>
-               </motion.div>
+              
             </motion.div>
           </div>
 

@@ -22,7 +22,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Users size={18} className="text-sky-500" />,
       footerText: "Adult-only learning environment — maximum focus per batch.",
-      image: "/adult-chess.webp",
+      image: "/adult-chess.png",
       icon: <Shield size={20} className="text-white" />
     },
     {
@@ -56,7 +56,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Building2 size={18} className="text-sky-500" />,
       footerText: "Tailored programs focused on HR initiatives and KPIs.",
-      image: "/wellness.webp",
+      image: "/wellness.png",
       icon: <Building2 size={20} className="text-white" />
     }
   ]
