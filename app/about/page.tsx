@@ -13,6 +13,7 @@ import WhatMakesUsDifferent from "@/components/diff"
 import FounderSection from "@/components/founder"
 import WhoWeServe from "@/components/who"
 import CompactCTA from "@/components/cta"
+import AwardSection from "@/components/award"
 
 export default function AboutPage() {
   return (
@@ -23,6 +24,7 @@ export default function AboutPage() {
       <MissionVision/>
       <WhatMakesUsDifferent/>
       <FounderSection/>
+      <AwardSection/>
       <WhoWeServe/>
       <CompactCTA/>
     </div>

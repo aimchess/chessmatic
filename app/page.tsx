@@ -10,6 +10,7 @@ import FAQSection from "@/components/faq"
 import CompactCTA from "@/components/cta"
 import { motion } from "framer-motion"
 import AwardSection from "@/components/award"
+import PricingSection from "@/components/corpcourse"
 
 export default function HomePage() {
   
@@ -67,10 +68,11 @@ export default function HomePage() {
              <ProgramsOverview />
           </div>
 
+          <PricingSection/>
+
           {/* 5. IMPACT: The Proof */}
           <TransformationSection />
 
-          <AwardSection/>
 
           {/* 6. FAQ: The Clarity */}
           <FAQSection />

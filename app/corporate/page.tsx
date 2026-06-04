@@ -15,6 +15,8 @@ import WhyCompaniesChoose from "@/components/whycorporate"
 import CorporateExperiences from "@/components/corpformat"
 import TeamOutcomesDashboard from "@/components/corpBenefit"
 import CorporateProcess from "@/components/process"
+import PricingSection from "@/components/corpcourse"
+import CorporateEventsGrid from "@/components/corp"
 
 export default function CorporatePage() {
   const navy = "#1a365d"
@@ -26,6 +28,7 @@ export default function CorporatePage() {
      <Navbar/>
      <CorporateBanner/>
      <WhyCompaniesChoose/>
+     <CorporateEventsGrid/>
      <CorporateExperiences/>
      <TeamOutcomesDashboard/>
      <CorporateProcess/>
