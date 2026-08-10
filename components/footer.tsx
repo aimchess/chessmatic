@@ -44,7 +44,7 @@ export function Footer() {
           {/* COLUMN 1: BRAND IDENTITY */}
           <div className="flex flex-col items-center sm:items-start space-y-6">
             <Link href="/" className="flex items-center gap-0 group">
-              <img src="/chessmatic1.png" alt="Chessmatic" className="h-14 md:h-18 w-auto transition-transform group-hover:scale-105" />
+              <img src="/logo-2.png" alt="Chessmatic" className="h-14 md:h-18 w-auto transition-transform group-hover:scale-105" />
               <div className="flex flex-col text-left">
                 <h3 className="text-xl md:text-2xl font-[1000] text-white tracking-tighter leading-none">
                   CHESS<span style={{ color: cyan }}>MATIC</span>

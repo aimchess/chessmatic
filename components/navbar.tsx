@@ -45,7 +45,7 @@ export function Navbar() {
         {/* Logo & Brand Text - Curved Style */}
         <Link href="/" className="flex items-center gap-3.5 group shrink-0">
           <img
-            src="/chessmatic.png"
+            src="/logo-1.png"
             alt="Chessmatic Logo"
             className={`transition-all duration-500 ${isScrolled ? "h-9" : "h-12"}`}
           />
