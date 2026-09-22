@@ -21,7 +21,7 @@ export default function HomePage() {
     "name": "Chessmatic LLP",
     "url": "https://www.chessmatic.sg",
     "logo": "https://www.chessmatic.sg/logo.jpg",
-    "description": "Singapore's first mental and physical hybrid performance lab. Combining adult chess coaching with physical core wellness.",
+    "description": "Singapore's first mental and physical hybrid performance lab. Combining adult chess coaching with physical training (PT).",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Woodlands",

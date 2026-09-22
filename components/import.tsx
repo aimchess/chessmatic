@@ -1,8 +1,9 @@
 "use client"
 
-import { Rocket, Brain, Users, Zap, CheckCircle2, Trophy, Target } from "lucide-react"
+import { Rocket, Brain, Users, Zap, CheckCircle2, Trophy, Target, Dumbbell } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 export default function SignatureExperience() {
   const navy = "#1a365d"
@@ -11,29 +12,29 @@ export default function SignatureExperience() {
   const features = [
     {
       id: "01",
-      title: "Core + Strategy",
-      desc: "Train your physical foundation while the blitz clock is ticking down.",
+      title: "Chess + PT Hybrid",
+      desc: "Train your strategic thinking alongside functional physical conditioning.",
       icon: <Zap className="w-5 h-5 text-amber-500" />,
       bg: "bg-amber-50/50"
     },
     {
       id: "02",
       title: "Mental Endurance",
-      desc: "Master focus and decision-making under extreme physical pressure.",
+      desc: "Master focus and decision-making under physical fatigue and clock pressure.",
       icon: <Brain className="w-5 h-5 text-sky-500" />,
       bg: "bg-sky-50/50"
     },
     {
       id: "03",
-      title: "Social Vibe",
-      desc: "A high-energy, fun environment built for modern social wellness.",
-      icon: <Users className="w-5 h-5 text-emerald-500" />,
+      title: "Separate Tracks Available",
+      desc: "Dedicated Chess-only or PT-only tracks for focused specializations.",
+      icon: <Dumbbell className="w-5 h-5 text-emerald-500" />,
       bg: "bg-emerald-50/50"
     },
     {
       id: "04",
-      title: "Viral Concept",
-      desc: "A visually striking, unique experience designed for modern teams.",
+      title: "5 Flexible Formats",
+      desc: "Private, Online Private, Online Group, Group Workshops, & Corporate Labs.",
       icon: <Trophy className="w-5 h-5 text-purple-500" />,
       bg: "bg-purple-50/50"
     }
@@ -54,28 +55,25 @@ export default function SignatureExperience() {
             {/* Main Image Container */}
             <div className="relative z-10 rounded-[60px] overflow-hidden border-[12px] border-slate-50 shadow-2xl">
               <img 
-                src="/plank-chess.png" 
-                alt="Plank Chess Challenge" 
+                src="/chess-pt-training.jpg" 
+                alt="Chess + PT Performance Protocol" 
                 className="w-full h-[550px] object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
               />
               
               {/* Technical Overlay Badges */}
-              <div className="absolute top-8 left-8 bg-white/90 backdrop-blur-md px-5 py-2.5 rounded-2xl border border-white/20 shadow-xl flex items-center gap-3">
+              <div className="absolute top-6 left-6 md:top-8 md:left-8 bg-white/90 backdrop-blur-md px-4 py-2 md:px-5 md:py-2.5 rounded-2xl border border-white/20 shadow-xl flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-rose-500 animate-pulse" />
-                <span className="text-[#1a365d] text-[10px] font-black uppercase tracking-widest italic">Live Lab Training</span>
+                <span className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-widest italic">Live Lab Training</span>
               </div>
 
-              <div className="absolute bottom-8 left-8 bg-[#1a365d] px-6 py-4 rounded-3xl flex items-center gap-4 shadow-2xl border border-white/10">
-                <div className="p-2 bg-sky-500 rounded-lg">
-                   <Target size={18} className="text-white" />
-                </div>
-                <span className="text-white text-xs font-black tracking-widest uppercase">
-                  The Experience
-                </span>
+              {/* Top Right Brand Stamp */}
+              <div className="absolute top-6 right-6 md:top-8 md:right-8 bg-[#1a365d]/85 backdrop-blur-md px-4 py-2 rounded-2xl border border-white/15 shadow-xl flex flex-col items-end text-right">
+                <span className="text-white text-[10px] md:text-[11px] font-[1000] tracking-wider uppercase">CHESSMATIC</span>
+                <span className="text-sky-400 text-[7px] md:text-[8px] font-bold tracking-widest uppercase">Singapore Lab</span>
               </div>
-            </div>
 
             
+            </div>
 
             {/* Background Decor Grid */}
             <div className="absolute -bottom-10 -left-10 w-40 h-40 opacity-[0.1] -z-10" 
@@ -96,10 +94,10 @@ export default function SignatureExperience() {
               
               <h2 className="text-3xl md:text-5xl font-[1000] leading-[1] tracking-tighter text-[#1a365d] uppercase italic">
                 Not Just Chess. <br />
-                It's <span style={{ color: cyan }}>Hybrid Power.</span>
+                It's <span style={{ color: cyan }}>Chess + PT.</span>
               </h2>
               <p className="text-slate-500 font-medium text-lg max-w-xl leading-relaxed">
-                Singapore’s first mental + physical hybrid challenge. Engineered for those who seek <span className="text-[#1a365d] font-bold">elite cognitive composure</span> and physical stability.
+                Singapore’s premier mental and physical performance system. Engineered for individuals and teams who demand <span className="text-[#1a365d] font-bold">elite cognitive composure</span> and physical stamina.
               </p>
             </motion.div>
 
@@ -139,11 +137,15 @@ export default function SignatureExperience() {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Button style={{ backgroundColor: navy }} className="hover:opacity-90 text-white px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm shadow-2xl active:scale-95 transition-all">
-                Explore Plank-Chess
+              <Button asChild style={{ backgroundColor: navy }} className="hover:opacity-90 text-white px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm shadow-2xl active:scale-95 transition-all">
+                <Link href="/pt">
+                  Explore PT & Chess
+                </Link>
               </Button>
-              <Button variant="outline" className="border-2 border-slate-100 text-[#1a365d] px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm hover:bg-slate-50 active:scale-95 transition-all">
-                Book a Session
+              <Button asChild variant="outline" className="border-2 border-slate-100 text-[#1a365d] px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm hover:bg-slate-50 active:scale-95 transition-all">
+                <Link href="/adult-classes">
+                  View Adult Classes
+                </Link>
               </Button>
             </motion.div>
           </div>

@@ -15,7 +15,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/plank-chess", label: "Plank-Chess" },
+    { href: "/pt", label: "PT" },
     { href: "/adult-classes", label: "Adult Classes" },
     { href: "/corporate", label: "Corporate" },
     { href: "/blog", label: "Blog" },

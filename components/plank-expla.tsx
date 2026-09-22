@@ -1,38 +1,38 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Dumbbell, Timer, ShieldCheck, Activity, Target } from "lucide-react"
+import { Dumbbell, Timer, ShieldCheck, Activity, Target, Brain } from "lucide-react"
 
-export default function PlankChessExplanation() {
+export default function PTExplanation() {
   const navy = "#1a365d"
   const cyan = "#0ea5e9"
 
   const steps = [
     {
       num: "01",
-      title: "Establish Foundation",
-      desc: "Drop into a stable plank position. Your core becomes the anchor for the game.",
-      icon: <Dumbbell className="w-5 h-5" />,
+      title: "Baseline Assessment",
+      desc: "We analyze your strategic chess foundation and physical movement mechanics to build a customized plan.",
+      icon: <Target className="w-5 h-5" />,
       accent: "bg-sky-500"
     },
     {
       num: "02",
-      title: "Tactical Engagement",
-      desc: "The blitz clock is active. Execute moves while managing your center of gravity.",
-      icon: <Timer className="w-5 h-5" />,
+      title: "Physical Conditioning (PT)",
+      desc: "Targeted personal training focused on core strength, postural alignment, and cardiovascular endurance.",
+      icon: <Dumbbell className="w-5 h-5" />,
       accent: "bg-[#1a365d]"
     },
     {
       num: "03",
-      title: "Physical Resilience",
-      desc: "Muscles fatigue, but logic must remain sharp. Fight the physical urge to drop.",
-      icon: <Activity className="w-5 h-5" />,
-      accent: "bg-rose-500"
+      title: "Tactical Execution",
+      desc: "Master calculation, opening theory, and endgame technique while maintaining peak physical composure.",
+      icon: <Brain className="w-5 h-5" />,
+      accent: "bg-amber-500"
     },
     {
       num: "04",
-      title: "Strategic Victory",
-      desc: "Last strong. Think sharp. Outperform your opponent in mind and body.",
+      title: "Sustained Mastery",
+      desc: "Combine mental clarity with physical stamina for high-pressure corporate and tournament performance.",
       icon: <ShieldCheck className="w-5 h-5" />,
       accent: "bg-emerald-500"
     }
@@ -60,10 +60,10 @@ export default function PlankChessExplanation() {
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
-            What is <span style={{ color: cyan }}>Plank-Chess?</span>
+            What is <span style={{ color: cyan }}>Chess + PT?</span>
           </motion.h2>
           <p className="mt-6 text-slate-500 text-base sm:text-lg md:text-xl font-medium max-w-2xl px-2">
-            A high-stakes fusion where <span className="text-[#1a365d] font-bold">physical endurance</span> meets <span className="text-[#1a365d] font-bold">tactical precision</span>.
+            A high-performance system where <span className="text-[#1a365d] font-bold">physical fitness (PT)</span> meets <span className="text-[#1a365d] font-bold">tactical precision</span>.
           </p>
         </div>
 
@@ -79,8 +79,8 @@ export default function PlankChessExplanation() {
               className="relative z-10 rounded-[30px] md:rounded-[50px] overflow-hidden border-[8px] md:border-[12px] border-gray-50 shadow-2xl"
             >
               <img 
-                src="/plank2.png" 
-                alt="Plank Chess Protocol" 
+                src="/chess-pt-training.jpg" 
+                alt="PT and Chess Protocol" 
                 className="w-full h-[350px] md:h-[550px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
               />
               
@@ -91,7 +91,7 @@ export default function PlankChessExplanation() {
               </div>
 
               <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#1a365d] p-3 sm:p-5 rounded-2xl sm:rounded-[30px] shadow-2xl text-white">
-                 <p className="text-[9px] sm:text-xs font-black uppercase tracking-widest opacity-60 mb-0.5 sm:mb-1">Dual-Task</p>
+                 <p className="text-[9px] sm:text-xs font-black uppercase tracking-widest opacity-60 mb-0.5 sm:mb-1">Dual-Track</p>
                  <p className="text-lg sm:text-xl font-black italic text-sky-400">ACTIVE</p>
               </div>
             </motion.div>
@@ -105,7 +105,7 @@ export default function PlankChessExplanation() {
           <div className="lg:col-span-7 space-y-8 order-2">
             <div className="space-y-3 mb-8 md:mb-12 text-center lg:text-left">
                <h3 className="text-[#1a365d] text-xl sm:text-2xl font-[1000] uppercase tracking-tight">The 4-Step Process</h3>
-               <p className="text-slate-400 text-xs sm:text-sm font-bold uppercase tracking-widest italic">Follow the protocol to achieve peak convergence.</p>
+               <p className="text-slate-400 text-xs sm:text-sm font-bold uppercase tracking-widest italic">Follow the protocol to achieve peak composure & strength.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 md:gap-x-12 gap-y-8 md:gap-y-10">
@@ -142,7 +142,7 @@ export default function PlankChessExplanation() {
                <div className="inline-flex items-center gap-3 px-4 sm:px-6 py-3 sm:py-4 rounded-2xl sm:rounded-3xl bg-[#f8fafc] border border-slate-100 shadow-sm">
                   <Target size={16} className="text-sky-500 flex-shrink-0" />
                   <p className="text-[#1a365d] text-[10px] sm:text-xs font-black uppercase tracking-wider">
-                    Target Outcome: <span className="text-sky-500">Maximum Cognitive Composure</span>
+                    Target Outcome: <span className="text-sky-500">Maximum Cognitive & Physical Composure</span>
                   </p>
                </div>
             </div>

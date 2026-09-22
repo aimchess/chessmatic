@@ -6,24 +6,24 @@ import { ChevronDown, Target, Zap } from "lucide-react"
 
 const faqs = [
   {
-    question: "Do I need to be good at chess to join Plank-Chess?",
-    answer: "Not at all. We cater to all skill levels. The goal of Plank-Chess is the hybrid challenge of focus under physical stress, not just grandmaster-level play."
+    question: "Do I need prior experience to join Chess + PT or separate classes?",
+    answer: "Not at all. We cater to all skill levels from complete beginners to advanced competitors. Whether you are learning piece movement or looking for intensive 1-on-1 PT and chess strategy, sessions are calibrated to your level."
   },
   {
-    question: "What is the typical duration of a Corporate Workshop?",
-    answer: "Our standard workshops run for 90 to 120 minutes, but we can customize high-performance retreats based on your HR goals."
+    question: "Can I take Chess and PT separately?",
+    answer: "Yes! We offer Chess + PT (combined hybrid), Chess Separate (pure chess coaching), and PT Separate (dedicated personal fitness training)."
   },
   {
-    question: "Are the Adult Chess Classes structured for absolute beginners?",
-    answer: "Yes. Our Phase 1 program is specifically designed to build foundational habits for those who have never touched a chessboard before."
+    question: "What formats do you offer for coaching?",
+    answer: "We offer 5 primary formats: Group Coaching Workshops, Private Lessons (1-on-1 in-studio), Online Private Lessons (1-on-1 virtual), Online Group Lessons (virtual batches), and Corporate team sessions."
   },
   {
-    question: "Is there a specific fitness level required for the sessions?",
-    answer: "Our physical activations are designed to be accessible and safe. We provide modifications for the planking elements to ensure everyone can participate comfortably."
+    question: "Is there a specific fitness level required for the PT sessions?",
+    answer: "Our physical personal training (PT) activations are customized based on an initial fitness and postural assessment to ensure safe and effective progression for everyone."
   },
   {
-    question: "Where are the sessions held in Singapore?",
-    answer: "We operate out of a premium studio environment in Woodlands, and we also offer on-site setups for corporate office sessions."
+    question: "Where are the in-person sessions held in Singapore?",
+    answer: "We operate out of our studio in Woodlands, Singapore, and we also provide on-site corporate facilitation for businesses across Singapore."
   }
 ]
 

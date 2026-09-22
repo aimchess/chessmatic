@@ -43,9 +43,9 @@ export default function WhyItWorks() {
             className="lg:col-span-7 relative min-h-[400px] md:min-h-[500px] rounded-[30px] md:rounded-[50px] overflow-hidden group shadow-2xl"
           >
             <img 
-              src="/plank3.png" 
+              src="/team-viral-chess-pt.jpg" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-              alt="Social Media Engagement"
+              alt="Chess + PT Viral Team Engagement"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-[#1a365d]/40 to-transparent" />
             
@@ -129,14 +129,14 @@ export default function WhyItWorks() {
 
                {/* SCIENCE DATA INFOGRAPHIC - Column on Mobile, Row on Desktop */}
                <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                  {/* Plank Benefits */}
+                  {/* PT Benefits */}
                   <div className="bg-white/5 backdrop-blur-xl rounded-[25px] md:rounded-[35px] p-6 md:p-8 border border-white/10">
                     <div className="flex items-center gap-3 mb-6">
                       <div className="p-2 bg-sky-500 rounded-lg md:rounded-xl"><Activity size={18} className="text-white" /></div>
-                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Physical Output</span>
+                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Physical Training (PT)</span>
                     </div>
                     <ul className="space-y-3 md:space-y-4">
-                       {['Core Stability', 'Posture Correction', 'Breathing Control'].map((item, i) => (
+                       {['Core Stability', 'Functional Strength', 'Posture & Stamina'].map((item, i) => (
                          <li key={i} className="text-slate-400 text-xs md:text-[13px] font-bold flex items-center gap-2">
                            <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-sky-500 flex-shrink-0" /> {item}
                          </li>

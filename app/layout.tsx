@@ -14,12 +14,13 @@ export const metadata: Metadata = {
     template: '%s | Chessmatic Strategic Lab',
   },
   description:
-    'Singapore’s first hybrid performance lab combining adult chess coaching, physical core wellness (Plank-Chess), and strategic corporate team building.',
+    'Singapore’s premier performance lab combining adult chess coaching, physical conditioning (PT), Chess + PT hybrid programs, and strategic corporate workshops.',
   keywords: [
     'Chessmatic LLP',
-    'Plank-Chess Singapore',
+    'Chess and PT Singapore',
+    'Personal Training Singapore',
     'Adult Chess Classes Singapore',
-    'Corporate Wellness Singapore',
+    'Corporate Workshops Singapore',
     'Strategic Thinking Workshop',
     'Mental Fitness',
     'Executive Coaching Singapore',
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Chessmatic - Strategic Mind & Body Training',
-    description: 'Transform your strategic logic and physical composure in Singapore’s first hybrid training lab.',
+    description: 'Transform your strategic logic and physical conditioning in Singapore’s first hybrid training lab.',
     url: 'https://www.chessmatic.sg',
     siteName: 'Chessmatic LLP',
     images: [
@@ -83,7 +84,7 @@ export default function RootLayout({
                 name: 'Chessmatic LLP',
                 url: 'https://www.chessmatic.sg',
                 logo: 'https://www.chessmatic.sg/logo.jpg',
-                description: 'A modern performance lab in Singapore combining chess strategy with physical wellness.',
+                description: 'A modern performance lab in Singapore combining chess strategy with physical wellness and personal training.',
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: 'Woodlands Studio', // Update with actual full address
@@ -118,18 +119,18 @@ export default function RootLayout({
                 mainEntity: [
                   {
                     '@type': 'Question',
-                    name: 'What is Plank-Chess?',
+                    name: 'What training tracks are offered?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Plank-Chess is Singapore’s first mental and physical hybrid challenge where participants play chess while maintaining a plank position to build focus under pressure.'
+                      text: 'We provide 3 distinct tracks: Chess + PT (integrated hybrid), Chess Separate (pure strategy & mastery), and PT Separate (dedicated physical training).'
                     }
                   },
                   {
                     '@type': 'Question',
-                    name: 'Does Chessmatic offer corporate team building?',
+                    name: 'Does Chessmatic offer corporate team building and workshops?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'Yes, Chessmatic provides tailored corporate wellness workshops and strategic team-building experiences for startups and enterprises.'
+                      text: 'Yes, Chessmatic provides tailored corporate workshops, group coaching, private sessions, and strategic team-building experiences for startups and enterprises.'
                     }
                   }
                 ]

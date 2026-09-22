@@ -13,43 +13,59 @@ import TargetCohorts from "@/components/level"
 import TrainingFormats from "@/components/format"
 import BenefitsSection from "@/components/benefit"
 import CommunityAndSchedule from "@/components/final"
+import CoachesSection from "@/components/coaches"
 
 export default function AdultClassesPage() {
   const navy = "#1a365d"
   const cyan = "#0ea5e9"
 
-  const packages = [
+  const tracks = [
     {
-      tier: "PHASE 01",
-      title: "The Tactical Executive",
-      focus: "Foundation & Routine",
-      price: "$199 - $299",
+      tier: "TRACK 01",
+      title: "Chess + PT",
+      focus: "Hybrid Strategy & Physical Conditioning",
       image: "/chess1.jpg",
-      chess: ["2x 60-min private lessons/mo", "Custom opening repertoire base", "Weekly tactical puzzles"],
-      fitness: ["1x Customized monthly workout plan", "Bi-weekly progress tracking"],
-      wellness: ["1x Guided chess mindfulness audio", "Ergonomic posture assessment"],
-      highlight: false
-    },
-    {
-      tier: "PHASE 02",
-      title: "The Mastermind Elite",
-      focus: "Optimization & Strategy",
-      price: "$450 - $599",
-      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800",
-      chess: ["4x 60-min private lessons/mo", "Deep-dive game analysis", "Access to academy tournaments"],
-      fitness: ["2x 45-min virtual PT sessions/mo", "Weekly form checks via video"],
-      wellness: ["1x 30-min mindset coaching call/mo", "Executive stress management"],
+      badge: "Signature Hybrid",
+      chess: [
+        "Personalized tactical and opening mastery",
+        "Deep calculation and endgame technique",
+        "Weekly puzzle analysis and tournament readiness"
+      ],
+      pt: [
+        "Targeted physical conditioning & core strength",
+        "Postural alignment & stamina building",
+        "Form checks and personalized workout programming"
+      ],
       highlight: true
     },
     {
-      tier: "PHASE 03",
-      title: "The Grandmaster Lifestyle",
-      focus: "Peak Performance",
-      price: "$999+",
+      tier: "TRACK 02",
+      title: "Chess Separate",
+      focus: "Pure Strategic Chess Mastery",
+      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800",
+      badge: "Pure Chess",
+      chess: [
+        "Structured curriculum for beginners to advanced",
+        "Opening repertoire customization",
+        "Master-level game analysis & review",
+        "Available in Private, Online, and Group formats"
+      ],
+      pt: [],
+      highlight: false
+    },
+    {
+      tier: "TRACK 03",
+      title: "PT Separate",
+      focus: "Dedicated Functional Physical Training",
       image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?q=80&w=800",
-      chess: ["Unlimited / 8x private lessons/mo", "Personalized tournament prep", "24/7 async game review"],
-      fitness: ["4x 45-min 1-on-1 PT sessions/mo", "Daily activity & sleep tracking"],
-      wellness: ["Bi-weekly mindset coaching", "Nutritional cognitive guidance"],
+      badge: "Pure PT",
+      chess: [],
+      pt: [
+        "1-on-1 and small group personal training",
+        "Functional strength & mobility development",
+        "Cardiovascular endurance & core conditioning",
+        "Custom fitness assessments & progress tracking"
+      ],
       highlight: false
     }
   ]
@@ -60,7 +76,7 @@ export default function AdultClassesPage() {
       <AdultClassesBanner/>
       <TargetCohorts/>
 
-      {/* 3. COACHING PACKAGES SECTION */}
+      {/* 3. COACHING TRACKS SECTION (No pricing, focused on Chess+PT, Chess, PT) */}
       <section className="py-16 md:py-24 bg-[#f8fafc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           
@@ -68,17 +84,20 @@ export default function AdultClassesPage() {
           <div className="flex flex-col items-center text-center mb-16 md:mb-24">
             <div className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6">
               <span className="bg-white px-4 sm:px-6 py-1.5 rounded-full text-[#1a365d] text-[10px] font-[1000] tracking-[0.2em] uppercase shadow-sm">
-                Holistic Mind & Body System
+                Customized Training Tracks
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">
-              Coaching <span style={{ color: cyan }}>Packages.</span>
+              Our Training <span style={{ color: cyan }}>Tracks.</span>
             </h2>
+            <p className="mt-4 text-slate-500 font-medium text-base sm:text-lg max-w-2xl">
+              Choose between integrated Chess + PT, dedicated Chess coaching, or independent Personal Training.
+            </p>
           </div>
 
-          {/* PACKAGE GRID */}
+          {/* TRACK GRID */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-10">
-            {packages.map((pkg, i) => (
+            {tracks.map((pkg, i) => (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 20 }} 
@@ -104,72 +123,54 @@ export default function AdultClassesPage() {
 
                   <div className="absolute bottom-6 left-8">
                      <p className="text-sky-400 text-[10px] font-black uppercase tracking-widest mb-1">{pkg.focus}</p>
-                     <h3 className="text-white text-xl font-[1000] uppercase tracking-tight">{pkg.title}</h3>
+                     <h3 className="text-white text-2xl font-[1000] uppercase tracking-tight">{pkg.title}</h3>
                   </div>
                 </div>
 
                 {/* PACKAGE CONTENT */}
-                <div className="p-8 sm:p-10 flex-1 flex flex-col">
-                  <div className="mb-8">
-                    <p className="text-[#1a365d] text-4xl font-[1000] tracking-tighter italic">
-                      {pkg.price}
-                      <span className="text-sm font-bold text-slate-400 not-italic ml-2">/ month</span>
-                    </p>
-                  </div>
-
-                  <div className="space-y-8 flex-1">
+                <div className="p-8 sm:p-10 flex-1 flex flex-col justify-between">
+                  <div className="space-y-8">
                     {/* Chess Protocol */}
-                    <div className="space-y-4">
-                      <div className="flex items-center gap-2 text-[#1a365d]">
-                        <Trophy size={16} className="text-sky-500" />
-                        <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Chess Protocol</span>
+                    {pkg.chess.length > 0 && (
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 text-[#1a365d]">
+                          <Trophy size={16} className="text-sky-500" />
+                          <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Chess Coaching</span>
+                        </div>
+                        <ul className="space-y-2.5">
+                          {pkg.chess.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
+                              <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-2.5">
-                        {pkg.chess.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
-                            <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    )}
 
-                    {/* Fitness Protocol */}
-                    <div className="space-y-4 pt-6 border-t border-slate-50">
-                      <div className="flex items-center gap-2 text-[#1a365d]">
-                        <Dumbbell size={16} className="text-sky-500" />
-                        <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Physical Fitness</span>
+                    {/* Physical Fitness (PT) */}
+                    {pkg.pt.length > 0 && (
+                      <div className={`space-y-4 ${pkg.chess.length > 0 ? "pt-6 border-t border-slate-50" : ""}`}>
+                        <div className="flex items-center gap-2 text-[#1a365d]">
+                          <Dumbbell size={16} className="text-sky-500" />
+                          <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Physical Training (PT)</span>
+                        </div>
+                        <ul className="space-y-2.5">
+                          {pkg.pt.map((item, idx) => (
+                            <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
+                              <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <ul className="space-y-2.5">
-                        {pkg.fitness.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
-                            <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Wellness Protocol */}
-                    <div className="space-y-4 pt-6 border-t border-slate-50">
-                      <div className="flex items-center gap-2 text-[#1a365d]">
-                        <Brain size={16} className="text-sky-500" />
-                        <span className="text-[10px] font-black uppercase tracking-widest opacity-40">Mental Wellness</span>
-                      </div>
-                      <ul className="space-y-2.5">
-                        {pkg.wellness.map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
-                            <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    )}
                   </div>
 
                   {/* ACTION BUTTON */}
-                  <div className="mt-12">
+                  <div className="mt-10">
                     <Button 
                       className={`w-full h-14 rounded-full text-white font-[1000] uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 ${pkg.highlight ? 'bg-sky-500 hover:bg-sky-600' : 'bg-[#1a365d] hover:bg-[#0f213a]'}`}
                     >
-                      Enquire for {pkg.tier}
+                      Enquire for {pkg.title}
                     </Button>
                   </div>
                 </div>
@@ -187,6 +188,8 @@ export default function AdultClassesPage() {
       <TrainingFormats/>
       <BenefitsSection/>
       <CommunityAndSchedule/>
+
+      <CoachesSection />
 
       {/* FINAL RESPONSIVE CTA */}
       <section className="py-16 md:py-24 bg-white flex justify-center px-4 sm:px-6">

@@ -10,7 +10,7 @@ import Link from "next/link"
 const categories = ["All Insights", "Chess Strategy", "Cognitive Fitness", "Corporate ROI", "Wellness"]
 
 // DATA INTEGRATED WITH YOUR PROVIDED CONTENT
-export const blogs = [
+const blogs = [
   {
     id: "cognitive-benefits-of-chess",
     title: "🧠 Cognitive Benefits of Chess: Beyond the Game",
@@ -21,12 +21,12 @@ export const blogs = [
     impact: "Executive Function"
   },
   {
-    id: "benefits-of-plank-chess",
-    title: "💪 The Science of Plank‑Chess: Dual-Task Performance",
-    excerpt: "The signature Chessmatic training system. How combining core-stability with rapid decision making rewires stress tolerance.",
+    id: "science-of-chess-pt",
+    title: "💪 The Science of Chess + PT: Dual-Task Performance",
+    excerpt: "The signature Chessmatic training system. How combining physical conditioning with rapid decision making rewires stress tolerance.",
     category: "Wellness",
     readTime: "10 min",
-    image: "/plank1.png",
+    image: "/adult1.jpg",
     impact: "Stress Regulation"
   },
   {

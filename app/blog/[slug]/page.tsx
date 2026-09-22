@@ -27,23 +27,23 @@ export default function BlogDetailPage() {
     sidebar: [{ label: "LOGIC", val: "98%" }, { label: "EXECUTIVE", val: "94%" }]
   }
 
-  const plankChessBenefits = {
-    title: "BENEFITS OF PLANK-CHESS",
+  const ptChessBenefits = {
+    title: "BENEFITS OF CHESS + PT",
     emoji: "💪",
-    intro: "Plank‑Chess is Chessmatic’s signature cognitive + physical dual‑task training system. It combines the static plank with rapid‑decision chess, creating a training effect impossible to achieve alone.",
-    subIntro: "Plank‑Chess trains the mind and body to perform under controlled stress — a skill that transfers directly to work, leadership, and daily life.",
+    intro: "Chess + PT is Chessmatic’s signature cognitive + physical dual‑task training system. It combines structured physical conditioning with rapid‑decision chess, creating a training effect impossible to achieve alone.",
+    subIntro: "Chess + PT trains the mind and body to perform under controlled stress — a skill that transfers directly to work, leadership, and daily life.",
     sections: [
       {
-        title: "ENHANCED FOCUS",
+        title: "ENHANCED FOCUS & ENDURANCE",
         icon: "⭐",
-        desc: "Holding a plank elevates heart rate and breathing, creating mild physical stress.",
+        desc: "Physical conditioning elevates heart rate and breathing, simulating high-pressure tactical scenarios.",
         bullets: ["Cognitive control", "Impulse regulation", "Strategic thinking", "Stress Adaptability"]
       }
     ],
-    sidebar: [{ label: "CORE", val: "90%" }, { label: "STABILITY", val: "95%" }]
+    sidebar: [{ label: "PHYSICAL CONDITIONING", val: "90%" }, { label: "DECISION STABILITY", val: "95%" }]
   }
 
-  const data = slug === "benefits-of-plank-chess" ? plankChessBenefits : cognitiveBenefits
+  const data = (slug === "science-of-chess-pt" || slug === "benefits-of-plank-chess") ? ptChessBenefits : cognitiveBenefits
 
   return (
     <main className="bg-white min-h-screen font-sans pb-32">

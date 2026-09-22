@@ -23,13 +23,13 @@ export default function WhyChooseUs() {
     {
       id: "HYBRID STAMINA",
       title: "Pressure Control",
-      program: "Plank-Chess",
-      description: "Build mental clarity and focus while your body is under intense physical stress.",
-      image: "/plank1.png",
-      benefits: ["Core Stability", "Stress Resilience"],
+      program: "Chess + PT",
+      description: "Build mental clarity, focus, and stamina through dedicated personal physical conditioning.",
+      image: "/about2.png",
+      benefits: ["Functional Strength", "Physical Stamina"],
       metricLabel: "Focus Depth",
-      metricValue: 70,
-      accent: "#d946ef",
+      metricValue: 88,
+      accent: "#0ea5e9",
       icon: <Activity className="w-4 h-4" />
     },
     {

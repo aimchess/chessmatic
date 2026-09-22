@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Zap, ArrowRight, Target } from "lucide-react"
+import Link from "next/link"
 
 export default function CompactRectangleCTA() {
   const navy = "#1a365d"
@@ -45,18 +46,24 @@ export default function CompactRectangleCTA() {
           {/* RIGHT: SIDE-BY-SIDE BUTTONS */}
           <div className="relative z-10 flex flex-row flex-wrap justify-center items-center gap-3 md:gap-4 w-full lg:w-auto">
             <Button 
+              asChild
               style={{ backgroundColor: cyan }}
               className="flex-1 sm:flex-none h-12 md:h-14 px-6 md:px-10 rounded-full text-[10px] md:text-[11px] font-[1000] uppercase tracking-widest text-[#1a365d] hover:bg-white transition-all shadow-xl active:scale-95 group/btn whitespace-nowrap"
             >
-              Join Session
-              <Zap size={14} className="ml-2 fill-[#1a365d]" />
+              <Link href="/contact">
+                Join Session
+                <Zap size={14} className="ml-2 fill-[#1a365d]" />
+              </Link>
             </Button>
 
             <Button 
+              asChild
               className="flex-1 sm:flex-none h-12 md:h-14 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[10px] md:text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 whitespace-nowrap"
             >
-              Corporate
-              <ArrowRight size={14} className="ml-2" />
+              <Link href="/contact">
+                Corporate Inquiries
+                <ArrowRight size={14} className="ml-2" />
+              </Link>
             </Button>
           </div>
 

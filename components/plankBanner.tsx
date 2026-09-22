@@ -15,11 +15,11 @@ export default function PlankChessBanner() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ 
-          backgroundImage: `url('/plank-chess.png')`, 
+          backgroundImage: `url('/pt-page-banner.jpg')`, 
         }}
       >
-        <div className="absolute inset-0 bg-[#1a365d]/60" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(2,6,23,0.9)_85%)]" />
+        <div className="absolute inset-0 bg-[#0f213a]/55" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(2,6,23,0.85)_85%)]" />
       </div>
 
       {/* TECHNICAL DOT GRID OVERLAY */}
@@ -42,7 +42,7 @@ export default function PlankChessBanner() {
           <div className="flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 rounded-full text-white/70 text-[9px] sm:text-[10px] font-black tracking-[0.3em] uppercase">
             <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight size={10} className="text-sky-500" />
-            <span className="text-sky-400">Plank-Chess</span>
+            <span className="text-sky-400">Personal Training (PT)</span>
           </div>
         </motion.div>
 
@@ -54,11 +54,11 @@ export default function PlankChessBanner() {
           className="space-y-4 sm:space-y-6"
         >
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-[1000] text-white tracking-tighter leading-none italic uppercase">
-            The <span style={{ color: cyan }}>Hybrid.</span>
+            Chess + <span style={{ color: cyan }}>PT.</span>
           </h1>
           <p className="text-slate-300 font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed px-4">
-            Singapore’s First <span className="text-white">Mental + Physical</span> Challenge. <br className="hidden sm:block" />
-            Where Core Stability Meets Strategic Calculation.
+            Singapore’s Premier <span className="text-white">Mental + Physical</span> Performance Lab. <br className="hidden sm:block" />
+            Combining Strategic Chess Coaching with Dedicated Personal Training.
           </p>
         </motion.div>
       </div>

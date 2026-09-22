@@ -1,56 +1,56 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Zap, Users, Building2, Target } from "lucide-react"
+import { Zap, Users, Building2, Target, Dumbbell, Trophy } from "lucide-react"
 
-export default function PlankChessFormats() {
+export default function PTFormats() {
   const navy = "#1a365d"
   const cyan = "#0ea5e9"
 
   const formats = [
     {
-      id: "MODE 01",
-      title: "1v1 Plank Blitz",
-      category: "Competitive",
+      id: "TRACK 01",
+      title: "1-on-1 Chess + PT",
+      category: "Personal Hybrid",
       icon: <Zap size={24} className="text-amber-500" />,
-      desc: "The ultimate test of focus. 3-minute blitz games where your physical endurance directly impacts your clock.",
+      desc: "The ultimate individual protocol. 1-on-1 dedicated chess instruction coupled with personal physical conditioning in our Woodlands studio.",
       specs: [
-        "High-intensity 3min Blitz",
-        "Physical drop = Time penalty",
-        "Real-time tactical pressure",
-        "Ranked leaderboard entry"
+        "60-90 min custom sessions",
+        "Targeted strength & stamina workouts",
+        "Deep tactical game analysis",
+        "Personalized progression tracker"
       ],
-      outcome: "Decision Velocity",
+      outcome: "Dual-Task Composure",
       color: "border-amber-100/50"
     },
     {
-      id: "MODE 02",
-      title: "Team Relay Challenge",
+      id: "TRACK 02",
+      title: "Group Workshops",
       category: "Collaborative",
       icon: <Users size={24} className="text-sky-500" />,
-      desc: "Synchronized strategy. Teams rotate between active chess play and physical planking rotations.",
+      desc: "High-energy group workshops combining tactical puzzle solving with dynamic physical activation exercises.",
       specs: [
-        "Rotational team play",
-        "Shared strategic endurance",
-        "Communication under stress",
-        "Ideal for social bonding"
+        "Small group interactive cohort",
+        "Team-based tactical challenges",
+        "Core & functional conditioning",
+        "Elite networking atmosphere"
       ],
       outcome: "Team Synergy",
       color: "border-sky-100/50"
     },
     {
-      id: "MODE 03",
-      title: "Corporate Workshop",
-      category: "Strategic",
+      id: "TRACK 03",
+      title: "Corporate PT & Strategy",
+      category: "Enterprise",
       icon: <Building2 size={24} className="text-[#1a365d]" />,
-      desc: "A fully facilitated experience designed for modern HR wellness and leadership development initiatives.",
+      desc: "Tailored corporate executive labs combining mental calculation under fatigue with posture and ergonomic physical training.",
       specs: [
-        "Professional Warm-up protocol",
-        "Guided tactical sessions",
-        "Metric-based Leaderboard",
-        "Reflection & Cooldown"
+        "Keynote strategy & problem-solving",
+        "Executive ergonomic movement",
+        "Departmental tournament challenges",
+        "Actionable performance metrics"
       ],
-      outcome: "Leadership ROI",
+      outcome: "Executive ROI",
       color: "border-slate-200"
     }
   ]
@@ -77,7 +77,7 @@ export default function PlankChessFormats() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
-            Challenge <span style={{ color: cyan }}>Formats.</span>
+            Delivery <span style={{ color: cyan }}>Formats.</span>
           </motion.h2>
         </div>
 
@@ -153,7 +153,7 @@ export default function PlankChessFormats() {
           className="mt-12 md:mt-16 text-center px-4"
         >
            <p className="text-slate-300 font-bold uppercase tracking-[0.2em] text-[8px] md:text-[9px]">
-             Customized formats available for <span className="text-[#1a365d]">Private Events</span> & <span className="text-[#1a365d]">Operational Retreats</span>
+             Customized formats available for <span className="text-[#1a365d]">Chess + PT</span>, <span className="text-[#1a365d]">Chess Separate</span> & <span className="text-[#1a365d]">PT Separate</span>
            </p>
         </motion.div>
 

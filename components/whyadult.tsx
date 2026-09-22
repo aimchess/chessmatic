@@ -15,8 +15,8 @@ export default function CompactDifferentiation() {
     },
     {
       id: "2",
-      title: "Plank-Chess Hybrid",
-      desc: "Singapore’s only mental + physical fusion training. Maintain core stability while making blitz decisions.",
+      title: "Chess + PT Integration",
+      desc: "Singapore’s premier mental and physical fusion training. Build functional strength, posture, and blitz stamina.",
       color: "bg-sky-500", // Cyan
       icon: <Zap size={16} />,
       side: "right"

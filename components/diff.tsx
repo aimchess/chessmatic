@@ -17,11 +17,11 @@ export default function WhatMakesUsDifferent() {
       side: "left"
     },
     {
-      title: "Plank-Chess Signature",
-      desc: "Our viral hybrid challenge. Train your core stability while managing high-pressure blitz chess decisions.",
+      title: "Chess + PT Hybrid",
+      desc: "Our signature dual-task protocol. Build physical endurance and core strength while managing high-pressure chess calculations.",
       icon: <Zap className="text-white w-5 h-5" />,
       iconBg: "bg-[#1a365d]",
-      tag: "THE HYBRID CHALLENGE",
+      tag: "THE HYBRID PROTOCOL",
       side: "left"
     },
     {

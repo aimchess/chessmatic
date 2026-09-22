@@ -139,9 +139,12 @@ export default function ContactSection() {
                   <label className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-widest ml-1">Inquiry Type</label>
                   <div className="relative">
                     <select className="w-full bg-white border border-gray-200 rounded-xl md:rounded-2xl px-5 py-3.5 md:py-4 text-sm focus:outline-none focus:border-sky-500 transition-all shadow-sm appearance-none cursor-pointer">
-                        <option>Adult Class Enquiry</option>
-                        <option>Corporate Booking</option>
-                        <option>Plank-Chess Challenge</option>
+                        <option>Chess + PT Hybrid</option>
+                        <option>Adult Chess Coaching (Separate)</option>
+                        <option>Personal Training / PT (Separate)</option>
+                        <option>Corporate Workshop / Booking</option>
+                        <option>Private 1-on-1 Lessons</option>
+                        <option>Online Coaching</option>
                         <option>Partnerships / Collaborations</option>
                         <option>Other</option>
                     </select>
@@ -151,7 +154,7 @@ export default function ContactSection() {
 
               <div className="space-y-2">
                 <label className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-widest ml-1">Message</label>
-                <textarea rows={4} md={5} placeholder="How can we help your performance journey?" className="w-full bg-white border border-gray-200 rounded-xl md:rounded-2xl px-5 py-3.5 md:py-4 text-sm focus:outline-none focus:border-sky-500 transition-all shadow-sm resize-none"></textarea>
+                <textarea rows={4} placeholder="How can we help your performance journey?" className="w-full bg-white border border-gray-200 rounded-xl md:rounded-2xl px-5 py-3.5 md:py-4 text-sm focus:outline-none focus:border-sky-500 transition-all shadow-sm resize-none"></textarea>
               </div>
 
               <Button 

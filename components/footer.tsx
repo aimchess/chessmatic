@@ -77,10 +77,10 @@ export function Footer() {
             </h4>
             <ul className="space-y-4">
               {[
-                { label: "Plank-Chess", href: "/plank-chess" },
+                { label: "PT", href: "/pt" },
                 { label: "Adult Classes", href: "/adult-classes" },
                 { label: "Corporate Labs", href: "/corporate" },
-                { label: "Success Stories", href: "/success-stories" },
+                { label: "Success Stories", href: "/about" },
                 { label: "Strategic Blog", href: "/blog" }
               ].map((link) => (
                 <li key={link.label}>

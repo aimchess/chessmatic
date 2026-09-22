@@ -47,7 +47,7 @@ export default function CorporateEventsGrid() {
       id: "PRO-03",
       title: "Grandmaster Executive",
       focus: "C-Suite Performance",
-      duration: "Full-Day / Overnight",
+      duration: "Full-Day",
       capacity: "5 - 15 Pax",
       desc: "Elite leadership alignment. Deep-dive risk profiling through simultaneous Master exhibitions.",
       inclusions: [

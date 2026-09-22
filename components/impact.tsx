@@ -14,7 +14,7 @@ export default function TransformationSection() {
       name: "Marcus Chen",
       role: "Investment Analyst • Member since 2023",
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
-      text: "I used to struggle with mental fatigue by 3 PM. Chessmatic rewired my workday. The combination of planking and blitz chess taught me how to find calm in high-pressure financial markets.",
+      text: "I used to struggle with mental fatigue by 3 PM. Chessmatic rewired my workday. The combination of functional PT and blitz chess taught me how to find calm in high-pressure financial markets.",
       joinedCount: 42,
       category: "Analysts"
     },
@@ -22,7 +22,7 @@ export default function TransformationSection() {
       name: "Sarah Lim",
       role: "Project Manager • Member since 2022",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
-      text: "The split-second decision making required in Plank-Chess has translated perfectly to my agile project environment. My focus levels have never been sharper during high-stakes sprints.",
+      text: "The split-second decision making required in Chess + PT has translated perfectly to my agile project environment. My focus levels have never been sharper during high-stakes sprints.",
       joinedCount: 28,
       category: "Managers"
     },

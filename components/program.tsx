@@ -10,53 +10,53 @@ export default function ProgramsOverview() {
   const programs = [
     {
       id: "/01",
-      level: "PHASE 1",
-      title: "Adult Chess Classes",
-      description: "Structured adult-focused learning designed to establish foundational habits and strategic depth.",
-      motto: "“EVERY GREAT STRATEGIST STARTED HERE. WE ENSURE YOU START RIGHT.”",
+      level: "HYBRID TRACK",
+      title: "Chess + PT",
+      description: "Our signature dual-task performance protocol combining strategic chess coaching with functional physical conditioning.",
+      motto: "“TRAIN THE MIND AND BODY SIMULTANEOUSLY FOR UNMATCHED COMPOSURE.”",
       features: [
-        "Beginner: Rules & piece movement",
-        "Intermediate: Tactics & calculation",
-        "Advanced: Deep calculation mastery",
-        "Tournament performance training"
+        "Tactical calculation & deep opening mastery",
+        "Functional physical training & core stability",
+        "Pressure management & stamina conditioning",
+        "Available across 1-on-1 and group formats"
       ],
-      footerIcon: <Users size={18} className="text-sky-500" />,
-      footerText: "Adult-only learning environment — maximum focus per batch.",
+      footerIcon: <Activity size={18} className="text-sky-500" />,
+      footerText: "Singapore’s premier hybrid mind and body protocol.",
+      image: "/chess1.jpg",
+      icon: <Trophy size={20} className="text-white" />
+    },
+    {
+      id: "/02",
+      level: "PURE CHESS",
+      title: "Chess Separate",
+      description: "Structured adult-focused chess learning designed to establish tactical depth, calculation velocity, and opening repertoire.",
+      motto: "“FROM RECREATIONAL LOGIC TO MASTER-LEVEL TOURNAMENT EXECUTION.”",
+      features: [
+        "Beginner to Advanced structured progression",
+        "Positional analysis & tactical calculation",
+        "Opening repertoire customization",
+        "Private lessons, online batches & group workshops"
+      ],
+      footerIcon: <Shield size={18} className="text-sky-500" />,
+      footerText: "Customized for adults, busy executives, and competitive players.",
       image: "/adult-chess.png",
       icon: <Shield size={20} className="text-white" />
     },
     {
-      id: "/02",
-      level: "PHASE 2",
-      title: "Plank-Chess Sessions",
-      description: "Weekly hybrid challenges prioritizing thinking quality under physical and time-based discipline.",
-      motto: "“WE BUILD THE THINKING HABITS THAT WIN UNDER PRESSURE.”",
-      features: [
-        "Social Nights: Fun & networking",
-        "Competitive formats: Blitz pressure",
-        "Group challenges: Team relays",
-        "Physical core & breathing control"
-      ],
-      footerIcon: <Activity size={18} className="text-sky-500" />,
-      footerText: "Accessible for all fitness and chess skill levels.",
-      image: "/plank2.png",
-      icon: <Trophy size={20} className="text-white" />
-    },
-    {
       id: "/03",
-      level: "ELITE & CORPORATE",
-      title: "Wellness Workshops",
-      description: "At this level, precision, communication, and cognitive team alignment are non-negotiable.",
-      motto: "“AT THIS LEVEL, MENTAL PREPARATION IS EVERYTHING.”",
+      level: "PHYSICAL TRAINING",
+      title: "PT Separate",
+      description: "Dedicated personal training (PT) tailored for functional strength, core stability, postural correction, and overall fitness.",
+      motto: "“BUILD THE PHYSICAL ENDURANCE THAT ANCHORS PEAK PERFORMANCE.”",
       features: [
-        "Interactive team-building",
-        "Cognitive performance metrics",
-        "Wellness & stress engagement",
-        "Leadership development initiatives"
+        "1-on-1 & small group functional PT",
+        "Core stability & posture alignment",
+        "Cardiovascular stamina & strength programming",
+        "In-studio and virtual coaching formats"
       ],
-      footerIcon: <Building2 size={18} className="text-sky-500" />,
-      footerText: "Tailored programs focused on HR initiatives and KPIs.",
-      image: "/wellness.png",
+      footerIcon: <Users size={18} className="text-sky-500" />,
+      footerText: "Custom-calibrated based on your physical assessment.",
+      image: "/about2.png",
       icon: <Building2 size={20} className="text-white" />
     }
   ]

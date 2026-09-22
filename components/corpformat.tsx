@@ -42,7 +42,7 @@ const experiences = [
     tag: "Module 05",
     desc: "Casual and wellness-focused social gatherings that combine chess, networking, mindfulness, and interactive activities to create a relaxed yet intellectually stimulating atmosphere.",
     icon: <Coffee size={20} />,
-    image: "/plank1.png"
+    image: "/adult1.jpg"
   }
 ]
 

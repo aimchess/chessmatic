@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion"
 import { 
-  User, Users, Coffee, Trophy, 
-  Sparkles, Building2, ArrowRight
+  User, Users, Laptop, Layers, 
+  Building2, ArrowRight, ShieldCheck
 } from "lucide-react"
 
 export default function TrainingFormatsGrid() {
@@ -12,64 +12,54 @@ export default function TrainingFormatsGrid() {
 
   const formats = [
     {
-      id: "PRT-01",
-      title: "1-on-1 Coaching",
-      tag: "PRIVATE LAB",
-      desc: "Deep-dive improvement plans tailored to your specific cognitive bottlenecks.",
-      icon: <User size={20} />,
-      color: "bg-blue-600",
-      outcome: "Decision Precision",
-      val: "100%"
-    },
-    {
-      id: "PRT-02",
-      title: "Group Classes",
-      tag: "SYNERGY SESSIONS",
-      desc: "Collaborative learning. Master tactics while engaging with a high-performing peer group.",
+      id: "FMT-01",
+      title: "Group Coaching Workshops",
+      tag: "IN-PERSON COHORTS",
+      desc: "Interactive cohort workshops designed for collaborative learning, tactical sparring, and structured group progression.",
       icon: <Users size={20} />,
       color: "bg-sky-500",
-      outcome: "Tactical Logic",
-      val: "85%"
+      outcome: "Tactical Synergy",
+      val: "High Impact"
     },
     {
-      id: "PRT-03",
-      title: "Casual Nights",
-      tag: "SOCIAL PROTOCOL",
-      desc: "Relaxed community sessions. Zero pressure, pure strategy, and elite networking.",
-      icon: <Coffee size={20} />,
+      id: "FMT-02",
+      title: "Private Lessons",
+      tag: "1-ON-1 IN STUDIO",
+      desc: "Personalized in-person coaching in our Woodlands Studio tailored to your unique pace, opening repertoire, and physical goals.",
+      icon: <User size={20} />,
+      color: "bg-blue-600",
+      outcome: "Maximum Precision",
+      val: "100% Focus"
+    },
+    {
+      id: "FMT-03",
+      title: "Online Private Lessons",
+      tag: "1-ON-1 VIRTUAL",
+      desc: "Direct digital 1-on-1 sessions featuring screen-share interactive board analysis, custom PGN prep, and async game reviews.",
+      icon: <Laptop size={20} />,
+      color: "bg-indigo-600",
+      outcome: "Flexible Mastery",
+      val: "Global Access"
+    },
+    {
+      id: "FMT-04",
+      title: "Online Group Lessons",
+      icon: <Layers size={20} />,
+      tag: "VIRTUAL COHORTS",
+      desc: "Dynamic live virtual cohorts that allow students to analyze games, solve tactical puzzles, and compete in online batches.",
       color: "bg-amber-500",
-      outcome: "Social Capital",
-      val: "Elite"
+      outcome: "Group Sparring",
+      val: "Cost-Effective"
     },
     {
-      id: "PRT-04",
-      title: "Competitive",
-      tag: "PERFORMANCE",
-      desc: "High-intensity tournament preparation, deep theory, and psychological endurance.",
-      icon: <Trophy size={20} />,
-      color: "bg-rose-500",
-      outcome: "Tournament ROI",
-      val: "Maximum"
-    },
-    {
-      id: "PRT-05",
-      title: "Hybrid Wellness",
-      tag: "NEURO-FUSION",
-      desc: "The signature fusion: Chess + mindfulness + plank-chess. Training the mind and body as one.",
-      icon: <Sparkles size={20} />,
-      color: "bg-emerald-500",
-      outcome: "Core Stability",
-      val: "95%"
-    },
-    {
-      id: "PRT-06",
-      title: "Corporate Labs",
-      tag: "B2B SOLUTIONS",
-      desc: "Custom facilitation for teams focused on leadership, communication, and culture.",
+      id: "FMT-05",
+      title: "Corporates",
+      tag: "B2B STRATEGY & RETREATS",
+      desc: "Customized workshops for corporate teams translating chess logic into executive decision-making, team synergy, and resilience.",
       icon: <Building2 size={20} />,
       color: "bg-[#1a365d]",
-      outcome: "Team Synergy",
-      val: "Scalable"
+      outcome: "Leadership ROI",
+      val: "Team Scale"
     }
   ]
 
@@ -95,11 +85,14 @@ export default function TrainingFormatsGrid() {
             viewport={{ once: true }}
             className="text-3xl sm:text-3xl md:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
-            Training <span style={{ color: cyan }}>Protocols.</span>
+            Training <span style={{ color: cyan }}>Formats.</span>
           </motion.h2>
+          <p className="mt-4 text-slate-400 font-bold uppercase tracking-[0.25em] text-[10px] sm:text-xs">
+            Available for Chess + PT • Chess Separate • PT Separate
+          </p>
         </div>
 
-        {/* RESPONSIVE 3-COLUMN GRID */}
+        {/* RESPONSIVE 3-COLUMN / 2-COLUMN GRID */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {formats.map((item, i) => (
             <motion.div
@@ -108,7 +101,7 @@ export default function TrainingFormatsGrid() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group relative flex flex-col h-full bg-white rounded-[32px] md:rounded-[40px] p-6 md:p-8 border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.02)] hover:shadow-2xl hover:border-sky-200 transition-all duration-500"
+              className={`group relative flex flex-col h-full bg-white rounded-[32px] md:rounded-[40px] p-6 md:p-8 border border-slate-100 shadow-[0_10px_40px_rgba(0,0,0,0.02)] hover:shadow-2xl hover:border-sky-200 transition-all duration-500 ${i === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               {/* TOP: HEADER & ID */}
               <div className="flex justify-between items-start mb-6 md:mb-8">
@@ -133,7 +126,7 @@ export default function TrainingFormatsGrid() {
               <div className="mt-8 md:mt-10 pt-4 md:pt-6 border-t border-slate-50">
                  <div className="flex justify-between items-end mb-3 px-1">
                     <div className="flex flex-col">
-                       <span className="text-slate-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none">Protocol Outcome</span>
+                       <span className="text-slate-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest leading-none">Format ROI</span>
                        <span className="text-[#1a365d] text-[11px] md:text-xs font-black italic mt-1">{item.outcome}</span>
                     </div>
                     <div className="flex items-baseline gap-0.5">
@@ -175,7 +168,7 @@ export default function TrainingFormatsGrid() {
           className="mt-12 md:mt-16 text-center px-4"
         >
            <p className="text-slate-300 font-bold uppercase tracking-[0.4em] text-[8px] md:text-[10px]">
-             Customized operational tracks available • <span className="text-[#1a365d]">The Lab Standard</span>
+             Customized operational tracks available • <span className="text-[#1a365d]">Chessmatic Standard</span>
            </p>
         </motion.div>
 

@@ -11,6 +11,7 @@ import AboutSection from "@/components/about"
 import MissionVision from "@/components/mission"
 import WhatMakesUsDifferent from "@/components/diff"
 import FounderSection from "@/components/founder"
+import CoachesSection from "@/components/coaches"
 import WhoWeServe from "@/components/who"
 import CompactCTA from "@/components/cta"
 import AwardSection from "@/components/award"
@@ -24,9 +25,11 @@ export default function AboutPage() {
       <MissionVision/>
       <WhatMakesUsDifferent/>
       <FounderSection/>
+      <CoachesSection/>
       <AwardSection/>
       <WhoWeServe/>
       <CompactCTA/>
+      <Footer/>
     </div>
   )
 }
