@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { MessageCircle, Zap, Target, ArrowRight } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function ContactCTA() {
   const navy = "#1a365d"
@@ -44,21 +45,33 @@ export default function ContactCTA() {
           {/* RIGHT: SIDE-BY-SIDE ACTION BUTTONS */}
           <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4">
             {/* PRIMARY: WHATSAPP */}
-            <Button 
-              style={{ backgroundColor: "#25D366" }}
-              className="h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:opacity-90 transition-all shadow-xl active:scale-95 flex items-center gap-3"
+            <a
+              href={getWhatsAppUrl("Hi Chessmatic! I need a fast response regarding coaching / training programs.")}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <MessageCircle size={18} fill="white" />
-              WhatsApp Now
-            </Button>
+              <Button 
+                style={{ backgroundColor: "#25D366" }}
+                className="h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 flex items-center gap-3"
+              >
+                <MessageCircle size={18} fill="white" />
+                WhatsApp Now
+              </Button>
+            </a>
 
             {/* SECONDARY: CLASSES */}
-            <Button 
-              className="h-14 px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center gap-3"
+            <a
+              href={getWhatsAppUrl("Hi Chessmatic! I'd like to book chess classes / PT hybrid sessions.")}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book Classes
-              <ArrowRight size={16} className="text-sky-400" />
-            </Button>
+              <Button 
+                className="h-14 px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center gap-3"
+              >
+                Book Classes
+                <ArrowRight size={16} className="text-sky-400" />
+              </Button>
+            </a>
           </div>
 
           {/* DECORATIVE CORNER ELEMENT */}

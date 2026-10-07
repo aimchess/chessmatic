@@ -4,6 +4,7 @@ import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 import './globals.css';
 import { Navbar } from '@/components/navbar';
 import { Footer } from '@/components/footer';
+import { FloatingWhatsApp } from '@/components/whatsapp-button';
 
 // Using Plus Jakarta Sans for that premium "Curved" branding look we established
 const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
@@ -95,9 +96,9 @@ export default function RootLayout({
                 },
                 contactPoint: {
                   '@type': 'ContactPoint',
-                  telephone: '+65-8430-2326',
+                  telephone: '+65-8580-5046',
                   contactType: 'customer service',
-                  email: 'admin@intchess.com.sg',
+                  email: 'info@chessmatic.com',
                 },
               },
               {
@@ -143,6 +144,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer/>
+        <FloatingWhatsApp />
       </body>
     </html>
   );

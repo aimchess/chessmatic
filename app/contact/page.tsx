@@ -66,7 +66,6 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <Navbar />
       <ContactBanner/>
       <ContactSection/>
       <FAQSection/>

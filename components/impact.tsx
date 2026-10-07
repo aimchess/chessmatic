@@ -1,9 +1,10 @@
 "use client"
 
 import { useState } from "react"
-import { Play, TrendingUp, Zap, Heart, Brain, Quote, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight } from "lucide-react"
+import { Play, TrendingUp, Zap, Heart, Brain, Quote, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function TransformationSection() {
   const navy = "#1a365d"
@@ -232,23 +233,22 @@ export default function TransformationSection() {
           </div>
         </div>
 
-        {/* 3. CORPORATE LOGO CLOUD */}
-        <div className="mt-20 py-10 border-t border-gray-100 text-center">
-           <p className="text-slate-400 text-[9px] font-black uppercase tracking-[0.4em] mb-12">Trusted by Leading Teams in Singapore</p>
-           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-30 grayscale hover:grayscale-0 transition-all duration-700">
-              <div className="text-xl md:text-2xl font-black text-[#1a365d]">FINANCEHUB</div>
-              <div className="text-xl md:text-2xl font-black text-[#1a365d]">TECH<span style={{color: cyan}}>CORP</span></div>
-              <div className="text-xl md:text-2xl font-black text-[#1a365d]">GLOBAL.CO</div>
-              <div className="text-xl md:text-2xl font-black text-[#1a365d]">ELITE<span style={{color: cyan}}>LOGISTICS</span></div>
-           </div>
-        </div>
+
 
         {/* FINAL TRANSFORMATION CTA */}
         <div className="mt-12 flex flex-col items-center">
-          <Button className="w-full sm:w-auto bg-[#1a365d] hover:bg-[#0f213a] text-white px-10 py-8 rounded-full text-base sm:text-lg font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all">
-            Start Your Transformation <ArrowRight className="ml-2" />
-          </Button>
-          <p className="mt-4 text-slate-400 text-[9px] font-black uppercase tracking-widest italic">Book your initial assessment session today</p>
+          <a
+            href={getWhatsAppUrl("Hi Chessmatic! I'd like to start my transformation and book an initial assessment session at the Woodlands Studio.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto"
+          >
+            <Button className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white px-10 py-8 rounded-full text-base sm:text-lg font-bold shadow-2xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+              <MessageCircle size={22} className="fill-current" />
+              Start Your Transformation <ArrowRight className="ml-1" />
+            </Button>
+          </a>
+          <p className="mt-4 text-slate-400 text-[9px] font-black uppercase tracking-widest italic">Book your initial assessment session on WhatsApp today</p>
         </div>
 
       </div>

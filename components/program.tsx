@@ -1,7 +1,8 @@
 "use client"
 
-import { Check, Users, Shield, Trophy, Activity, Building2 } from "lucide-react"
+import { Check, Users, Shield, Trophy, Activity, Building2, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function ProgramsOverview() {
   const navy = "#1a365d"
@@ -22,7 +23,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Activity size={18} className="text-sky-500" />,
       footerText: "Singapore’s premier hybrid mind and body protocol.",
-      image: "/chess1.jpg",
+      image: "/pt-page-banner.jpg",
       icon: <Trophy size={20} className="text-white" />
     },
     {
@@ -39,7 +40,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Shield size={18} className="text-sky-500" />,
       footerText: "Customized for adults, busy executives, and competitive players.",
-      image: "/adult-chess.png",
+      image: "/about2.png",
       icon: <Shield size={20} className="text-white" />
     },
     {
@@ -56,7 +57,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Users size={18} className="text-sky-500" />,
       footerText: "Custom-calibrated based on your physical assessment.",
-      image: "/about2.png",
+      image: "/pt-page-banner.jpg",
       icon: <Building2 size={20} className="text-white" />
     }
   ]
@@ -145,16 +146,30 @@ export default function ProgramsOverview() {
                   ))}
                 </div>
 
-                {/* OPERATIONAL FOOTER BOX */}
-                <div className="mt-auto bg-[#f8fafc] rounded-3xl p-5 border border-slate-100 flex items-start gap-4 relative overflow-hidden">
-                  {/* Technical Dot Grid Overlay */}
-                  <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
-                       style={{ backgroundImage: `radial-gradient(${navy} 1px, transparent 1px)`, backgroundSize: '16px 16px' }} />
-                  
-                  <div className="mt-1 relative z-10">{prog.footerIcon}</div>
-                  <p className="text-[#1a365d] text-[11px] font-[1000] uppercase tracking-wider leading-relaxed opacity-70 relative z-10">
-                    {prog.footerText}
-                  </p>
+                {/* OPERATIONAL FOOTER BOX & WHATSAPP BUTTON */}
+                <div className="mt-auto space-y-4">
+                  <div className="bg-[#f8fafc] rounded-3xl p-5 border border-slate-100 flex items-start gap-4 relative overflow-hidden">
+                    {/* Technical Dot Grid Overlay */}
+                    <div className="absolute inset-0 opacity-[0.03] pointer-events-none" 
+                         style={{ backgroundImage: `radial-gradient(${navy} 1px, transparent 1px)`, backgroundSize: '16px 16px' }} />
+                    
+                    <div className="mt-1 relative z-10">{prog.footerIcon}</div>
+                    <p className="text-[#1a365d] text-[11px] font-[1000] uppercase tracking-wider leading-relaxed opacity-70 relative z-10">
+                      {prog.footerText}
+                    </p>
+                  </div>
+
+                  <a
+                    href={getWhatsAppUrl(`Hi Chessmatic! I'd like to book / enquire about the ${prog.title} (${prog.level}) curriculum. Please share details.`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full"
+                  >
+                    <button className="w-full h-12 rounded-2xl bg-[#25D366] hover:bg-[#20ba59] text-white font-[1000] uppercase tracking-widest text-[11px] shadow-lg hover:shadow-emerald-500/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2">
+                      <MessageCircle size={16} className="fill-current" />
+                      Book {prog.title}
+                    </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

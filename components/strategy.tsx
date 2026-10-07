@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Share2, Beaker, ShieldCheck, CheckCircle2, Brain, Activity, Target, Zap } from "lucide-react"
+import { Share2, Beaker, ShieldCheck, CheckCircle2, Brain, Activity, Target, Zap, Dumbbell } from "lucide-react"
 
 export default function WhyItWorks() {
   const navy = "#1a365d"
@@ -20,7 +20,7 @@ export default function WhyItWorks() {
             className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6"
           >
             <span className="bg-white px-4 sm:px-6 py-1.5 rounded-full text-[#1a365d] text-[10px] font-[1000] tracking-[0.25em] uppercase shadow-sm">
-              The Science of Hybrid
+              The Science of Conditioning
             </span>
           </motion.div>
           <motion.h2 
@@ -29,13 +29,13 @@ export default function WhyItWorks() {
             viewport={{ once: true }}
             className="text-3xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
-            Why the <span style={{ color: cyan }}>Method</span> Works.
+            Why Functional <span style={{ color: cyan }}>PT</span> Works.
           </motion.h2>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8">
           
-          {/* CARD 01: VISUALLY POWERFUL (Stacks on Mobile) */}
+          {/* CARD 01: FUNCTIONAL STRENGTH & POSTURE */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -43,24 +43,24 @@ export default function WhyItWorks() {
             className="lg:col-span-7 relative min-h-[400px] md:min-h-[500px] rounded-[30px] md:rounded-[50px] overflow-hidden group shadow-2xl"
           >
             <img 
-              src="/team-viral-chess-pt.jpg" 
+              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" 
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-              alt="Chess + PT Viral Team Engagement"
+              alt="Functional Personal Training Session"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-[#1a365d]/40 to-transparent" />
             
             <div className="absolute top-4 left-4 md:top-8 md:left-8 flex items-center gap-3 bg-white/10 backdrop-blur-md px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-white/20">
-               <Share2 size={14} className="text-sky-400" />
-               <span className="text-white text-[9px] md:text-[10px] font-black uppercase tracking-widest">Viral Impact potential</span>
+               <Activity size={14} className="text-sky-400" />
+               <span className="text-white text-[9px] md:text-[10px] font-black uppercase tracking-widest">Postural Alignment</span>
             </div>
 
             <div className="absolute bottom-8 left-6 right-6 md:bottom-12 md:left-10 md:right-10">
-               <h3 className="text-white text-2xl md:text-3xl font-[1000] uppercase tracking-tight mb-3 md:mb-4 italic">01. Visually Powerful</h3>
-               <p className="text-white/70 text-sm md:text-lg mb-6 md:mb-8 max-w-md font-medium">
-                  Designed for the social media era. A visually unique challenge that generates high-engagement content for teams and communities.
+               <h3 className="text-white text-2xl md:text-3xl font-[1000] uppercase tracking-tight mb-3 md:mb-4 italic">01. Desk Fatigue Recovery</h3>
+               <p className="text-white/80 text-sm md:text-base mb-6 md:mb-8 max-w-md font-medium">
+                  Engineered for busy professionals. We target the posterior chain, hips, and deep core to eliminate neck stiffness and lower back fatigue.
                </p>
                <div className="flex flex-wrap gap-2 md:gap-3">
-                  {['Social Media', 'Corporate Events', 'Viral Content', 'Community'].map((tag, i) => (
+                  {['Spine Health', 'Mobility Flow', 'Posture Correction', 'Desk Recovery'].map((tag, i) => (
                     <span key={i} className="px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/10 text-white text-[8px] md:text-[10px] font-bold uppercase tracking-wider">
                       {tag}
                     </span>
@@ -69,7 +69,7 @@ export default function WhyItWorks() {
             </div>
           </motion.div>
 
-          {/* CARD 02: HR FRIENDLY (Stacks on Mobile) */}
+          {/* CARD 02: INCLUSIVE & TAILORED */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -82,17 +82,17 @@ export default function WhyItWorks() {
             </div>
             
             <div className="space-y-3 md:space-y-4 mb-8 md:mb-10">
-               <h3 className="text-[#1a365d] text-2xl md:text-3xl font-[1000] uppercase tracking-tight italic">02. HR Friendly</h3>
+               <h3 className="text-[#1a365d] text-2xl md:text-3xl font-[1000] uppercase tracking-tight italic">02. 100% Customized</h3>
                <p className="text-slate-500 text-sm md:text-base font-medium leading-relaxed">
-                  Engineered to be inclusive and accessible. We customize the physical load to ensure every employee stays safe and engaged.
+                  Every workout protocol is designed around your baseline fitness, body mechanics, and personal goals for safe, progressive results.
                </p>
             </div>
 
             <div className="space-y-3 md:space-y-4">
                {[
-                 { label: "Safe for all fitness levels" },
-                 { label: "Inclusive & Team-oriented" },
-                 { label: "High ROI Engagement" },
+                 { label: "Safe for all fitness & age levels" },
+                 { label: "1-on-1 private attention at Woodlands" },
+                 { label: "Measurable endurance & mobility gains" },
                ].map((item, i) => (
                  <div key={i} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 rounded-xl md:rounded-2xl bg-[#f8fafc] border border-gray-50">
                     <CheckCircle2 className="text-sky-500 flex-shrink-0 w-5 h-5" />
@@ -102,7 +102,7 @@ export default function WhyItWorks() {
             </div>
           </motion.div>
 
-          {/* CARD 03: SCIENTIFICALLY ALIGNED (Responsive Flex) */}
+          {/* CARD 03: THE PHYSIOLOGY OF STRENGTH */}
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,27 +116,27 @@ export default function WhyItWorks() {
             <div className="relative z-10 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
                <div className="flex-1 space-y-4 md:space-y-6 text-center lg:text-left">
                   <div className="inline-flex items-center gap-2 bg-sky-500/20 px-4 py-2 rounded-full border border-sky-500/20">
-                    <Beaker size={14} className="text-sky-400" />
-                    <span className="text-sky-400 text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em]">Strategic Convergence Lab</span>
+                    <Zap size={14} className="text-sky-400" />
+                    <span className="text-sky-400 text-[8px] md:text-[9px] font-black uppercase tracking-[0.3em]">High-Performance Standard</span>
                   </div>
                   <h3 className="text-white text-3xl md:text-5xl font-[1000] uppercase tracking-tighter leading-none italic">
-                     03. Scientifically <br className="hidden md:block" /> <span style={{ color: cyan }}>Aligned.</span>
+                     03. Core Resilience <br className="hidden md:block" /> <span style={{ color: cyan }}>& Stamina.</span>
                   </h3>
                   <p className="text-slate-300 text-sm md:text-lg font-medium leading-relaxed max-w-lg mx-auto lg:mx-0">
-                    By combining core stability with tactical logic, we trigger a <span className="text-white font-bold">dual-task training effect</span> that rewires stress tolerance.
+                    Functional conditioning elevates muscular endurance, stabilizes heart rate recovery, and provides the physical foundation for daily stamina.
                   </p>
                </div>
 
-               {/* SCIENCE DATA INFOGRAPHIC - Column on Mobile, Row on Desktop */}
+               {/* SCIENCE DATA INFOGRAPHIC */}
                <div className="w-full lg:w-1/2 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-                  {/* PT Benefits */}
+                  {/* PT Core */}
                   <div className="bg-white/5 backdrop-blur-xl rounded-[25px] md:rounded-[35px] p-6 md:p-8 border border-white/10">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 bg-sky-500 rounded-lg md:rounded-xl"><Activity size={18} className="text-white" /></div>
-                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Physical Training (PT)</span>
+                      <div className="p-2 bg-sky-500 rounded-lg md:rounded-xl"><Dumbbell size={18} className="text-white" /></div>
+                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Strength & Core</span>
                     </div>
                     <ul className="space-y-3 md:space-y-4">
-                       {['Core Stability', 'Functional Strength', 'Posture & Stamina'].map((item, i) => (
+                       {['Deep Core Stability', 'Functional Muscle Tone', 'Glute & Back Activation'].map((item, i) => (
                          <li key={i} className="text-slate-400 text-xs md:text-[13px] font-bold flex items-center gap-2">
                            <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-sky-500 flex-shrink-0" /> {item}
                          </li>
@@ -144,16 +144,16 @@ export default function WhyItWorks() {
                     </ul>
                   </div>
 
-                  {/* Chess Benefits */}
+                  {/* Mobility & Recovery */}
                   <div className="bg-white/5 backdrop-blur-xl rounded-[25px] md:rounded-[35px] p-6 md:p-8 border border-white/10">
                     <div className="flex items-center gap-3 mb-6">
-                      <div className="p-2 bg-amber-500 rounded-lg md:rounded-xl"><Brain size={18} className="text-white" /></div>
-                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Mental Output</span>
+                      <div className="p-2 bg-emerald-500 rounded-lg md:rounded-xl"><Activity size={18} className="text-white" /></div>
+                      <span className="text-white font-black text-[10px] md:text-xs uppercase tracking-widest">Mobility & Health</span>
                     </div>
                     <ul className="space-y-3 md:space-y-4">
-                       {['Focus Depth', 'Decision Velocity', 'Stress Tolerance'].map((item, i) => (
+                       {['Postural Rehabilitation', 'Shoulder & Hip Range', 'Cardiovascular Health'].map((item, i) => (
                          <li key={i} className="text-slate-400 text-xs md:text-[13px] font-bold flex items-center gap-2">
-                           <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-amber-500 flex-shrink-0" /> {item}
+                           <div className="w-1 md:w-1.5 h-1 md:h-1.5 rounded-full bg-emerald-500 flex-shrink-0" /> {item}
                          </li>
                        ))}
                     </ul>

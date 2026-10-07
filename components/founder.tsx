@@ -1,6 +1,6 @@
 "use client"
 
-import { Linkedin, Twitter, MapPin, Award } from "lucide-react"
+import { Linkedin, MapPin, Award } from "lucide-react"
 import { motion } from "framer-motion"
 
 export default function FounderSection() {
@@ -61,7 +61,7 @@ export default function FounderSection() {
 
               <div className="space-y-3 text-slate-600 text-sm md:text-base leading-relaxed font-medium">
                 <p>
-                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic LLP</span> and the Tournament Director of <span className="text-[#1a365d] font-bold">Intchess Asia</span>. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT).
+                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic LLP</span> and the Director of <span className="text-[#1a365d] font-bold">Intchess</span>. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT).
                 </p>
                 
                 <p>
@@ -85,8 +85,8 @@ export default function FounderSection() {
                 <div className="flex items-center gap-2">
                   <Award size={20} className="text-sky-500" />
                   <div>
-                    <p className="text-[#1a365d] text-sm font-[1000] leading-tight">Intchess Asia</p>
-                    <p className="text-slate-400 text-[8px] font-black uppercase tracking-wider">Tournament Direction</p>
+                    <p className="text-[#1a365d] text-sm font-[1000] leading-tight">Intchess</p>
+                    <p className="text-slate-400 text-[8px] font-black uppercase tracking-wider">Director</p>
                   </div>
                 </div>
 
@@ -102,11 +102,14 @@ export default function FounderSection() {
               </div>
 
               <div className="flex gap-2">
-                <a href="#" className="w-9 h-9 rounded-xl bg-[#1a365d] text-white flex items-center justify-center hover:bg-sky-500 transition-all shadow-md">
-                  <Linkedin size={16} />
-                </a>
-                <a href="#" className="w-9 h-9 rounded-xl bg-white border border-gray-200 text-[#1a365d] flex items-center justify-center hover:bg-[#1a365d] hover:text-white transition-all shadow-sm">
-                  <Twitter size={16} />
+                <a 
+                  href="https://www.linkedin.com/in/wagish-chessmatic" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  aria-label="Wagish LinkedIn"
+                  className="w-10 h-10 rounded-xl bg-[#1a365d] text-white flex items-center justify-center hover:bg-sky-500 transition-all shadow-md active:scale-95"
+                >
+                  <Linkedin size={18} />
                 </a>
               </div>
             </motion.div>

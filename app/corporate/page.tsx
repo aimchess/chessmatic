@@ -10,28 +10,25 @@ import {
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Navbar } from "@/components/navbar"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 import CorporateBanner from "@/components/corpoBanner"
 import WhyCompaniesChoose from "@/components/whycorporate"
 import CorporateExperiences from "@/components/corpformat"
 import TeamOutcomesDashboard from "@/components/corpBenefit"
 import CorporateProcess from "@/components/process"
 import PricingSection from "@/components/corpcourse"
-import CorporateEventsGrid from "@/components/corp"
-
 export default function CorporatePage() {
   const navy = "#1a365d"
   const cyan = "#0ea5e9"
 
   return (
     <main className="bg-white min-h-screen font-sans">
-      
-     <Navbar/>
-     <CorporateBanner/>
-     <WhyCompaniesChoose/>
-     <CorporateEventsGrid/>
-     <CorporateExperiences/>
-     <TeamOutcomesDashboard/>
-     <CorporateProcess/>
+      <CorporateBanner/>
+      <WhyCompaniesChoose/>
+      <CorporateExperiences/>
+      <CorporateProcess/>
+
+
 
 
 
@@ -55,31 +52,7 @@ export default function CorporatePage() {
         </div>
       </section>
 
-      {/* 8. EVENT FLOW (The Process) */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex justify-between items-end mb-16 border-b border-slate-100 pb-8">
-             <h2 className="text-4xl font-[1000] text-[#1a365d] tracking-tighter uppercase italic">Operational <span style={{color: cyan}}>Flow.</span></h2>
-             <p className="text-slate-400 text-xs font-bold uppercase tracking-widest hidden md:block">From Consultation to Facilitation</p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-             {[
-               { id: "01", title: "Consultation", desc: "Alignment with your HR goals." },
-               { id: "02", title: "Planning", desc: "Custom-built lab experience." },
-               { id: "03", title: "Facilitation", desc: "Live session at office or studio." },
-               { id: "04", title: "Wrap-up", desc: "Reflection & Team engagement metrics." },
-             ].map((step, i) => (
-               <div key={i} className="relative group">
-                 <span className="text-slate-100 text-8xl font-[1000] absolute -top-10 -left-4 group-hover:text-sky-50 transition-colors z-0">{step.id}</span>
-                 <div className="relative z-10 pt-4">
-                    <h4 className="text-[#1a365d] text-lg font-black uppercase tracking-tight mb-2">{step.title}</h4>
-                    <p className="text-slate-500 text-sm font-medium">{step.desc}</p>
-                 </div>
-               </div>
-             ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* 12. FINAL CTA SECTION (Balanced Rectangle) */}
       <section className="py-24 bg-white flex justify-center">
@@ -99,12 +72,26 @@ export default function CorporatePage() {
             </div>
 
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4">
-              <Button style={{ backgroundColor: cyan }} className="h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-[#1a365d] hover:bg-white transition-all shadow-xl active:scale-95 flex items-center gap-3">
-                <FileText size={16}/> Request Proposal
-              </Button>
-              <Button className="h-14 px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95">
-                Contact Lab
-              </Button>
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to request a customized corporate workshop proposal for our team.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button style={{ backgroundColor: "#25D366" }} className="h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 flex items-center gap-3">
+                  <MessageCircle size={18} className="fill-current" />
+                  <FileText size={16}/> Request Proposal
+                </Button>
+              </a>
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to contact the Lab for corporate inquiries and availability.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="h-14 px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center gap-2">
+                  <MessageCircle size={16} />
+                  Contact Lab
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>

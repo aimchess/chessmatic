@@ -54,11 +54,11 @@ export default function PlankChessBanner() {
           className="space-y-4 sm:space-y-6"
         >
           <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-[80px] font-[1000] text-white tracking-tighter leading-none italic uppercase">
-            Chess + <span style={{ color: cyan }}>PT.</span>
+            Personal <span style={{ color: cyan }}>Training.</span>
           </h1>
           <p className="text-slate-300 font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed px-4">
-            Singapore’s Premier <span className="text-white">Mental + Physical</span> Performance Lab. <br className="hidden sm:block" />
-            Combining Strategic Chess Coaching with Dedicated Personal Training.
+            Singapore’s Premier <span className="text-white">Functional Fitness & Stamina</span> Lab. <br className="hidden sm:block" />
+            Dedicated 1-on-1 Personal Training, Core Stability & Postural Conditioning at Woodlands Studio.
           </p>
         </motion.div>
       </div>
@@ -66,22 +66,22 @@ export default function PlankChessBanner() {
       {/* 3. FLOATING DASHBOARD BADGES (Desktop Only) */}
       <div className="absolute inset-0 pointer-events-none hidden lg:block">
         
-        {/* LEFT BADGE: HYBRID STATUS */}
+        {/* LEFT BADGE: PT STATUS */}
         <motion.div 
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
           className="absolute top-1/3 left-[6%] bg-white/5 backdrop-blur-2xl p-5 rounded-[30px] border border-white/10 shadow-2xl flex items-center gap-4"
         >
           <div className="p-3 bg-sky-500 rounded-2xl shadow-lg">
-            <Zap className="text-white w-5 h-5" />
+            <Dumbbell className="text-white w-5 h-5" />
           </div>
           <div className="pr-2">
             <p className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none mb-1">Training Mode</p>
-            <p className="text-white font-bold text-xs tracking-tight">Active Hybrid</p>
+            <p className="text-white font-bold text-xs tracking-tight">1-on-1 Private PT</p>
           </div>
         </motion.div>
 
-        {/* RIGHT BADGE: INTENSITY */}
+        {/* RIGHT BADGE: POSTURE */}
         <motion.div 
           animate={{ y: [0, 20, 0] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
@@ -91,8 +91,8 @@ export default function PlankChessBanner() {
             <Activity className="text-sky-400 w-5 h-5" />
           </div>
           <div className="pr-2">
-            <p className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none mb-1">Cognitive Load</p>
-            <p className="text-white font-bold text-xs tracking-tight">High Intensity</p>
+            <p className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none mb-1">Body Mechanics</p>
+            <p className="text-white font-bold text-xs tracking-tight">Postural Alignment</p>
           </div>
         </motion.div>
 
@@ -103,11 +103,11 @@ export default function PlankChessBanner() {
           className="absolute bottom-1/4 left-[10%] bg-white/5 backdrop-blur-2xl p-5 rounded-[30px] border border-white/10 shadow-2xl flex items-center gap-4"
         >
           <div className="p-3 bg-sky-500/20 rounded-2xl border border-sky-500/20">
-            <Dumbbell className="text-sky-400 w-5 h-5" />
+            <Zap className="text-sky-400 w-5 h-5" />
           </div>
           <div className="pr-2">
             <p className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none mb-1">Focus Point</p>
-            <p className="text-sky-400 font-bold text-xs tracking-tight">Core Stability</p>
+            <p className="text-sky-400 font-bold text-xs tracking-tight">Core & Stamina</p>
           </div>
         </motion.div>
       </div>

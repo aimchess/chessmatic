@@ -11,7 +11,6 @@ import CompactRectangleCTA from "@/components/plankcta"
 export default function PTPage() {
   return (
     <main className="min-h-screen bg-white font-sans">
-      <Navbar />
       <PlankChessBanner />
       <PlankChessExplanation />
       <WhyItWorks />

@@ -29,7 +29,7 @@ export default function HomePage() {
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+65-8430-2326",
+      "telephone": "+65-8580-5046",
       "contactType": "Customer Service"
     },
     "aggregateRating": {

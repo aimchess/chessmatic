@@ -19,7 +19,6 @@ import AwardSection from "@/components/award"
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-white overflow-x-hidden">
-      <Navbar />
       <AboutBanner/>
       <AboutSection/>
       <MissionVision/>
@@ -29,7 +28,6 @@ export default function AboutPage() {
       <AwardSection/>
       <WhoWeServe/>
       <CompactCTA/>
-      <Footer/>
     </div>
   )
 }

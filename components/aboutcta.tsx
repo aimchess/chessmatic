@@ -1,8 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Zap, Target, Sparkles } from "lucide-react"
+import { ArrowRight, Zap, Target, Sparkles, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CompactCTA() {
   const navy = "#1a365d"
@@ -52,20 +53,34 @@ export default function CompactCTA() {
 
             {/* BUTTON GROUP */}
             <div className="flex flex-col sm:flex-row items-center gap-4">
-              <Button 
-                style={{ backgroundColor: cyan }}
-                className="hover:bg-white text-[#1a365d] px-10 py-8 rounded-full text-md font-black uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 group/btn"
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to join a class at Chessmatic. Please share available tracks.")}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Join a Class
-                <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+                <Button 
+                  style={{ backgroundColor: "#25D366" }}
+                  className="hover:bg-[#20ba59] text-white px-10 py-8 rounded-full text-md font-black uppercase tracking-widest shadow-2xl transition-all hover:scale-105 active:scale-95 group/btn flex items-center gap-2"
+                >
+                  <MessageCircle size={20} className="fill-current" />
+                  Join a Class
+                  <ArrowRight className="ml-1 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               
-              <Button 
-                variant="ghost"
-                className="text-white border border-white/20 hover:bg-white/10 px-8 py-8 rounded-full text-md font-black uppercase tracking-widest transition-all"
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to book a Corporate strategic thinking workshop for my company.")}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Book Corporate
-              </Button>
+                <Button 
+                  variant="ghost"
+                  className="text-white border border-white/20 hover:bg-white/10 px-8 py-8 rounded-full text-md font-black uppercase tracking-widest transition-all flex items-center gap-2"
+                >
+                  <MessageCircle size={18} />
+                  Book Corporate
+                </Button>
+              </a>
             </div>
           </div>
 

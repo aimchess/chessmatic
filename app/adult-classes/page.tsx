@@ -3,9 +3,10 @@
 import { motion } from "framer-motion"
 import { 
   Check, Users, ArrowRight, Zap, 
-  Dumbbell, Brain, Trophy, Target
+  Dumbbell, Brain, Trophy, Target, MessageCircle
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 import AdultClassesBanner from "@/components/adultBanner"
 import { Navbar } from "@/components/navbar"
 import WhyAdultsLearn from "@/components/whyadult"
@@ -22,49 +23,43 @@ export default function AdultClassesPage() {
   const tracks = [
     {
       tier: "TRACK 01",
-      title: "Chess + PT",
-      focus: "Hybrid Strategy & Physical Conditioning",
-      image: "/chess1.jpg",
-      badge: "Signature Hybrid",
+      title: "Beginner & Foundation",
+      focus: "Fundamentals, Rules & Board Vision",
+      image: "/adult1.png",
+      badge: "Foundation Level",
       chess: [
-        "Personalized tactical and opening mastery",
-        "Deep calculation and endgame technique",
-        "Weekly puzzle analysis and tournament readiness"
+        "Piece dynamics, core rules, and board coordinates",
+        "Essential checkmating patterns and king safety",
+        "Foundational tactical motifs (forks, pins, skewers)",
+        "Opening fundamentals & blunder prevention"
       ],
-      pt: [
-        "Targeted physical conditioning & core strength",
-        "Postural alignment & stamina building",
-        "Form checks and personalized workout programming"
+      highlight: false
+    },
+    {
+      tier: "TRACK 02",
+      title: "Tactical Improvers",
+      focus: "Pattern Recognition & Middlegame Strategy",
+      image: "/adult2.png",
+      badge: "Most Popular",
+      chess: [
+        "Advanced tactical calculation and puzzle speed",
+        "Modern opening repertoire concepts & principles",
+        "Positional evaluation and piece coordination",
+        "Full game diagnostics & digital engine reviews"
       ],
       highlight: true
     },
     {
-      tier: "TRACK 02",
-      title: "Chess Separate",
-      focus: "Pure Strategic Chess Mastery",
-      image: "https://images.unsplash.com/photo-1586165368502-1bad197a6461?q=80&w=800",
-      badge: "Pure Chess",
-      chess: [
-        "Structured curriculum for beginners to advanced",
-        "Opening repertoire customization",
-        "Master-level game analysis & review",
-        "Available in Private, Online, and Group formats"
-      ],
-      pt: [],
-      highlight: false
-    },
-    {
       tier: "TRACK 03",
-      title: "PT Separate",
-      focus: "Dedicated Functional Physical Training",
-      image: "https://images.unsplash.com/photo-1528819622765-d6bcf132f793?q=80&w=800",
-      badge: "Pure PT",
-      chess: [],
-      pt: [
-        "1-on-1 and small group personal training",
-        "Functional strength & mobility development",
-        "Cardiovascular endurance & core conditioning",
-        "Custom fitness assessments & progress tracking"
+      title: "Competitive & Master Prep",
+      focus: "Deep Calculation & Tournament Repertoire",
+      image: "/adult3.png",
+      badge: "Tournament Grade",
+      chess: [
+        "FIDE & Singapore Swiss tournament preparation",
+        "Deep opening repertoire specialization",
+        "Complex endgame conversion & pawn structures",
+        "Psychological time-management under pressure"
       ],
       highlight: false
     }
@@ -72,11 +67,10 @@ export default function AdultClassesPage() {
 
   return (
     <main className="min-h-screen bg-white font-sans antialiased">
-      <Navbar/>
       <AdultClassesBanner/>
       <TargetCohorts/>
 
-      {/* 3. COACHING TRACKS SECTION (No pricing, focused on Chess+PT, Chess, PT) */}
+      {/* 3. CHESS COACHING TRACKS */}
       <section className="py-16 md:py-24 bg-[#f8fafc]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           
@@ -84,14 +78,14 @@ export default function AdultClassesPage() {
           <div className="flex flex-col items-center text-center mb-16 md:mb-24">
             <div className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6">
               <span className="bg-white px-4 sm:px-6 py-1.5 rounded-full text-[#1a365d] text-[10px] font-[1000] tracking-[0.2em] uppercase shadow-sm">
-                Customized Training Tracks
+                Adult Chess Curriculum
               </span>
             </div>
             <h2 className="text-3xl sm:text-5xl lg:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase">
-              Our Training <span style={{ color: cyan }}>Tracks.</span>
+              Adult Chess <span style={{ color: cyan }}>Tracks.</span>
             </h2>
             <p className="mt-4 text-slate-500 font-medium text-base sm:text-lg max-w-2xl">
-              Choose between integrated Chess + PT, dedicated Chess coaching, or independent Personal Training.
+              From absolute beginners to competitive tournament players—structured adult chess coaching in Singapore.
             </p>
           </div>
 
@@ -112,7 +106,7 @@ export default function AdultClassesPage() {
               >
                 {/* IMAGE HEADER VIEWPORT */}
                 <div className="h-56 relative overflow-hidden">
-                  <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover grayscale-[0.2] transition-transform duration-700 group-hover:scale-110" />
+                  <img src={pkg.image} alt={pkg.title} className="w-full h-full object-cover grayscale-[0.1] transition-transform duration-700 group-hover:scale-110" />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-[#1a365d]/20 to-transparent" />
                   
                   {/* Phase Badge */}
@@ -121,7 +115,7 @@ export default function AdultClassesPage() {
                     <span className="text-white text-[9px] font-black uppercase tracking-widest">{pkg.tier}</span>
                   </div>
 
-                  <div className="absolute bottom-6 left-8">
+                  <div className="absolute bottom-6 left-8 right-6">
                      <p className="text-sky-400 text-[10px] font-black uppercase tracking-widest mb-1">{pkg.focus}</p>
                      <h3 className="text-white text-2xl font-[1000] uppercase tracking-tight">{pkg.title}</h3>
                   </div>
@@ -129,49 +123,37 @@ export default function AdultClassesPage() {
 
                 {/* PACKAGE CONTENT */}
                 <div className="p-8 sm:p-10 flex-1 flex flex-col justify-between">
-                  <div className="space-y-8">
-                    {/* Chess Protocol */}
-                    {pkg.chess.length > 0 && (
-                      <div className="space-y-4">
-                        <div className="flex items-center gap-2 text-[#1a365d]">
-                          <Trophy size={16} className="text-sky-500" />
-                          <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Chess Coaching</span>
-                        </div>
-                        <ul className="space-y-2.5">
-                          {pkg.chess.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
-                              <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
-                            </li>
-                          ))}
-                        </ul>
+                  <div className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-2 text-[#1a365d]">
+                        <Trophy size={16} className="text-sky-500" />
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Chess Curriculum Inclusions</span>
                       </div>
-                    )}
-
-                    {/* Physical Fitness (PT) */}
-                    {pkg.pt.length > 0 && (
-                      <div className={`space-y-4 ${pkg.chess.length > 0 ? "pt-6 border-t border-slate-50" : ""}`}>
-                        <div className="flex items-center gap-2 text-[#1a365d]">
-                          <Dumbbell size={16} className="text-sky-500" />
-                          <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Physical Training (PT)</span>
-                        </div>
-                        <ul className="space-y-2.5">
-                          {pkg.pt.map((item, idx) => (
-                            <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
-                              <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                      <ul className="space-y-3">
+                        {pkg.chess.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-3 text-[13px] text-slate-600 font-bold leading-tight">
+                            <Check size={14} className="text-sky-500 mt-0.5 shrink-0" strokeWidth={3} /> {item}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
 
                   {/* ACTION BUTTON */}
                   <div className="mt-10">
-                    <Button 
-                      className={`w-full h-14 rounded-full text-white font-[1000] uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 ${pkg.highlight ? 'bg-sky-500 hover:bg-sky-600' : 'bg-[#1a365d] hover:bg-[#0f213a]'}`}
+                    <a
+                      href={getWhatsAppUrl(`Hi Chessmatic! I'd like to book a trial / join the Adult Chess Track: ${pkg.title} (${pkg.focus}).`)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full"
                     >
-                      Enquire for {pkg.title}
-                    </Button>
+                      <Button 
+                        className={`w-full h-14 rounded-full text-white font-[1000] uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2 ${pkg.highlight ? 'bg-[#25D366] hover:bg-[#20ba59]' : 'bg-[#1a365d] hover:bg-[#25D366]'}`}
+                      >
+                        <MessageCircle size={16} className="fill-current" />
+                        Join {pkg.title}
+                      </Button>
+                    </a>
                   </div>
                 </div>
 
@@ -207,12 +189,28 @@ export default function AdultClassesPage() {
               </h2>
             </div>
             <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
-              <Button style={{ backgroundColor: cyan }} className="w-full sm:w-auto h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-[#1a365d] hover:bg-white transition-all shadow-xl active:scale-95">
-                Join Classes <Zap size={14} className="ml-2 fill-[#1a365d]" />
-              </Button>
-              <Button className="w-full sm:w-auto h-14 px-10 bg-white/10 border border-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95">
-                Book Trial <ArrowRight size={14} className="ml-2" />
-              </Button>
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to join adult chess classes. Please share enrollment details.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button style={{ backgroundColor: "#25D366" }} className="w-full sm:w-auto h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 flex items-center justify-center gap-2">
+                  <MessageCircle size={16} className="fill-current" />
+                  Join Classes <Zap size={14} className="ml-1 fill-white" />
+                </Button>
+              </a>
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a trial session for adult chess.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button className="w-full sm:w-auto h-14 px-10 bg-white/10 border border-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center gap-2">
+                  <MessageCircle size={16} />
+                  Book Trial <ArrowRight size={14} className="ml-1" />
+                </Button>
+              </a>
             </div>
           </motion.div>
         </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Target, MessageCircle, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function AboutSection() {
   const navy = "#1a365d"
@@ -111,13 +112,20 @@ export default function AboutSection() {
 
             {/* CTA BUTTON */}
             <div className="pt-4 flex justify-center lg:justify-start">
-              <Button 
-                style={{ backgroundColor: navy }}
-                className="w-full sm:w-auto hover:opacity-90 text-white px-8 md:px-10 py-6 md:py-7 rounded-full text-sm md:text-md font-bold shadow-xl active:scale-95 transition-all flex items-center justify-center gap-3"
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to connect with a coach and learn more about your strategic methodology.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                <MessageCircle size={18} />
-                Connect with a Coach
-              </Button>
+                <Button 
+                  style={{ backgroundColor: "#25D366" }}
+                  className="w-full sm:w-auto hover:bg-[#20ba59] text-white px-8 md:px-10 py-6 md:py-7 rounded-full text-sm md:text-md font-bold shadow-xl active:scale-95 transition-all flex items-center justify-center gap-3"
+                >
+                  <MessageCircle size={18} className="fill-current" />
+                  Connect with a Coach (WhatsApp)
+                </Button>
+              </a>
             </div>
           </div>
 

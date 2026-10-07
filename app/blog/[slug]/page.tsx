@@ -47,8 +47,6 @@ export default function BlogDetailPage() {
 
   return (
     <main className="bg-white min-h-screen font-sans pb-32">
-      <Navbar />
-      
       <div className="max-w-7xl mx-auto px-6 pt-12 md:pt-26">
         
         {/* 1. SIMPLE TEXT LINK (Matches Reference) */}

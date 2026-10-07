@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { 
   Mail, Phone, MapPin, Facebook, Instagram, 
   Youtube, MessageCircle, ArrowRight, Brain, 
-  Zap, Users, Target 
+  Zap, Users, Target, BicepsFlexed 
 } from "lucide-react"
 import Link from "next/link"
 
@@ -57,15 +57,15 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: <Facebook size={18} />, href: "#", label: "Facebook" },
-                { icon: <Instagram size={18} />, href: "#", label: "Instagram" },
-                { icon: <Youtube size={18} />, href: "#", label: "Youtube" }
+                { icon: <Facebook size={18} />, href: "https://wa.me/6585805046?text=Hi%20Chessmatic!%20Connecting%20from%20Facebook.", label: "Facebook" },
+                { icon: <Instagram size={18} />, href: "https://wa.me/6585805046?text=Hi%20Chessmatic!%20Connecting%20from%20Instagram.", label: "Instagram" },
+                { icon: <Youtube size={18} />, href: "https://wa.me/6585805046?text=Hi%20Chessmatic!%20Connecting%20from%20Youtube.", label: "Youtube" }
               ].map((social, i) => (
-                <Link key={i} href={social.href} aria-label={social.label}>
+                <a key={i} href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
                   <div className="w-10 h-10 md:w-11 md:h-11 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center transition-all hover:bg-sky-500 hover:border-sky-500 hover:-translate-y-1 group">
                     <span className="text-white group-hover:scale-110 transition-transform">{social.icon}</span>
                   </div>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
@@ -77,11 +77,14 @@ export function Footer() {
             </h4>
             <ul className="space-y-4">
               {[
-                { label: "PT", href: "/pt" },
+                { label: "Home", href: "/" },
                 { label: "Adult Classes", href: "/adult-classes" },
+                { label: "PT (Physical Training)", href: "/pt" },
                 { label: "Corporate Labs", href: "/corporate" },
-                { label: "Success Stories", href: "/about" },
-                { label: "Strategic Blog", href: "/blog" }
+                { label: "Strategic Blog", href: "/blog" },
+                { label: "About Us", href: "/about" },
+                { label: "FAQs & Knowledge", href: "/faq" },
+                { label: "Contact Lab", href: "/contact" }
               ].map((link) => (
                 <li key={link.label}>
                   <Link href={link.href} className="text-slate-300 hover:text-sky-400 transition-all text-sm font-bold flex items-center justify-center sm:justify-start group">
@@ -98,19 +101,24 @@ export function Footer() {
             <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-sky-400 mb-8 flex items-center gap-2">
               <Brain size={12} /> The Pillars
             </h4>
-            <div className="space-y-5">
+            <div className="space-y-4">
               {[
-                { icon: <Zap size={14} className="text-rose-500" />, label: "Mental Endurance" },
-                { icon: <Target size={14} className="text-sky-500" />, label: "Tactical Logic" },
-                { icon: <Users size={14} className="text-amber-500" />, label: "Corporate Synergy" },
-                { icon: <Brain size={14} className="text-indigo-400" />, label: "Cognitive Focus" }
+                { 
+                  icon: <BicepsFlexed size={15} className="text-emerald-400" />, 
+                  label: "Physical Fitness & Health", 
+                  href: "/pt" 
+                },
+                { icon: <Zap size={14} className="text-rose-500" />, label: "Mental Endurance", href: "/pt" },
+                { icon: <Target size={14} className="text-sky-500" />, label: "Tactical Logic", href: "/adult-classes" },
+                { icon: <Users size={14} className="text-amber-500" />, label: "Corporate Synergy", href: "/corporate" },
+                { icon: <Brain size={14} className="text-indigo-400" />, label: "Cognitive Focus", href: "/about" }
               ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center">
+                <Link key={i} href={item.href} className="flex items-center gap-3 group hover:translate-x-1 transition-all">
+                  <div className="w-8 h-8 rounded-lg bg-white/5 border border-white/5 flex items-center justify-center group-hover:bg-sky-500/20 group-hover:border-sky-500/40 transition-colors">
                     {item.icon}
                   </div>
-                  <span className="text-slate-200 text-[13px] font-bold tracking-tight">{item.label}</span>
-                </div>
+                  <span className="text-slate-200 text-[13px] font-bold tracking-tight group-hover:text-sky-400 transition-colors">{item.label}</span>
+                </Link>
               ))}
             </div>
           </div>
@@ -121,20 +129,28 @@ export function Footer() {
               <MessageCircle size={12} /> Contact Lab
             </h4>
             <div className="space-y-5">
-              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">
-                <MapPin className="text-sky-400 shrink-0" size={18} />
-                <p className="text-slate-300 text-[13px] font-medium leading-relaxed italic">
+              <Link href="/contact" className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 group">
+                <MapPin className="text-sky-400 shrink-0 group-hover:scale-110 transition-transform" size={18} />
+                <p className="text-slate-300 group-hover:text-white transition-colors text-[13px] font-medium leading-relaxed italic">
                   Woodlands Studio,<br className="hidden sm:block" /> Singapore
                 </p>
+              </Link>
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">
+                <Phone className="text-sky-400 shrink-0" size={18} />
+                <a href="https://wa.me/6585805046?text=Hi%20Chessmatic!%20I'd%20like%20to%20get%20in%20touch." target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-sky-400 transition-colors text-[13px] font-medium">
+                  +65 8580 5046
+                </a>
               </div>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">
                 <Mail className="text-sky-400 shrink-0" size={18} />
-                <p className="text-slate-300 text-[13px] font-medium break-all">admin@intchess.com.sg</p>
+                <a href="mailto:info@chessmatic.com" className="text-slate-300 hover:text-sky-400 transition-colors text-[13px] font-medium break-all">
+                  info@chessmatic.com
+                </a>
               </div>
             </div>
 
             <Button asChild className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-[280px] sm:max-w-none mx-auto rounded-2xl py-6 md:py-7 shadow-xl shadow-green-900/20 active:scale-95 transition-all">
-              <a href="https://wa.me/6584302326" target="_blank" rel="noopener noreferrer" className="font-black uppercase tracking-widest text-[10px] flex items-center justify-center">
+              <a href="https://wa.me/6585805046?text=Hi%20Chessmatic!%20I'd%20like%20to%20inquire%20about%20your%20coaching%20and%20PT%20programs." target="_blank" rel="noopener noreferrer" className="font-black uppercase tracking-widest text-[10px] flex items-center justify-center">
                 <MessageCircle className="w-4 h-4 mr-2 fill-white" />
                 Live WhatsApp
               </a>

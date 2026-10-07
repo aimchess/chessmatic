@@ -4,9 +4,10 @@ import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { 
   Trophy, Dumbbell, Users, Target, ShieldCheck, Zap, 
-  ChevronRight, Laptop, User, Building2, Layers
+  ChevronRight, Laptop, User, Building2, Layers, MessageCircle
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function OperationalOfferings() {
   const [activeTab, setActiveTab] = useState<"tracks" | "formats">("tracks")
@@ -167,9 +168,17 @@ export default function OperationalOfferings() {
                   </div>
                 </div>
 
-                <Button className={`w-full h-14 rounded-full font-[1000] uppercase tracking-widest text-[11px] transition-all hover:scale-[1.02] ${pkg.highlight ? 'bg-sky-500 text-white hover:bg-white hover:text-[#1a365d]' : 'bg-[#1a365d] text-white hover:bg-sky-500'}`}>
-                  Enquire for {pkg.title}
-                </Button>
+                <a
+                  href={getWhatsAppUrl(`Hi Chessmatic! I'd like to enquire about ${pkg.title} (${pkg.focus}). Please provide program details and schedules.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className={`w-full h-14 rounded-full font-[1000] uppercase tracking-widest text-[11px] transition-all hover:scale-[1.02] flex items-center justify-center gap-2 ${pkg.highlight ? 'bg-[#25D366] text-white hover:bg-[#20ba59]' : 'bg-[#1a365d] text-white hover:bg-[#25D366]'}`}>
+                    <MessageCircle size={16} className="fill-current" />
+                    Enquire for {pkg.title}
+                  </Button>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -204,9 +213,17 @@ export default function OperationalOfferings() {
                   </ul>
                 </div>
 
-                <Button className={`w-full h-12 rounded-full font-[1000] uppercase tracking-widest text-[10px] transition-all ${fmt.highlight ? 'bg-sky-500 text-white hover:bg-white hover:text-[#1a365d]' : 'bg-[#1a365d] text-white hover:bg-sky-500'}`}>
-                  Book {fmt.title}
-                </Button>
+                <a
+                  href={getWhatsAppUrl(`Hi Chessmatic! I'd like to book / enquire about ${fmt.title}. Please share available options.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full"
+                >
+                  <Button className={`w-full h-12 rounded-full font-[1000] uppercase tracking-widest text-[10px] transition-all flex items-center justify-center gap-2 ${fmt.highlight ? 'bg-[#25D366] text-white hover:bg-[#20ba59]' : 'bg-[#1a365d] text-white hover:bg-[#25D366]'}`}>
+                    <MessageCircle size={14} className="fill-current" />
+                    Book {fmt.title}
+                  </Button>
+                </a>
               </motion.div>
             ))}
           </div>

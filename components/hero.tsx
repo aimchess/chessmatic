@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { ChevronRight, Users, Target } from "lucide-react"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function HeroSection() {
   const navy = "#1a365d"
@@ -53,22 +54,34 @@ export default function HeroSection() {
 
           {/* 3-BUTTON CTA GROUP */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 w-full max-w-2xl px-4 sm:px-0">
-            <Button asChild className="w-full sm:w-auto bg-[#1a365d] hover:bg-[#0f213a] text-white px-8 py-6 rounded-full text-sm font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 group">
-              <a href="/adult-classes">
+            <Button asChild className="w-full sm:w-auto bg-[#25D366] hover:bg-[#20ba59] text-white px-8 py-6 rounded-full text-sm font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 group">
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to join the Adult Chess Classes. Please share the schedule and enrollment details.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Join Adult Classes
                 <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             
             <Button asChild className="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white px-8 py-6 rounded-full text-sm font-bold flex items-center justify-center gap-3 transition-all hover:scale-105">
-              <a href="/corporate">
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to book/inquire about a Corporate Chess & Leadership Workshop for my team.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Users size={18} className="text-sky-400" />
                 Book Corporate
               </a>
             </Button>
 
             <Button asChild variant="ghost" className="w-full sm:w-auto text-white/90 hover:text-white hover:bg-white/10 px-8 py-6 rounded-full text-sm font-bold flex items-center justify-center gap-3 transition-all underline decoration-sky-500/60 underline-offset-8">
-              <a href="/pt">
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I'm interested in exploring your Personal Training (PT) and Chess+PT Hybrid programs.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Target size={18} className="text-sky-400" />
                 Explore PT
               </a>

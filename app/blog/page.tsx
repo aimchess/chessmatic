@@ -71,7 +71,6 @@ export default function BlogPage() {
 
   return (
     <main className="bg-white min-h-screen font-sans pb-20">
-      <Navbar/>
       <BlogBanner />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8 md:pt-12">

@@ -4,9 +4,10 @@ import { motion } from "framer-motion"
 import { 
   ShieldCheck, Zap, Target, Users, 
   Timer, FileText, Gift, Presentation, 
-  ChevronRight, Award 
+  ChevronRight, Award, MessageCircle 
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CorporateEventsGrid() {
   const navy = "#1a365d"
@@ -19,6 +20,7 @@ export default function CorporateEventsGrid() {
       focus: "Light Team Building",
       duration: "1.5 - 2 Hours",
       capacity: "Up to 30 Pax",
+      image: "/corp-gambit.jpg",
       desc: "Best for lunch-and-learns or icebreakers. Uses chess as a metaphor for corporate decision-making.",
       inclusions: [
         "Corporate Strategy Keynote",
@@ -34,6 +36,7 @@ export default function CorporateEventsGrid() {
       focus: "Departmental Alignment",
       duration: "Half-Day (4 Hours)",
       capacity: "15 - 40 Pax",
+      image: "/corp-strategy.jpg",
       desc: "Our signature retreat. Blends Swiss-system tournaments with grandmaster breathing protocols.",
       inclusions: [
         "'Blind Spot' Team Tournament",
@@ -49,6 +52,7 @@ export default function CorporateEventsGrid() {
       focus: "C-Suite Performance",
       duration: "Full-Day",
       capacity: "5 - 15 Pax",
+      image: "/corp-executive.jpg",
       desc: "Elite leadership alignment. Deep-dive risk profiling through simultaneous Master exhibitions.",
       inclusions: [
         "Simul Challenge vs Master",
@@ -95,72 +99,102 @@ export default function CorporateEventsGrid() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
               className={`
-                group relative flex flex-col rounded-[45px] p-8 md:p-12 border transition-all duration-500
+                group relative flex flex-col rounded-[45px] overflow-hidden border transition-all duration-500
                 ${pkg.highlight 
                   ? "bg-[#1a365d] border-[#1a365d] shadow-[0_30px_80px_rgba(26,54,93,0.25)] lg:scale-105 z-10 text-white" 
                   : "bg-white border-slate-100 shadow-xl text-[#1a365d]"
                 }
               `}
             >
-              {/* OPERATIONAL STATUS TAG */}
-              <div className="flex justify-between items-start mb-10">
-                <div className="space-y-1">
-                  <span className={`${pkg.highlight ? 'text-sky-400' : 'text-sky-500'} text-[10px] font-black uppercase tracking-widest`}>
-                    {pkg.id} • {pkg.focus}
-                  </span>
-                  <h3 className="text-2xl md:text-3xl font-[1000] uppercase italic leading-none">{pkg.title}</h3>
+              {/* PHOTO VIEWPORT */}
+              <div className="h-56 sm:h-64 relative overflow-hidden">
+                <img 
+                  src={pkg.image} 
+                  alt={pkg.title} 
+                  className="w-full h-full object-cover grayscale-[0.15] group-hover:grayscale-0 transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d] via-[#1a365d]/30 to-transparent" />
+                
+                {/* Status Badges */}
+                <div className="absolute top-5 left-6 flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20">
+                  <div className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse" />
+                  <span className="text-white text-[9px] font-black uppercase tracking-widest">{pkg.id}</span>
                 </div>
+
                 {pkg.highlight && (
-                   <div className="bg-sky-500 text-white p-2 rounded-xl shadow-lg">
-                      <Zap size={18} fill="white" />
-                   </div>
+                  <div className="absolute top-5 right-6 bg-[#25D366] text-white px-3 py-1 rounded-full text-[8px] font-black uppercase tracking-widest shadow-lg flex items-center gap-1">
+                    <Zap size={10} fill="white" /> Most Popular
+                  </div>
                 )}
-              </div>
 
-              {/* TECHNICAL SPECS BAR */}
-              <div className={`flex gap-6 mb-10 pb-6 border-b ${pkg.highlight ? 'border-white/10' : 'border-slate-50'}`}>
-                 <div className="flex items-center gap-2">
-                    <Timer size={14} className={pkg.highlight ? 'text-sky-400' : 'text-slate-400'} />
-                    <span className="text-[10px] font-black uppercase tracking-widest opacity-80">{pkg.duration}</span>
-                 </div>
-                 <div className="flex items-center gap-2">
-                    <Users size={14} className={pkg.highlight ? 'text-sky-400' : 'text-slate-400'} />
-                    <span className="text-[10px] font-black uppercase tracking-widest opacity-80">{pkg.capacity}</span>
-                 </div>
-              </div>
-
-              {/* EXPERIENCE INCLUSIONS */}
-              <div className="space-y-8 flex-1">
-                <div className="space-y-4">
-                  <span className={`text-[9px] font-black uppercase tracking-[0.3em] ${pkg.highlight ? 'text-white/40' : 'text-slate-300'}`}>Protocol Inclusions</span>
-                  <ul className="space-y-3">
-                    {pkg.inclusions.map((item, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <ShieldCheck size={16} className="text-sky-500 shrink-0 mt-0.5" />
-                        <span className={`text-[13px] font-bold leading-tight ${pkg.highlight ? 'text-slate-300' : 'text-slate-500'}`}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                {/* DELIVERABLE HIGHLIGHT */}
-                <div className={`p-5 rounded-[25px] border ${pkg.highlight ? 'bg-white/5 border-white/10' : 'bg-slate-50 border-slate-100'}`}>
-                   <div className="flex items-center gap-2 mb-2">
-                      <FileText size={12} className="text-sky-500" />
-                      <span className={`text-[9px] font-black uppercase tracking-widest ${pkg.highlight ? 'text-white/40' : 'text-slate-400'}`}>Key Deliverable</span>
-                   </div>
-                   <p className="text-sm font-black italic">{pkg.deliverable}</p>
+                <div className="absolute bottom-5 left-6 right-6">
+                  <span className="text-sky-400 text-[10px] font-black uppercase tracking-widest block mb-1">
+                    {pkg.focus}
+                  </span>
+                  <h3 className="text-white text-2xl font-[1000] uppercase italic leading-none">{pkg.title}</h3>
                 </div>
               </div>
 
-              {/* ACTION BUTTON */}
-              <Button 
-                style={{ backgroundColor: pkg.highlight ? cyan : navy }}
-                className="w-full h-14 rounded-full mt-12 text-white font-[1000] uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 group/btn"
-              >
-                Request Proposal
-                <ChevronRight size={14} className="ml-2 group-hover/btn:translate-x-1 transition-transform" />
-              </Button>
+              <div className="p-8 sm:p-10 flex-1 flex flex-col justify-between">
+                <div>
+                  {/* TECHNICAL SPECS BAR */}
+                  <div className={`flex gap-6 mb-8 pb-6 border-b ${pkg.highlight ? 'border-white/10' : 'border-slate-100'}`}>
+                     <div className="flex items-center gap-2">
+                        <Timer size={14} className={pkg.highlight ? 'text-sky-400' : 'text-slate-400'} />
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-80">{pkg.duration}</span>
+                     </div>
+                     <div className="flex items-center gap-2">
+                        <Users size={14} className={pkg.highlight ? 'text-sky-400' : 'text-slate-400'} />
+                        <span className="text-[10px] font-black uppercase tracking-widest opacity-80">{pkg.capacity}</span>
+                     </div>
+                  </div>
+
+                  <p className={`text-xs sm:text-sm font-medium leading-relaxed mb-8 ${pkg.highlight ? 'text-slate-300' : 'text-slate-500'}`}>
+                    {pkg.desc}
+                  </p>
+
+                  {/* EXPERIENCE INCLUSIONS */}
+                  <div className="space-y-6 mb-8">
+                    <div className="space-y-3">
+                      <span className={`text-[9px] font-black uppercase tracking-[0.3em] ${pkg.highlight ? 'text-white/40' : 'text-slate-400'}`}>Protocol Inclusions</span>
+                      <ul className="space-y-2.5">
+                        {pkg.inclusions.map((item, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <ShieldCheck size={16} className="text-sky-500 shrink-0 mt-0.5" />
+                            <span className={`text-[13px] font-bold leading-tight ${pkg.highlight ? 'text-slate-300' : 'text-slate-600'}`}>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* DELIVERABLE HIGHLIGHT */}
+                    <div className={`p-4 sm:p-5 rounded-[22px] border ${pkg.highlight ? 'bg-white/5 border-white/10' : 'bg-slate-50 border-slate-100'}`}>
+                       <div className="flex items-center gap-2 mb-1.5">
+                          <FileText size={12} className="text-sky-500" />
+                          <span className={`text-[9px] font-black uppercase tracking-widest ${pkg.highlight ? 'text-white/40' : 'text-slate-400'}`}>Key Deliverable</span>
+                       </div>
+                       <p className="text-xs sm:text-sm font-black italic">{pkg.deliverable}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* ACTION BUTTON */}
+                <a
+                  href={getWhatsAppUrl(`Hi Chessmatic! I would like to request a proposal for the Corporate Event: ${pkg.title} (${pkg.focus} - ${pkg.duration}, ${pkg.capacity}). Please provide customization and quote options.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full mt-6"
+                >
+                  <Button 
+                    style={{ backgroundColor: pkg.highlight ? "#25D366" : navy }}
+                    className="w-full h-14 rounded-full text-white font-[1000] uppercase tracking-widest text-[11px] shadow-2xl transition-all hover:scale-[1.02] active:scale-95 group/btn flex items-center justify-center gap-2"
+                  >
+                    <MessageCircle size={16} className="fill-current" />
+                    Request Proposal
+                    <ChevronRight size={14} className="ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
+              </div>
 
               {/* TECHNICAL DOT GRID (Only in Navy Card) */}
               {pkg.highlight && (

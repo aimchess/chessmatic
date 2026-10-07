@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, Target, Zap } from "lucide-react"
+import Link from "next/link"
 
 const faqs = [
   {
@@ -120,6 +121,16 @@ export default function FAQSection() {
                   </div>
                 )
               })}
+
+              <div className="pt-6 text-center lg:text-left">
+                <Link 
+                  href="/faq" 
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1a365d] text-white hover:bg-sky-500 transition-all font-black text-xs uppercase tracking-widest shadow-md group"
+                >
+                  <span>Explore Full Knowledge Base & Categorized FAQs</span>
+                  <ChevronDown className="-rotate-90 group-hover:translate-x-1 transition-transform" size={14} />
+                </Link>
+              </div>
             </div>
           </div>
 

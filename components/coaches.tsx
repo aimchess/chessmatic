@@ -1,9 +1,10 @@
 "use client"
 
-import { Trophy, Star, Award, ShieldCheck, Zap, ChevronRight, CheckCircle2 } from "lucide-react"
+import { Trophy, Star, Award, ShieldCheck, Zap, ChevronRight, CheckCircle2, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CoachesSection() {
   const navy = "#1a365d"
@@ -128,11 +129,17 @@ export default function CoachesSection() {
                       ))}
                     </div>
 
-                    <Button asChild size="sm" className="bg-[#1a365d] hover:bg-[#0f213a] text-white rounded-full text-[10px] font-[1000] uppercase tracking-wider px-5 py-4 shrink-0 shadow-md">
-                      <Link href="/contact">
-                        Book Coach Arlan
-                        <ChevronRight size={14} className="ml-1" />
-                      </Link>
+                    <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full text-[10px] font-[1000] uppercase tracking-wider px-5 py-4 shrink-0 shadow-md">
+                      <a 
+                        href={getWhatsAppUrl(`Hi Chessmatic! I would like to book a chess coaching session with Coach ${coach.name}. Please share available dates and slots.`)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1.5"
+                      >
+                        <MessageCircle size={14} className="fill-current" />
+                        Book {coach.name}
+                        <ChevronRight size={14} className="ml-0.5" />
+                      </a>
                     </Button>
                   </div>
 

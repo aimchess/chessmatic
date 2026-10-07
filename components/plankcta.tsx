@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { Zap, ArrowRight, Target } from "lucide-react"
 import Link from "next/link"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CompactRectangleCTA() {
   const navy = "#1a365d"
@@ -35,10 +36,10 @@ export default function CompactRectangleCTA() {
             
             <div className="max-w-md">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-[1000] text-white tracking-tighter leading-none italic uppercase">
-                Challenge Your <span style={{ color: cyan }}><br className="hidden sm:block" />Mind & Core.</span>
+                Transform Your <span style={{ color: cyan }}><br className="hidden sm:block" />Physical Fitness.</span>
               </h2>
               <p className="text-slate-400 font-bold uppercase tracking-[0.2em] text-[9px] md:text-[10px] mt-3">
-                Singapore’s first elite performance lab.
+                1-on-1 Personal Training & Posture Conditioning • Woodlands Studio
               </p>
             </div>
           </div>
@@ -47,23 +48,31 @@ export default function CompactRectangleCTA() {
           <div className="relative z-10 flex flex-row flex-wrap justify-center items-center gap-3 md:gap-4 w-full lg:w-auto">
             <Button 
               asChild
-              style={{ backgroundColor: cyan }}
-              className="flex-1 sm:flex-none h-12 md:h-14 px-6 md:px-10 rounded-full text-[10px] md:text-[11px] font-[1000] uppercase tracking-widest text-[#1a365d] hover:bg-white transition-all shadow-xl active:scale-95 group/btn whitespace-nowrap"
+              style={{ backgroundColor: "#25D366" }}
+              className="flex-1 sm:flex-none h-12 md:h-14 px-6 md:px-10 rounded-full text-[10px] md:text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 group/btn whitespace-nowrap"
             >
-              <Link href="/contact">
-                Join Session
-                <Zap size={14} className="ml-2 fill-[#1a365d]" />
-              </Link>
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a 1-on-1 Personal Training (PT) assessment session at the Woodlands Studio.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Book PT Assessment
+                <Zap size={14} className="ml-2 fill-white text-white" />
+              </a>
             </Button>
 
             <Button 
               asChild
               className="flex-1 sm:flex-none h-12 md:h-14 px-6 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[10px] md:text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 whitespace-nowrap"
             >
-              <Link href="/contact">
-                Corporate Inquiries
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to inquire about Personal Training (PT) packages and small group conditioning batches.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Inquire PT Batches
                 <ArrowRight size={14} className="ml-2" />
-              </Link>
+              </a>
             </Button>
           </div>
 

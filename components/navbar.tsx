@@ -2,10 +2,11 @@
 
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
-import { Menu, X } from "lucide-react"
+import { Menu, X, MessageCircle } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -14,11 +15,11 @@ export function Navbar() {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/about", label: "About Us" },
-    { href: "/pt", label: "PT" },
     { href: "/adult-classes", label: "Adult Classes" },
+    { href: "/pt", label: "PT" },
     { href: "/corporate", label: "Corporate" },
     { href: "/blog", label: "Blog" },
+    { href: "/about", label: "About Us" },
   ]
 
   useEffect(() => {
@@ -86,16 +87,22 @@ export function Navbar() {
 
         {/* Contact Button */}
         <div className="flex items-center gap-4">
-          <Link href="/contact" className="hidden sm:block">
+          <a 
+            href={getWhatsAppUrl("Hi Chessmatic! I'd like to get in touch and inquire about your coaching & training programs.")}
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hidden sm:block"
+          >
             <Button 
               className={`
-                bg-[#1a365d] hover:bg-[#1a365d]/90 text-white rounded-full font-bold transition-all duration-300
-                ${isScrolled ? "px-6 py-5 text-xs" : "px-9 py-6 text-sm shadow-xl shadow-[#1a365d]/10"}
+                bg-[#25D366] hover:bg-[#20ba59] text-white rounded-full font-bold transition-all duration-300 flex items-center gap-2
+                ${isScrolled ? "px-6 py-5 text-xs" : "px-8 py-6 text-sm shadow-xl shadow-emerald-500/20"}
               `}
             >
-              Contact Us
+              <MessageCircle size={16} className="fill-current" />
+              WhatsApp Us
             </Button>
-          </Link>
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button
@@ -125,11 +132,18 @@ export function Navbar() {
                   {item.label}
                 </Link>
               ))}
-              <Link href="/contact" onClick={() => setIsOpen(false)} className="mt-4">
-                <Button className="bg-[#1a365d] w-full py-7 rounded-2xl text-lg font-bold">
-                  Contact Us
+              <a 
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to get in touch and inquire about your coaching & training programs.")}
+                target="_blank" 
+                rel="noopener noreferrer" 
+                onClick={() => setIsOpen(false)} 
+                className="mt-4"
+              >
+                <Button className="bg-[#25D366] hover:bg-[#20ba59] w-full py-7 rounded-2xl text-lg font-bold flex items-center justify-center gap-2">
+                  <MessageCircle size={20} className="fill-current" />
+                  WhatsApp Us
                 </Button>
-              </Link>
+              </a>
             </motion.div>
           )}
         </AnimatePresence>

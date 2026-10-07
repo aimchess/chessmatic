@@ -4,9 +4,10 @@ import { motion } from "framer-motion"
 import { 
   Users, Coffee, Trophy, Globe, 
   Calendar, Clock, UserCheck, Building2, 
-  ArrowRight, Zap, Sparkles 
+  ArrowRight, Zap, Sparkles, MessageCircle 
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CommunityAndSchedule() {
   const navy = "#1a365d"
@@ -126,42 +127,54 @@ export default function CommunityAndSchedule() {
               We understand the executive schedule. Our Lab operates on a multi-tier flexibility model to ensure your training never stops.
             </p>
             <div className="pt-4">
-              <Button style={{ backgroundColor: navy }} className="w-full sm:w-auto px-10 py-7 rounded-full text-white font-[1000] uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all">
-                Check Real-time Slots
-              </Button>
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to check real-time availability and booking slots for coaching / PT sessions.")}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button style={{ backgroundColor: "#25D366" }} className="w-full sm:w-auto px-10 py-7 rounded-full text-white hover:bg-[#20ba59] font-[1000] uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center justify-center gap-2">
+                  <MessageCircle size={18} className="fill-current" />
+                  Check Real-time Slots (WhatsApp)
+                </Button>
+              </a>
             </div>
           </div>
 
           {/* DASHBOARD SIDE */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {availability.map((item, i) => (
-              <motion.div 
+              <a
                 key={i}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className={`
-                  p-6 rounded-[24px] md:rounded-[35px] border border-slate-100 bg-[#f8fafc] group hover:bg-[#1a365d] transition-all duration-500
-                  ${i === 0 ? "sm:col-span-2" : "col-span-1"}
-                `}
+                href={getWhatsAppUrl(`Hi Chessmatic! I'd like to enquire and book a slot for ${item.label} (${item.time} - ${item.tag}).`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block ${i === 0 ? "sm:col-span-2" : "col-span-1"}`}
               >
-                <div className="flex justify-between items-start mb-6">
-                   <div className="w-10 h-10 rounded-xl bg-white text-[#1a365d] flex items-center justify-center shadow-sm group-hover:bg-sky-500 group-hover:text-white transition-all shrink-0">
-                      {item.icon}
-                   </div>
-                   <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-sky-400 transition-colors">
-                     {item.tag}
-                   </span>
-                </div>
-                <div>
-                   <h4 className="text-[#1a365d] font-[1000] uppercase text-base md:text-lg group-hover:text-white transition-colors">{item.label}</h4>
-                   <p className="text-slate-400 text-xs font-bold mt-1 group-hover:text-white/50 transition-colors">{item.time}</p>
-                </div>
-                <div className="mt-4 flex justify-end opacity-0 group-hover:opacity-100 transition-opacity">
-                   <ArrowRight size={18} className="text-sky-400" />
-                </div>
-              </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="p-6 rounded-[24px] md:rounded-[35px] border border-slate-100 bg-[#f8fafc] group hover:bg-[#1a365d] transition-all duration-500 cursor-pointer h-full flex flex-col justify-between"
+                >
+                  <div className="flex justify-between items-start mb-6">
+                     <div className="w-10 h-10 rounded-xl bg-white text-[#1a365d] flex items-center justify-center shadow-sm group-hover:bg-[#25D366] group-hover:text-white transition-all shrink-0">
+                        {item.icon}
+                     </div>
+                     <span className="text-[9px] font-black uppercase tracking-widest text-slate-400 group-hover:text-sky-400 transition-colors">
+                       {item.tag}
+                     </span>
+                  </div>
+                  <div>
+                     <h4 className="text-[#1a365d] font-[1000] uppercase text-base md:text-lg group-hover:text-white transition-colors">{item.label}</h4>
+                     <p className="text-slate-400 text-xs font-bold mt-1 group-hover:text-white/50 transition-colors">{item.time}</p>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity">
+                     <span className="text-[9px] font-black uppercase tracking-widest text-emerald-400">Book via WhatsApp</span>
+                     <ArrowRight size={18} className="text-sky-400" />
+                  </div>
+                </motion.div>
+              </a>
             ))}
           </div>
 

@@ -1,9 +1,10 @@
 "use client"
 
-import { Rocket, Brain, Users, Zap, CheckCircle2, Trophy, Target, Dumbbell } from "lucide-react"
+import { Rocket, Brain, Users, Zap, CheckCircle2, Trophy, Target, Dumbbell, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function SignatureExperience() {
   const navy = "#1a365d"
@@ -137,15 +138,27 @@ export default function SignatureExperience() {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-4 pt-4"
             >
-              <Button asChild style={{ backgroundColor: navy }} className="hover:opacity-90 text-white px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm shadow-2xl active:scale-95 transition-all">
-                <Link href="/pt">
+              <Button asChild style={{ backgroundColor: "#25D366" }} className="hover:bg-[#20ba59] text-white px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm shadow-2xl active:scale-95 transition-all">
+                <a 
+                  href={getWhatsAppUrl("Hi Chessmatic! I'd like to explore the Signature Chess + PT Hybrid protocol. Please share details.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle size={18} className="fill-current" />
                   Explore PT & Chess
-                </Link>
+                </a>
               </Button>
-              <Button asChild variant="outline" className="border-2 border-slate-100 text-[#1a365d] px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm hover:bg-slate-50 active:scale-95 transition-all">
-                <Link href="/adult-classes">
+              <Button asChild variant="outline" className="border-2 border-slate-200 text-[#1a365d] hover:text-[#1a365d] px-10 py-8 rounded-full font-[1000] uppercase tracking-widest text-sm hover:bg-slate-50 active:scale-95 transition-all">
+                <a 
+                  href={getWhatsAppUrl("Hi Chessmatic! I'd like to learn more and register for Adult Chess Classes.")}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                >
+                  <MessageCircle size={18} />
                   View Adult Classes
-                </Link>
+                </a>
               </Button>
             </motion.div>
           </div>

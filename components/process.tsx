@@ -6,6 +6,7 @@ import {
   Heart, Lightbulb, UserCheck, Search, 
   Settings, Play, BarChart3, ChevronRight, Target
 } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CorporateProcess() {
   const navy = "#1a365d"
@@ -171,10 +172,16 @@ export default function CorporateProcess() {
         viewport={{ once: true }}
         className="mt-12 text-center"
       >
-         <button className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-[10px] md:text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 hover:text-sky-500 hover:gap-5 transition-all group">
-           Start your consultation
-           <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
-         </button>
+        <a 
+          href={getWhatsAppUrl("Hi Chessmatic! I'd like to book an initial consultation for our corporate team's chess & wellness program.")}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-[10px] md:text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 hover:text-sky-500 hover:gap-5 transition-all group cursor-pointer">
+            Start your consultation
+            <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
+          </button>
+        </a>
       </motion.div>
 
     </div>

@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Zap, Users, Building2, Target, Dumbbell, Trophy } from "lucide-react"
+import { Zap, Users, Building2, Target, Dumbbell, Trophy, MessageCircle, ArrowRight } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function PTFormats() {
   const navy = "#1a365d"
@@ -10,47 +11,48 @@ export default function PTFormats() {
   const formats = [
     {
       id: "TRACK 01",
-      title: "1-on-1 Chess + PT",
-      category: "Personal Hybrid",
-      icon: <Zap size={24} className="text-amber-500" />,
-      desc: "The ultimate individual protocol. 1-on-1 dedicated chess instruction coupled with personal physical conditioning in our Woodlands studio.",
+      title: "1-on-1 Private PT",
+      category: "Personal Training",
+      icon: <Dumbbell size={24} className="text-sky-500" />,
+      desc: "Dedicated 1-on-1 in-studio coaching at our Woodlands studio. Fully customized workout regimens focused on your personal strength, posture, and conditioning goals.",
       specs: [
-        "60-90 min custom sessions",
-        "Targeted strength & stamina workouts",
-        "Deep tactical game analysis",
-        "Personalized progression tracker"
+        "60-90 min custom 1-on-1 sessions",
+        "Targeted strength & core conditioning",
+        "Personalized fitness progression tracker",
+        "Form correction & injury prevention"
       ],
-      outcome: "Dual-Task Composure",
-      color: "border-amber-100/50"
-    },
-    {
-      id: "TRACK 02",
-      title: "Group Workshops",
-      category: "Collaborative",
-      icon: <Users size={24} className="text-sky-500" />,
-      desc: "High-energy group workshops combining tactical puzzle solving with dynamic physical activation exercises.",
-      specs: [
-        "Small group interactive cohort",
-        "Team-based tactical challenges",
-        "Core & functional conditioning",
-        "Elite networking atmosphere"
-      ],
-      outcome: "Team Synergy",
+      outcome: "Peak Physical Stamina",
       color: "border-sky-100/50"
     },
     {
-      id: "TRACK 03",
-      title: "Corporate PT & Strategy",
-      category: "Enterprise",
-      icon: <Building2 size={24} className="text-[#1a365d]" />,
-      desc: "Tailored corporate executive labs combining mental calculation under fatigue with posture and ergonomic physical training.",
+      tier: "TRACK 02",
+      id: "TRACK 02",
+      title: "Small Group Conditioning",
+      category: "Group Batches",
+      icon: <Users size={24} className="text-amber-500" />,
+      desc: "High-energy functional fitness batches that blend circuit training, kettlebell mechanics, core endurance, and mobility flow in a supportive environment.",
       specs: [
-        "Keynote strategy & problem-solving",
-        "Executive ergonomic movement",
-        "Departmental tournament challenges",
-        "Actionable performance metrics"
+        "Small group interactive cohorts",
+        "Dynamic functional circuits & intervals",
+        "Core & postural conditioning",
+        "Motivating training atmosphere"
       ],
-      outcome: "Executive ROI",
+      outcome: "Functional Fitness",
+      color: "border-amber-100/50"
+    },
+    {
+      id: "TRACK 03",
+      title: "Executive Posture & Mobility",
+      category: "Desk Recovery",
+      icon: <Building2 size={24} className="text-[#1a365d]" />,
+      desc: "Specialized rehabilitation and mobility coaching for corporate executives and desk workers suffering from upper back stiffness, neck pain, and tight hip flexors.",
+      specs: [
+        "Ergonomic movement correction",
+        "Thoracic mobility & shoulder relief",
+        "Deep spinal alignment drills",
+        "Sustainable workplace energy"
+      ],
+      outcome: "Desk Pain Relief",
       color: "border-slate-200"
     }
   ]
@@ -130,12 +132,37 @@ export default function PTFormats() {
               </div>
 
               {/* DATA FOOTER */}
-              <div className="mt-auto pt-6 border-t border-slate-50 flex items-center justify-between">
-                 <div className="flex items-center gap-2">
-                    <Target size={14} className="text-sky-400" />
-                    <span className="text-slate-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest">Target Outcome</span>
+              <div className="mt-auto pt-6 border-t border-slate-100 flex flex-col gap-4">
+                 <div className="flex items-center justify-between">
+                   <div className="flex items-center gap-2">
+                      <Target size={14} className="text-sky-400" />
+                      <span className="text-slate-400 text-[8px] md:text-[9px] font-black uppercase tracking-widest">Target Outcome</span>
+                   </div>
+                   <span className="text-[#1a365d] text-xs font-black italic">{item.outcome}</span>
                  </div>
-                 <span className="text-[#1a365d] text-xs font-black italic">{item.outcome}</span>
+
+                 {/* Action buttons: Book Trial + Arrow */}
+                 <div className="flex items-center gap-3">
+                   <a
+                     href={getWhatsAppUrl(`Hi Chessmatic! I'd like to book a trial for ${item.title} (${item.category}). Target Outcome: ${item.outcome}. Please share available slots, schedule, and pricing.`)}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     className="flex-1 py-3 px-4 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-[11px] md:text-xs font-[1000] uppercase tracking-wider shadow-md hover:shadow-emerald-500/20 transition-all hover:scale-[1.02] active:scale-95 flex items-center justify-center gap-2"
+                   >
+                     <MessageCircle size={15} className="fill-current" />
+                     <span>Book Trial</span>
+                   </a>
+
+                   <a
+                     href={getWhatsAppUrl(`Hi Chessmatic! I'd like to book a trial for ${item.title} (${item.category}). Target Outcome: ${item.outcome}. Please share available slots, schedule, and pricing.`)}
+                     target="_blank"
+                     rel="noopener noreferrer"
+                     aria-label={`Book trial on WhatsApp for ${item.title}`}
+                     className="w-11 h-11 rounded-xl bg-slate-50 text-slate-400 hover:bg-[#25D366] hover:text-white group-hover:bg-sky-500 group-hover:text-white transition-all shadow-sm flex items-center justify-center shrink-0"
+                   >
+                      <ArrowRight size={16} />
+                   </a>
+                 </div>
               </div>
               
               {/* Subtle technical background grid inside card on hover */}

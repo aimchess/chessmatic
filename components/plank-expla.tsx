@@ -10,29 +10,29 @@ export default function PTExplanation() {
   const steps = [
     {
       num: "01",
-      title: "Baseline Assessment",
-      desc: "We analyze your strategic chess foundation and physical movement mechanics to build a customized plan.",
+      title: "Movement & Postural Assessment",
+      desc: "Comprehensive evaluation of joint mobility, core stability, spinal alignment, and baseline cardiovascular endurance.",
       icon: <Target className="w-5 h-5" />,
       accent: "bg-sky-500"
     },
     {
       num: "02",
-      title: "Physical Conditioning (PT)",
-      desc: "Targeted personal training focused on core strength, postural alignment, and cardiovascular endurance.",
+      title: "Customized Conditioning Plan",
+      desc: "Tailored workout programming targeting functional strength, deep core activation, and desk-fatigue correction.",
       icon: <Dumbbell className="w-5 h-5" />,
       accent: "bg-[#1a365d]"
     },
     {
       num: "03",
-      title: "Tactical Execution",
-      desc: "Master calculation, opening theory, and endgame technique while maintaining peak physical composure.",
-      icon: <Brain className="w-5 h-5" />,
+      title: "1-on-1 Guided Form Mastery",
+      desc: "Precision coaching on movement mechanics, progressive overload, and injury prevention in our private Woodlands studio.",
+      icon: <Activity className="w-5 h-5" />,
       accent: "bg-amber-500"
     },
     {
       num: "04",
-      title: "Sustained Mastery",
-      desc: "Combine mental clarity with physical stamina for high-pressure corporate and tournament performance.",
+      title: "Sustainable Stamina & Resilience",
+      desc: "Measurable improvements in daily energy, core endurance, postural stability, and long-term physical resilience.",
       icon: <ShieldCheck className="w-5 h-5" />,
       accent: "bg-emerald-500"
     }
@@ -51,7 +51,7 @@ export default function PTExplanation() {
             className="inline-flex items-center bg-[#f1f3f4] rounded-full p-1 border border-gray-200 mb-6"
           >
             <span className="bg-white px-4 sm:px-8 py-1.5 rounded-full text-[#1a365d] text-[9px] sm:text-[10px] font-[1000] tracking-[0.3em] uppercase shadow-sm">
-              The Training Protocol
+              The PT Protocol
             </span>
           </motion.div>
           <motion.h2 
@@ -60,10 +60,10 @@ export default function PTExplanation() {
             viewport={{ once: true }}
             className="text-3xl sm:text-5xl md:text-5xl font-[1000] text-[#1a365d] tracking-tighter leading-none italic uppercase"
           >
-            What is <span style={{ color: cyan }}>Chess + PT?</span>
+            What is <span style={{ color: cyan }}>Personal Training?</span>
           </motion.h2>
           <p className="mt-6 text-slate-500 text-base sm:text-lg md:text-xl font-medium max-w-2xl px-2">
-            A high-performance system where <span className="text-[#1a365d] font-bold">physical fitness (PT)</span> meets <span className="text-[#1a365d] font-bold">tactical precision</span>.
+            A high-performance system dedicated to <span className="text-[#1a365d] font-bold">functional strength</span>, <span className="text-[#1a365d] font-bold">postural recovery</span>, and <span className="text-[#1a365d] font-bold">core endurance</span>.
           </p>
         </div>
 
@@ -79,19 +79,19 @@ export default function PTExplanation() {
               className="relative z-10 rounded-[30px] md:rounded-[50px] overflow-hidden border-[8px] md:border-[12px] border-gray-50 shadow-2xl"
             >
               <img 
-                src="/chess-pt-training.jpg" 
-                alt="PT and Chess Protocol" 
-                className="w-full h-[350px] md:h-[550px] object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700"
+                src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1200&auto=format&fit=crop" 
+                alt="Personal Training and Conditioning" 
+                className="w-full h-[350px] md:h-[550px] object-cover grayscale-[0.1] hover:grayscale-0 transition-all duration-700"
               />
               
               {/* Technical Overlay Badges - Scaled for mobile */}
               <div className="absolute top-4 left-4 sm:top-6 sm:left-6 bg-white/90 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl sm:rounded-2xl border border-white/20 shadow-lg flex items-center gap-2">
-                 <div className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse" />
-                 <span className="text-[#1a365d] text-[8px] sm:text-[10px] font-black uppercase tracking-widest">Live Lab Training</span>
+                 <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                 <span className="text-[#1a365d] text-[8px] sm:text-[10px] font-black uppercase tracking-widest">Woodlands Studio PT</span>
               </div>
 
               <div className="absolute bottom-4 right-4 sm:bottom-6 sm:right-6 bg-[#1a365d] p-3 sm:p-5 rounded-2xl sm:rounded-[30px] shadow-2xl text-white">
-                 <p className="text-[9px] sm:text-xs font-black uppercase tracking-widest opacity-60 mb-0.5 sm:mb-1">Dual-Track</p>
+                 <p className="text-[9px] sm:text-xs font-black uppercase tracking-widest opacity-60 mb-0.5 sm:mb-1">1-on-1 PT</p>
                  <p className="text-lg sm:text-xl font-black italic text-sky-400">ACTIVE</p>
               </div>
             </motion.div>

@@ -1,8 +1,9 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles, MessageCircle } from "lucide-react"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CompactCTA() {
   const navy = "#1a365d"
@@ -47,20 +48,34 @@ export default function CompactCTA() {
 
             {/* ACTION SIDE */}
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Button 
-                style={{ backgroundColor: navy }}
-                className="hover:opacity-90 text-white px-10 py-8 rounded-full text-md font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 group"
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to join your Adult Classes at the Elite Lab. Please share schedule details.")}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Join Adult Classes
-                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+                <Button 
+                  style={{ backgroundColor: "#25D366" }}
+                  className="hover:bg-[#20ba59] text-white px-10 py-8 rounded-full text-md font-bold shadow-2xl transition-all hover:scale-105 active:scale-95 group flex items-center gap-2"
+                >
+                  <MessageCircle size={18} className="fill-current" />
+                  Join Adult Classes
+                  <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </a>
               
-              <Button 
-                variant="ghost"
-                className="text-[#1a365d] border border-gray-200 hover:bg-white px-8 py-8 rounded-full text-md font-bold transition-all hover:scale-105"
+              <a
+                href={getWhatsAppUrl("Hi Chessmatic! I would like to make a Corporate Enquiry for strategic team training.")}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Corporate Enquiry
-              </Button>
+                <Button 
+                  variant="ghost"
+                  className="text-[#1a365d] border border-gray-300 hover:bg-white px-8 py-8 rounded-full text-md font-bold transition-all hover:scale-105 flex items-center gap-2"
+                >
+                  <MessageCircle size={16} />
+                  Corporate Enquiry
+                </Button>
+              </a>
             </div>
           </div>
 

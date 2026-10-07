@@ -2,8 +2,9 @@
 
 import { motion } from "framer-motion"
 import { 
-  ArrowUpRight, Users, Trophy, Brain, Coffee, Presentation 
+  ArrowUpRight, Users, Trophy, Brain, Coffee, Presentation, MessageCircle 
 } from "lucide-react"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function CorporateExperiencesCompact() {
   const cyan = "#0ea5e9"
@@ -17,18 +18,18 @@ const experiences = [
     image: "/comp.png"
   },
   {
-    title: "Team Challenges",
+    title: "Team Challenges (2v2 Plank Chess)",
     tag: "Module 02",
-    desc: "Engaging group-based chess and wellness challenges that encourage collaboration, communication, leadership, and team coordination in a fun and competitive environment.",
+    desc: "High-energy group-based chess and wellness relays featuring our viral 2 v 2 Plank Chess Challenge—testing physical stamina, core resilience, and rapid strategic coordination under pressure.",
     icon: <Users size={20} />,
-    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800"
+    image: "/plank1.png"
   },
   {
     title: "Company Tournaments",
     tag: "Module 03",
     desc: "Premium in-house chess tournaments and branded corporate events designed to strengthen workplace culture, employee engagement, and healthy competition among teams.",
     icon: <Trophy size={20} />,
-    image: "company.png"
+    image: "/company.png"
   },
   {
     title: "Executive Sessions",
@@ -42,7 +43,7 @@ const experiences = [
     tag: "Module 05",
     desc: "Casual and wellness-focused social gatherings that combine chess, networking, mindfulness, and interactive activities to create a relaxed yet intellectually stimulating atmosphere.",
     icon: <Coffee size={20} />,
-    image: "/adult1.jpg"
+    image: "/adult1.png"
   }
 ]
 
@@ -93,56 +94,64 @@ const experiences = [
 }
 
 function ModuleCard({ exp, delay }: { exp: any, delay: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ delay }}
-      className="relative h-[460px] rounded-[45px] bg-sky-500 p-7 flex flex-col justify-between overflow-hidden shadow-[0_15px_50px_rgba(14,165,233,0.15)] group border border-sky-400"
-    >
-      {/* TECHNICAL DOT GRID */}
-      <div className="absolute inset-0 opacity-[0.12] pointer-events-none" 
-           style={{ backgroundImage: `radial-gradient(white 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
+  const whatsappUrl = getWhatsAppUrl(`Hi Chessmatic! I'd like to book / inquire about the Corporate Experience: ${exp.title} (${exp.tag}). Please share details and pricing.`)
 
-      {/* TOP CONTENT */}
-      <div className="relative z-10">
-        <div className="flex justify-between items-center mb-5">
-          <span className="text-white/60 text-[9px] font-black uppercase tracking-[0.3em]">
-            {exp.tag}
-          </span>
-          <div className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center text-white transition-transform group-hover:rotate-45">
-             <ArrowUpRight size={16} />
+  return (
+    <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="block group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay }}
+        className="relative h-[480px] rounded-[45px] bg-[#1a365d] p-7 flex flex-col justify-between overflow-hidden shadow-[0_15px_50px_rgba(26,54,93,0.15)] hover:shadow-2xl transition-all duration-500 border border-slate-100/10 cursor-pointer"
+      >
+        {/* TECHNICAL DOT GRID */}
+        <div className="absolute inset-0 opacity-[0.12] pointer-events-none" 
+             style={{ backgroundImage: `radial-gradient(white 1px, transparent 1px)`, backgroundSize: '20px 20px' }} />
+
+        {/* TOP CONTENT */}
+        <div className="relative z-10">
+          <div className="flex justify-between items-center mb-5">
+            <span className="text-sky-400 text-[9px] font-black uppercase tracking-[0.3em]">
+              {exp.tag}
+            </span>
+            <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white transition-transform group-hover:rotate-45 group-hover:bg-[#25D366]">
+               <ArrowUpRight size={16} />
+            </div>
+          </div>
+          
+          <h3 className="text-xl font-[1000] text-white uppercase tracking-tight leading-tight mb-3">
+            {exp.title}
+          </h3>
+          <p className="text-slate-300 text-[13px] font-medium leading-relaxed">
+            {exp.desc}
+          </p>
+        </div>
+
+        {/* BOTTOM VISUAL (Compact Height) */}
+        <div className="relative z-10 h-[40%] w-full">
+          <div className="absolute inset-0 rounded-[30px] overflow-hidden border-[3px] border-white/10 shadow-xl">
+            <img 
+              src={exp.image} 
+              alt={exp.title} 
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
+            />
+            <div className="absolute inset-0 bg-[#1a365d]/20 group-hover:bg-transparent transition-all" />
+          </div>
+          
+          {/* FLOATING BRAND ICON */}
+          <div className="absolute -bottom-3 -left-3 w-10 h-10 rounded-xl bg-white text-[#1a365d] flex items-center justify-center shadow-2xl z-20">
+             {exp.icon}
+          </div>
+
+          <div className="absolute bottom-2 right-2 bg-[#25D366] text-white text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-full shadow-lg opacity-0 group-hover:opacity-100 transition-opacity flex items-center gap-1">
+            <MessageCircle size={10} className="fill-current" /> Book
           </div>
         </div>
-        
-        <h3 className="text-xl font-[1000] text-white uppercase tracking-tight leading-tight mb-3">
-          {exp.title}
-        </h3>
-        <p className="text-white/80 text-[13px] font-bold leading-relaxed">
-          {exp.desc}
-        </p>
-      </div>
 
-      {/* BOTTOM VISUAL (Compact Height) */}
-      <div className="relative z-10 h-[40%] w-full">
-        <div className="absolute inset-0 rounded-[30px] overflow-hidden border-[3px] border-white/10 shadow-xl">
-          <img 
-            src={exp.image} 
-            alt={exp.title} 
-            className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" 
-          />
-          <div className="absolute inset-0 bg-[#1a365d]/20 group-hover:bg-transparent transition-all" />
-        </div>
-        
-        {/* FLOATING BRAND ICON */}
-        <div className="absolute -bottom-3 -left-3 w-10 h-10 rounded-xl bg-white text-[#1a365d] flex items-center justify-center shadow-2xl z-20">
-           {exp.icon}
-        </div>
-      </div>
-
-      {/* AMBIENT GLOW */}
-      <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-    </motion.div>
+        {/* AMBIENT GLOW */}
+        <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-sky-500/10 rounded-full blur-2xl pointer-events-none" />
+      </motion.div>
+    </a>
   )
 }

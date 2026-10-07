@@ -2,6 +2,7 @@
 
 import { Brain, Dumbbell, Building2, Users, ArrowRight, Zap, Target, Star } from "lucide-react"
 import { motion } from "framer-motion"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function WhatMakesUsDifferent() {
   const navy = "#1a365d"
@@ -64,23 +65,33 @@ export default function WhatMakesUsDifferent() {
           {/* LEFT CARDS */}
           <div className="space-y-8 lg:pr-10">
             {features.filter(f => f.side === "left").map((item, i) => (
-              <motion.div
+              <a
                 key={i}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.2 }}
-                className="bg-white p-8 rounded-[35px] shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100 group transition-all hover:shadow-2xl hover:-translate-y-1"
+                href={getWhatsAppUrl(`Hi Chessmatic! I'd like to learn more about ${item.title} (${item.tag}).`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <div className={`${item.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/10 transition-transform group-hover:rotate-6`}>
-                   {item.icon}
-                </div>
-                <h3 className="text-xl font-[1000] text-[#1a365d] uppercase tracking-tight mb-4">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-8">{item.desc}</p>
-                <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
-                   <span className="text-sky-500 text-[10px] font-black tracking-widest uppercase">{item.tag}</span>
-                   <ArrowRight size={14} className="text-slate-300 group-hover:text-sky-500 transition-colors" />
-                </div>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.2 }}
+                  className="bg-white p-8 rounded-[35px] shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100 group transition-all hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
+                >
+                  <div className={`${item.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/10 transition-transform group-hover:rotate-6`}>
+                     {item.icon}
+                  </div>
+                  <h3 className="text-xl font-[1000] text-[#1a365d] uppercase tracking-tight mb-4">{item.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-8">{item.desc}</p>
+                  <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
+                     <span className="text-sky-500 text-[10px] font-black tracking-widest uppercase">{item.tag}</span>
+                     <div className="flex items-center gap-1.5 text-emerald-600 font-bold text-[10px]">
+                       <span>WhatsApp</span>
+                       <ArrowRight size={14} className="text-slate-300 group-hover:text-emerald-500 transition-colors" />
+                     </div>
+                  </div>
+                </motion.div>
+              </a>
             ))}
           </div>
 
@@ -111,23 +122,33 @@ export default function WhatMakesUsDifferent() {
           {/* RIGHT CARDS */}
           <div className="space-y-8 lg:pl-10">
             {features.filter(f => f.side === "right").map((item, i) => (
-              <motion.div
+              <a
                 key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.2 }}
-                className="bg-white p-8 rounded-[35px] shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100 group transition-all hover:shadow-2xl hover:-translate-y-1"
+                href={getWhatsAppUrl(`Hi Chessmatic! I'd like to learn more about ${item.title} (${item.tag}).`)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
               >
-                <div className={`${item.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/10 transition-transform group-hover:rotate-6`}>
-                   {item.icon}
-                </div>
-                <h3 className="text-xl font-[1000] text-[#1a365d] uppercase tracking-tight mb-4">{item.title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-8">{item.desc}</p>
-                <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
-                   <span className="text-sky-500 text-[10px] font-black tracking-widest uppercase">{item.tag}</span>
-                   <ArrowRight size={14} className="text-slate-300 group-hover:text-sky-500 transition-colors" />
-                </div>
-              </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: i * 0.2 }}
+                  className="bg-white p-8 rounded-[35px] shadow-[0_15px_45px_rgba(0,0,0,0.03)] border border-gray-100 group transition-all hover:shadow-2xl hover:-translate-y-1 cursor-pointer"
+                >
+                  <div className={`${item.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-sky-500/10 transition-transform group-hover:rotate-6`}>
+                     {item.icon}
+                  </div>
+                  <h3 className="text-xl font-[1000] text-[#1a365d] uppercase tracking-tight mb-4">{item.title}</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed mb-8">{item.desc}</p>
+                  <div className="pt-4 border-t border-slate-50 flex items-center justify-between">
+                     <span className="text-sky-500 text-[10px] font-black tracking-widest uppercase">{item.tag}</span>
+                     <div className="flex items-center gap-1.5 text-emerald-600 font-bold text-[10px]">
+                       <span>WhatsApp</span>
+                       <ArrowRight size={14} className="text-slate-300 group-hover:text-emerald-500 transition-colors" />
+                     </div>
+                  </div>
+                </motion.div>
+              </a>
             ))}
           </div>
 
