@@ -388,7 +388,7 @@ export default function FAQPage() {
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.35, ease: "easeOut" }}
                       >
-                        <div className="px-6 sm:px-8 pb-8 pt-2 pl-18 sm:pl-20">
+                        <div className="px-6 sm:px-8 pb-8 pt-2 pl-6 sm:pl-20">
                           <div className="h-[2px] w-10 bg-sky-400 rounded-full mb-4" />
                           <p className="text-slate-600 font-medium text-sm sm:text-base leading-relaxed">
                             {faq.answer}

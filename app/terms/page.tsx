@@ -61,7 +61,7 @@ export default function TermsPage() {
                 Account Registration & User Conduct
               </h2>
             </div>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Identity & Eligibility</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
@@ -85,7 +85,7 @@ export default function TermsPage() {
                 Studio Health, Physical Training (PT) & Safety
               </h2>
             </div>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Health & Fitness Clearance</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
@@ -109,7 +109,7 @@ export default function TermsPage() {
                 Scheduling, Cancellations & Rescheduling
               </h2>
             </div>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Private Lesson Rescheduling</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
@@ -133,7 +133,7 @@ export default function TermsPage() {
                 Intellectual Property & DPO Governance
               </h2>
             </div>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Proprietary Training Methodologies</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">

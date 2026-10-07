@@ -71,13 +71,14 @@ export default function CorporatePage() {
               </div>
             </div>
 
-            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4">
+            <div className="relative z-10 flex flex-col sm:flex-row items-center gap-4 w-full lg:w-auto">
               <a
                 href={getWhatsAppUrl("Hi Chessmatic! I'd like to request a customized corporate workshop proposal for our team.")}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                <Button style={{ backgroundColor: "#25D366" }} className="h-14 px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 flex items-center gap-3">
+                <Button style={{ backgroundColor: "#25D366" }} className="w-full sm:w-auto h-14 px-8 md:px-10 rounded-full text-[11px] font-[1000] uppercase tracking-widest text-white hover:bg-[#20ba59] transition-all shadow-xl active:scale-95 flex items-center justify-center gap-3">
                   <MessageCircle size={18} className="fill-current" />
                   <FileText size={16}/> Request Proposal
                 </Button>
@@ -86,8 +87,9 @@ export default function CorporatePage() {
                 href={getWhatsAppUrl("Hi Chessmatic! I'd like to contact the Lab for corporate inquiries and availability.")}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="w-full sm:w-auto"
               >
-                <Button className="h-14 px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center gap-2">
+                <Button className="w-full sm:w-auto h-14 px-8 md:px-10 bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 text-white text-[11px] font-[1000] uppercase tracking-widest transition-all active:scale-95 flex items-center justify-center gap-2">
                   <MessageCircle size={16} />
                   Contact Lab
                 </Button>

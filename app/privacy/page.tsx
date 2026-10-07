@@ -61,10 +61,10 @@ export default function PrivacyPage() {
                 Collection of Personal Data
               </h2>
             </div>
-            <p className="text-sm md:text-base font-medium leading-relaxed pl-11 text-slate-600">
+            <p className="text-sm md:text-base font-medium leading-relaxed pl-2 sm:pl-11 text-slate-600">
               We collect personal data required to provide seamless online chess multiplayer services, tournament management, and fair-play tracking. This includes:
             </p>
-            <div className="grid grid-cols-1 gap-3 pl-11 pt-2">
+            <div className="grid grid-cols-1 gap-3 pl-2 sm:pl-11 pt-2">
               {[
                 { title: "Account Information", desc: "Username, email address, password, country, and birth year." },
                 { title: "Gameplay & Performance Analytics", desc: "Move history, Elo ratings, timestamps, and anti-cheating telemetry metrics." },
@@ -90,10 +90,10 @@ export default function PrivacyPage() {
                 Specific Rules for Photography & Images
               </h2>
             </div>
-            <p className="text-sm md:text-base font-medium leading-relaxed pl-11 text-slate-600">
+            <p className="text-sm md:text-base font-medium leading-relaxed pl-2 sm:pl-11 text-slate-600">
               When you upload photographs or grant camera permissions to Chessmatic, the following PDPA data protection mechanisms apply tightly:
             </p>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               {[
                 { label: "Purpose Limitation", desc: "Profile images are used solely for user personalization. Identity-verification photos are utilized strictly to validate tournament eligibility and prevent multi-accounting. They are never repurposed for marketing without explicit, separate consent." },
                 { label: "Biometric Data Clarification", desc: "Chessmatic does not extract geometric facial templates or utilize biometric processing algorithms unless explicitly stated for high-tier professional prize tournaments." },
@@ -116,7 +116,7 @@ export default function PrivacyPage() {
                 Compliance with PDPA Core Obligations
               </h2>
             </div>
-            <div className="space-y-3 pl-11 pt-2">
+            <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               {[
                 { title: "3.1 Consent & Purpose Limitation Obligations", desc: "By creating an account or uploading photographs, you consent to the processing of your data for the defined functionalities. We do not sell or lease your identity documents or personal imagery to advertisers." },
                 { title: "3.2 Access and Correction Obligations", desc: "You maintain the legal right to request access to your historical account data or update outdated information (such as changing a profile photo or legal name). Contact our Data Protection Officer for formalized queries." },
@@ -139,7 +139,7 @@ export default function PrivacyPage() {
                 Data Protection Officer (DPO) Contact Info
               </h2>
             </div>
-            <div className="pl-11 pt-2">
+            <div className="pl-2 sm:pl-11 pt-2">
               <div className="p-6 md:p-8 rounded-[30px] bg-[#1a365d] text-white shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                 <div className="space-y-2">
                   <p className="text-slate-300 text-xs md:text-sm font-medium">

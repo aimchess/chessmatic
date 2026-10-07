@@ -103,7 +103,7 @@ function ModuleCard({ exp, delay }: { exp: any, delay: number }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay }}
-        className="relative h-[480px] rounded-[45px] bg-[#1a365d] p-7 flex flex-col justify-between overflow-hidden shadow-[0_15px_50px_rgba(26,54,93,0.15)] hover:shadow-2xl transition-all duration-500 border border-slate-100/10 cursor-pointer"
+        className="relative min-h-[460px] md:h-[490px] rounded-[35px] md:rounded-[45px] bg-[#1a365d] p-6 sm:p-7 flex flex-col justify-between overflow-hidden shadow-[0_15px_50px_rgba(26,54,93,0.15)] hover:shadow-2xl transition-all duration-500 border border-slate-100/10 cursor-pointer"
       >
         {/* TECHNICAL DOT GRID */}
         <div className="absolute inset-0 opacity-[0.12] pointer-events-none" 
