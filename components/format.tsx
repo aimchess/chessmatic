@@ -1,17 +1,38 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { useState } from "react"
+import { motion, AnimatePresence } from "framer-motion"
 import { 
   User, Users, Laptop, Layers, 
-  Building2, ArrowRight, MessageCircle 
+  Building2, ArrowRight, MessageCircle,
+  Clock, MapPin, CheckCircle2, Sparkles, X, Info
 } from "lucide-react"
 import { getWhatsAppUrl } from "@/lib/whatsapp"
+
+interface FormatItem {
+  id: string
+  title: string
+  tag: string
+  desc: string
+  icon: React.ReactNode
+  color: string
+  outcome: string
+  val: string
+  duration: string
+  location: string
+  batchSize: string
+  idealFor: string
+  highlights: string[]
+  inclusions: string[]
+}
 
 export default function TrainingFormatsGrid() {
   const navy = "#1a365d"
   const cyan = "#0ea5e9"
 
-  const formats = [
+  const [selectedFormat, setSelectedFormat] = useState<FormatItem | null>(null)
+
+  const formats: FormatItem[] = [
     {
       id: "FMT-01",
       title: "Group Coaching Workshops",
@@ -20,7 +41,23 @@ export default function TrainingFormatsGrid() {
       icon: <Users size={20} />,
       color: "bg-sky-500",
       outcome: "Tactical Synergy",
-      val: "High Impact"
+      val: "High Impact",
+      duration: "75 - 90 mins / session",
+      location: "Woodlands Studio, Singapore",
+      batchSize: "Small Cohorts (4-8 Players)",
+      idealFor: "Adults and youth players who thrive in a social, competitive atmosphere and want hands-on tournament sparring.",
+      highlights: [
+        "Master game calculation principles & opening repertoire breakdowns",
+        "Over-the-board live tactical sparring with timed clock conditions",
+        "Real-time blunder detection and instant coach critique",
+        "Dynamic endgame conversion drills and collaborative calculation sprints"
+      ],
+      inclusions: [
+        "Weekly curated PGN master files and tactical homework packs",
+        "Direct coach game review and positional evaluations",
+        "Access to in-house Chessmatic sparring arena and leaderboards",
+        "Integrated mental stamina & breathwork activation routines"
+      ]
     },
     {
       id: "FMT-02",
@@ -30,7 +67,23 @@ export default function TrainingFormatsGrid() {
       icon: <User size={20} />,
       color: "bg-blue-600",
       outcome: "Maximum Precision",
-      val: "100% Focus"
+      val: "100% Focus",
+      duration: "60 mins / session",
+      location: "Woodlands Studio, Singapore",
+      batchSize: "1-on-1 Dedicated Master Coach",
+      idealFor: "Busy executives, tournament players, or beginners seeking rapid, 100% customized rating growth with zero distractions.",
+      highlights: [
+        "Full diagnostic audit of your calculation velocity, weaknesses, and habits",
+        "Bespoke opening repertoire engineered specifically for your style",
+        "Move-by-move deconstruction of your recent tournament and online games",
+        "Integrated dual-task training (mind-body posture & endurance conditioning)"
+      ],
+      inclusions: [
+        "Tailored developmental roadmap updated after every session",
+        "Private annotated PGN repertoire database built for you",
+        "Asynchronous coach messaging support for quick game checks between lessons",
+        "Physical ergonomic & stamina calibration exercises"
+      ]
     },
     {
       id: "FMT-03",
@@ -40,7 +93,23 @@ export default function TrainingFormatsGrid() {
       icon: <Laptop size={20} />,
       color: "bg-indigo-600",
       outcome: "Flexible Mastery",
-      val: "Global Access"
+      val: "Global Access",
+      duration: "60 mins / session",
+      location: "Virtual (Zoom / Google Meet + Lichess/Chess.com)",
+      batchSize: "1-on-1 Dedicated Virtual Coach",
+      idealFor: "Busy professionals, frequent travelers, and international students needing elite chess coaching with complete scheduling freedom.",
+      highlights: [
+        "Interactive screen-share analysis with live digital board annotations",
+        "Targeted positional puzzles, calculation sprints, and blunder mitigation",
+        "Real-time online sparring with immediate grandmaster-grade review",
+        "Targeted preparation against specific upcoming tournament opponents"
+      ],
+      inclusions: [
+        "Full HD session recordings accessible 24/7 for unlimited review",
+        "Comprehensive annotated PGN study files delivered after every class",
+        "Weekly tactical homework with automated accuracy tracking",
+        "Async coach review for your online blitz/rapid games"
+      ]
     },
     {
       id: "FMT-04",
@@ -50,7 +119,23 @@ export default function TrainingFormatsGrid() {
       icon: <Layers size={20} />,
       color: "bg-amber-500",
       outcome: "Group Sparring",
-      val: "Cost-Effective"
+      val: "Cost-Effective",
+      duration: "60 mins / session",
+      location: "Virtual Classroom + Discord Arena",
+      batchSize: "Small Online Cohorts (4-8 Students)",
+      idealFor: "Students seeking an affordable, highly interactive, and community-driven digital chess training cohort.",
+      highlights: [
+        "Live cohort calculation sprints and speed puzzle-solving battles",
+        "Thematic masterclasses covering critical middlegame and opening concepts",
+        "Private cohort arena tournaments with live coach commentary",
+        "Step-by-step progressive curriculum tailored to cohort rating band"
+      ],
+      inclusions: [
+        "Weekly digital study packets and curated homework assignments",
+        "Cohort leaderboard and tournament matchmaking access",
+        "Community discussion group for ongoing sparring and game reviews",
+        "Regular progress assessments and rating milestone tracking"
+      ]
     },
     {
       id: "FMT-05",
@@ -60,7 +145,23 @@ export default function TrainingFormatsGrid() {
       icon: <Building2 size={20} />,
       color: "bg-[#1a365d]",
       outcome: "Leadership ROI",
-      val: "Team Scale"
+      val: "Team Scale",
+      duration: "Half-Day / Full-Day / Multi-Week Series",
+      location: "On-site at Client Office / Retreat / Woodlands Studio",
+      batchSize: "Custom Cohorts (10 to 100+ Participants)",
+      idealFor: "Corporate teams, executive leadership retreats, HR wellness days, and companies looking for strategic team bonding.",
+      highlights: [
+        "Executive Decision-Making: Translating chess calculation into business strategy",
+        "Viral 2v2 Plank Chess Relays: Physical endurance meets high-pressure chess",
+        "Turnkey Corporate Tournaments with custom branding, trophies & medals",
+        "Composure Under Pressure: Stress management and decision agility"
+      ],
+      inclusions: [
+        "Customized workshop curriculum aligned with corporate KPIs & themes",
+        "All tournament chess equipment, digital timers, and wellness gear provided",
+        "High-res event photography, video highlights, and certificates of completion",
+        "Corporate wellness follow-up guides & internal chess club toolkit"
+      ]
     }
   ]
 
@@ -150,8 +251,9 @@ export default function TrainingFormatsGrid() {
                       <div className="absolute right-0 top-0 h-full w-4 bg-white/40 skew-x-12" />
                    </div>
 
-                   {/* Action buttons: Book Trial + Arrow */}
+                   {/* Action buttons: Book Trial (WhatsApp) + More Info Arrow (Modal) */}
                    <div className="pt-2 flex items-center gap-3">
+                      {/* WhatsApp Button */}
                       <a
                         href={whatsappUrl}
                         target="_blank"
@@ -162,15 +264,16 @@ export default function TrainingFormatsGrid() {
                         <span>Book Trial</span>
                       </a>
 
-                      <a
-                        href={whatsappUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={`Book trial on WhatsApp for ${item.title}`}
-                        className="w-11 h-11 rounded-xl bg-slate-50 text-slate-400 hover:bg-[#25D366] hover:text-white group-hover:bg-sky-500 group-hover:text-white transition-all shadow-sm flex items-center justify-center shrink-0"
+                      {/* Arrow Button: Opens More Info Modal */}
+                      <button
+                        type="button"
+                        onClick={() => setSelectedFormat(item)}
+                        aria-label={`View full details for ${item.title}`}
+                        title="View format details & syllabus"
+                        className="w-11 h-11 rounded-xl bg-slate-50 text-slate-500 hover:bg-[#1a365d] hover:text-white group-hover:border-sky-300 border border-slate-200/60 transition-all shadow-sm flex items-center justify-center shrink-0 hover:scale-105 active:scale-95 cursor-pointer"
                       >
-                         <ArrowRight size={16} />
-                      </a>
+                         <ArrowRight size={16} className="transition-transform group-hover:translate-x-0.5" />
+                      </button>
                    </div>
                 </div>
 
@@ -195,6 +298,170 @@ export default function TrainingFormatsGrid() {
         </motion.div>
 
       </div>
+
+      {/* MORE INFO MODAL */}
+      <AnimatePresence>
+        {selectedFormat && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6">
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setSelectedFormat(null)}
+              className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity"
+            />
+
+            {/* Modal Dialog Content */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95, y: 15 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 15 }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="relative w-full max-w-2xl bg-white rounded-[28px] sm:rounded-[36px] shadow-2xl border border-slate-100 overflow-hidden z-10 flex flex-col max-h-[92vh] my-auto"
+            >
+              {/* MODAL HEADER (shrink-0 ensures it never squishes or cuts text) */}
+              <div className="relative shrink-0 p-5 sm:p-7 md:p-8 bg-gradient-to-br from-[#1a365d] to-[#0f2444] text-white">
+                {/* Ambient Grid Pattern */}
+                <div 
+                  className="absolute inset-0 opacity-10 pointer-events-none"
+                  style={{ backgroundImage: `radial-gradient(white 1px, transparent 1px)`, backgroundSize: '16px 16px' }}
+                />
+
+                {/* Close Button */}
+                <button
+                  onClick={() => setSelectedFormat(null)}
+                  className="absolute top-4 right-4 sm:top-6 sm:right-6 w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-white/10 hover:bg-white/25 text-white/80 hover:text-white flex items-center justify-center transition-all cursor-pointer backdrop-blur-md z-20"
+                  aria-label="Close dialog"
+                >
+                  <X size={18} />
+                </button>
+
+                <div className="relative z-10 flex items-center gap-2.5 mb-2.5 pr-10">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-white/15 border border-white/20 text-sky-300 text-[8px] sm:text-[9px] font-black uppercase tracking-[0.25em]">
+                    {selectedFormat.tag}
+                  </span>
+                  <span className="text-white/50 text-[9px] sm:text-[10px] font-black tracking-widest uppercase">
+                    {selectedFormat.id}
+                  </span>
+                </div>
+
+                <h3 className="relative z-10 text-xl sm:text-2xl md:text-3xl font-[1000] text-white tracking-tight uppercase leading-tight pr-10">
+                  {selectedFormat.title}
+                </h3>
+                <p className="relative z-10 mt-2 text-slate-300 text-xs sm:text-sm font-medium leading-relaxed pr-6">
+                  {selectedFormat.desc}
+                </p>
+              </div>
+
+              {/* MODAL BODY (flex-1 min-h-0 overflow-y-auto ensures smooth inner scrolling) */}
+              <div className="flex-1 min-h-0 p-5 sm:p-7 md:p-8 overflow-y-auto space-y-5 sm:space-y-6 text-slate-700">
+                
+                {/* QUICK SPEC CHIPS */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-xl bg-sky-50 text-sky-600 flex items-center justify-center shrink-0">
+                      <Clock size={16} />
+                    </div>
+                    <div>
+                      <span className="text-[8px] sm:text-[9px] uppercase font-black tracking-wider text-slate-400 block">Session Length</span>
+                      <span className="text-xs font-bold text-[#1a365d] leading-tight block mt-0.5">{selectedFormat.duration}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center shrink-0">
+                      <MapPin size={16} />
+                    </div>
+                    <div>
+                      <span className="text-[8px] sm:text-[9px] uppercase font-black tracking-wider text-slate-400 block">Delivery Venue</span>
+                      <span className="text-xs font-bold text-[#1a365d] leading-tight block mt-0.5">{selectedFormat.location}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-slate-50 border border-slate-100 rounded-2xl p-3 flex items-start gap-3">
+                    <div className="w-8 h-8 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center shrink-0">
+                      <Users size={16} />
+                    </div>
+                    <div>
+                      <span className="text-[8px] sm:text-[9px] uppercase font-black tracking-wider text-slate-400 block">Batch Setup</span>
+                      <span className="text-xs font-bold text-[#1a365d] leading-tight block mt-0.5">{selectedFormat.batchSize}</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* WHO IT'S IDEAL FOR */}
+                <div className="bg-sky-50/70 border border-sky-100 rounded-2xl p-3.5 sm:p-4 flex items-start gap-3">
+                  <Info size={18} className="text-sky-600 shrink-0 mt-0.5" />
+                  <div>
+                    <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-sky-900 block mb-0.5">
+                      Target Learner Profile
+                    </span>
+                    <p className="text-xs font-medium text-sky-800 leading-relaxed">
+                      {selectedFormat.idealFor}
+                    </p>
+                  </div>
+                </div>
+
+                {/* CURRICULUM HIGHLIGHTS */}
+                <div className="space-y-2.5 sm:space-y-3">
+                  <div className="flex items-center gap-2">
+                    <Sparkles size={16} className="text-sky-500" />
+                    <h4 className="text-[11px] sm:text-xs font-[1000] uppercase tracking-wider text-[#1a365d]">
+                      Curriculum & Training Focus
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+                    {selectedFormat.highlights.map((highlight, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 border border-slate-100">
+                        <CheckCircle2 size={14} className="text-sky-500 shrink-0 mt-0.5" />
+                        <span className="text-xs font-bold text-slate-700 leading-snug">{highlight}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* WHAT'S INCLUDED */}
+                <div className="space-y-2.5 sm:space-y-3">
+                  <h4 className="text-[11px] sm:text-xs font-[1000] uppercase tracking-wider text-[#1a365d]">
+                    Deliverables & Inclusions
+                  </h4>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
+                    {selectedFormat.inclusions.map((inclusion, idx) => (
+                      <div key={idx} className="flex items-start gap-2.5 p-2.5 sm:p-3 rounded-xl bg-slate-50/80 border border-slate-100">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5" />
+                        <span className="text-xs font-medium text-slate-600 leading-snug">{inclusion}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+              </div>
+
+              {/* MODAL FOOTER ACTIONS (shrink-0 ensures it's always fully visible) */}
+              <div className="shrink-0 p-4 sm:p-5 md:p-6 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row items-center gap-2.5 sm:gap-3">
+                <button
+                  type="button"
+                  onClick={() => setSelectedFormat(null)}
+                  className="w-full sm:w-auto px-5 py-2.5 sm:py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-600 text-xs font-bold border border-slate-200 transition-colors cursor-pointer"
+                >
+                  Close
+                </button>
+
+                <a
+                  href={getWhatsAppUrl(`Hi Chessmatic! I reviewed the details for ${selectedFormat.title} (${selectedFormat.tag}) and would like to book a trial / schedule consultation. Please share available slots.`)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:flex-1 py-2.5 sm:py-3 px-5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-[1000] uppercase tracking-wider shadow-md hover:shadow-emerald-500/20 transition-all flex items-center justify-center gap-2"
+                >
+                  <MessageCircle size={16} className="fill-current" />
+                  <span>Book Trial for {selectedFormat.title}</span>
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

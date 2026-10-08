@@ -124,7 +124,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-[8px] md:text-[9px] font-black uppercase tracking-widest mb-1">Operating Hours</p>
-                    <p className="text-white font-bold text-xs md:text-sm">Mon - Fri: 10:00 - 20:00<br/>Sat - Sun: 09:00 - 18:00</p>
+                    <p className="text-white font-bold text-xs md:text-sm">Mon - Fri: 10:00 - 20:00<br/>Sat - Sun: 09:00 - 21:00</p>
                   </div>
                 </div>
               </div>

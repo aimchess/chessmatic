@@ -14,8 +14,8 @@ export default function CommunityAndSchedule() {
   const cyan = "#0ea5e9"
 
   const availability = [
-    { label: "Weekday Evenings", time: "19:00 - 21:00", icon: <Clock size={18} />, tag: "AFTER WORK" },
-    { label: "Weekend Classes", time: "09:00 - 18:00", icon: <Calendar size={18} />, tag: "PRIME TIME" },
+    { label: "Weekday Evenings", time: "17:00 - 21:00", icon: <Clock size={18} />, tag: "AFTER WORK" },
+    { label: "Weekend Classes", time: "09:00 - 21:00", icon: <Calendar size={18} />, tag: "PRIME TIME" },
     { label: "Private Bookings", time: "Custom Slots", icon: <UserCheck size={18} />, tag: "1-ON-1" },
     { label: "Corporate Sessions", time: "Flexible", icon: <Building2 size={18} />, tag: "B2B ONLY" },
     { label: "Flexi-Timings", time: "On-Demand", icon: <Zap size={18} />, tag: "ANYTIME" },
