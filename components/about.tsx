@@ -87,7 +87,7 @@ export default function AboutSection() {
 
               <div className="space-y-4 text-slate-500 text-base md:text-lg leading-relaxed font-medium">
                 <p>
-                  At <span className="text-[#1a365d] font-bold">Chessmatic LLP</span>, we believe chess is more than just a game—it’s a powerful lab for building elite confidence, sharpening tactical calculation, and fostering mental resilience.
+                  At <span className="text-[#1a365d] font-bold">Chessmatic</span>, we believe chess is more than just a game—it’s a powerful lab for building elite confidence, sharpening tactical calculation, and fostering mental resilience.
                 </p>
                 <p>
                   We bring a modern lifestyle concept to Singapore by combining <span className="text-[#1a365d] font-bold">chess, fitness, and social wellness</span>. Our curriculum is designed not just to teach the fundamentals, but to inspire critical performance on the board and beyond.

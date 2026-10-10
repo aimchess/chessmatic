@@ -76,7 +76,7 @@ export default function WhyCompaniesChoose() {
               </h2>
 
               <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Chessmatic LLP delivers a modern performance concept to Singapore. We don't just facilitate workshops; we rewire team logic through high-intensity mental and physical fusion.
+                Chessmatic delivers a modern performance concept to Singapore. We don't just facilitate workshops; we rewire team logic through high-intensity mental and physical fusion.
               </p>
             </div>
 

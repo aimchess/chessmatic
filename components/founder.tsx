@@ -61,7 +61,7 @@ export default function FounderSection() {
 
               <div className="space-y-3 text-slate-600 text-sm md:text-base leading-relaxed font-medium">
                 <p>
-                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic LLP</span> and the Director of <span className="text-[#1a365d] font-bold">Intchess</span>. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT).
+                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic</span> and the Director of <span className="text-[#1a365d] font-bold">Intchess</span>. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT).
                 </p>
                 
                 <p>

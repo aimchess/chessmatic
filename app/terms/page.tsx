@@ -3,7 +3,7 @@ import { FileText, ArrowLeft, ShieldCheck, CheckCircle2, Mail, Award, Lock } fro
 
 export const metadata = {
   title: "Terms & Conditions | Chessmatic Platform & Studio (Singapore)",
-  description: "Official Terms and Conditions for Chessmatic LLP platform, in-studio coaching, personal training, and corporate workshops.",
+  description: "Official Terms and Conditions for Chessmatic platform, in-studio coaching, personal training, and corporate workshops.",
 }
 
 export default function TermsPage() {
@@ -47,7 +47,7 @@ export default function TermsPage() {
         {/* Intro Box */}
         <div className="p-6 md:p-8 rounded-[30px] bg-slate-50 border border-slate-200/80 mb-12">
           <p className="text-slate-700 text-sm md:text-base font-medium leading-relaxed">
-            Welcome to <strong>Chessmatic LLP</strong> ("Chessmatic", "we", "our"). By registering an account, attending in-person sessions at our Woodlands Studio, participating in virtual coaching batches, or booking corporate workshops, you agree to comply with these Platform Terms & Conditions and our <Link href="/privacy" className="text-sky-500 font-bold underline">PDPA Privacy Policy</Link>.
+            Welcome to <strong>Chessmatic</strong> ("Chessmatic", "we", "our"). By registering an account, attending in-person sessions at our Woodlands Studio, participating in virtual coaching batches, or booking corporate workshops, you agree to comply with these Platform Terms & Conditions and our <Link href="/privacy" className="text-sky-500 font-bold underline">PDPA Privacy Policy</Link>.
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function TermsPage() {
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Proprietary Training Methodologies</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
-                  All training materials, tactical calculation modules, proprietary Plank Chess rules, and analysis reports developed by Chessmatic LLP remain the exclusive intellectual property of Chessmatic.
+                  All training materials, tactical calculation modules, proprietary Plank Chess rules, and analysis reports developed by Chessmatic remain the exclusive intellectual property of Chessmatic.
                 </p>
               </div>
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
@@ -153,7 +153,7 @@ export default function TermsPage() {
 
         {/* FOOTER NOTE */}
         <div className="mt-16 pt-8 border-t border-slate-200 text-center text-slate-400 text-xs font-bold uppercase tracking-widest">
-          Chessmatic LLP © 2026 • Singapore Jurisdiction
+          Chessmatic © 2026 • Singapore Jurisdiction
         </div>
 
       </div>

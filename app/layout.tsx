@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     'Singapore’s premier performance lab combining adult chess coaching, physical conditioning (PT), Chess + PT hybrid programs, and strategic corporate workshops.',
   keywords: [
-    'Chessmatic LLP',
+    'Chessmatic',
     'Chess and PT Singapore',
     'Personal Training Singapore',
     'Adult Chess Classes Singapore',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     canonical: 'https://www.chessmatic.sg',
   },
   authors: [{ name: 'Wagish', url: 'https://www.chessmatic.sg' }],
-  creator: 'Chessmatic LLP',
-  publisher: 'Chessmatic LLP',
+  creator: 'Chessmatic',
+  publisher: 'Chessmatic',
   robots: {
     index: true,
     follow: true,
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Chessmatic - Strategic Mind & Body Training',
     description: 'Transform your strategic logic and physical conditioning in Singapore’s first hybrid training lab.',
     url: 'https://www.chessmatic.sg',
-    siteName: 'Chessmatic LLP',
+    siteName: 'Chessmatic',
     images: [
       {
         url: 'https://www.chessmatic.sg/og-image.jpg', // Ensure you have an OG image in public
@@ -82,7 +82,7 @@ export default function RootLayout({
               {
                 '@context': 'https://schema.org',
                 '@type': 'EducationalOrganization',
-                name: 'Chessmatic LLP',
+                name: 'Chessmatic',
                 url: 'https://www.chessmatic.sg',
                 logo: 'https://www.chessmatic.sg/logo.jpg',
                 description: 'A modern performance lab in Singapore combining chess strategy with physical wellness and personal training.',
@@ -108,7 +108,7 @@ export default function RootLayout({
                 jobTitle: 'Founder',
                 affiliation: {
                   '@type': 'Organization',
-                  name: 'Chessmatic LLP',
+                  name: 'Chessmatic',
                 },
                 sameAs: [
                   'https://www.linkedin.com/in/wagish-chessmatic', // Update with actual links

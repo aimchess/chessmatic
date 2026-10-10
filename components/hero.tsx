@@ -48,7 +48,7 @@ export default function HeroSection() {
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-medium mb-8 sm:mb-12 max-w-3xl mx-auto opacity-95">
-            Chessmatic LLP brings a modern performance concept to Singapore by 
+            Chessmatic brings a modern performance concept to Singapore by 
             combining <span className="text-white font-bold">chess strategy, personal physical training (PT), and corporate leadership labs</span> for adults and organizations.
           </p>
 

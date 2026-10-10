@@ -18,7 +18,7 @@ export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "EducationalOrganization",
-    "name": "Chessmatic LLP",
+    "name": "Chessmatic",
     "url": "https://www.chessmatic.sg",
     "logo": "https://www.chessmatic.sg/logo.jpg",
     "description": "Singapore's first mental and physical hybrid performance lab. Combining adult chess coaching with physical training (PT).",

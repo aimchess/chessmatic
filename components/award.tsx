@@ -56,7 +56,7 @@ export default function AwardSection() {
               <div className="relative rounded-[30px] md:rounded-[40px] overflow-hidden border-4 md:border-8 border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.4)] bg-white group-hover:scale-[1.02] transition-transform duration-700">
                  <img 
                    src="/award.jpeg" 
-                   alt="Singapore 500 SME Award 2025 - Chessmatic LLP" 
+                   alt="Singapore 500 SME Award 2025 - Chessmatic" 
                    className="w-full h-auto object-cover"
                  />
                  <div className="absolute inset-0 bg-gradient-to-t from-[#1a365d]/30 via-transparent to-transparent" />
@@ -91,7 +91,7 @@ export default function AwardSection() {
                 </h3>
                 
                 <p className="text-slate-300 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                  Chessmatic LLP has been awarded the prestige commercial status of a <span className="text-white font-bold underline decoration-sky-500 underline-offset-4">Singapore 500 SME Company</span> for 2025, based on elite assessments.
+                  Chessmatic has been awarded the prestige commercial status of a <span className="text-white font-bold underline decoration-sky-500 underline-offset-4">Singapore 500 SME Company</span> for 2025, based on elite assessments.
                 </p>
               </div>
 

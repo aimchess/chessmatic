@@ -35,8 +35,8 @@ const FAQ_DATA: FAQItem[] = [
     id: "gen-1",
     section: "general",
     tag: "Concept",
-    question: "What is Chessmatic LLP and how does the hybrid methodology work?",
-    answer: "Chessmatic LLP is Singapore's premier mind-and-body training lab founded by Wagish (Director of Intchess). We pioneer a dual-track standard: pairing tactical chess calculation with functional physical conditioning (PT). By training physical stamina alongside deep calculation, we eliminate cognitive fatigue and stabilize decision-making under intense pressure."
+    question: "What is Chessmatic and how does the hybrid methodology work?",
+    answer: "Chessmatic is Singapore's premier mind-and-body training lab founded by Wagish (Director of Intchess). We pioneer a dual-track standard: pairing tactical chess calculation with functional physical conditioning (PT). By training physical stamina alongside deep calculation, we eliminate cognitive fatigue and stabilize decision-making under intense pressure."
   },
   {
     id: "gen-2",
@@ -50,7 +50,7 @@ const FAQ_DATA: FAQItem[] = [
     section: "general",
     tag: "Founder",
     question: "Who leads the training and curriculum at Chessmatic?",
-    answer: "Wagish is the Founder of Chessmatic LLP and the Director of Intchess. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT). With a functional fitness background, Wagish champions: 'A sharper strategic mind backed by physical stamina and core resilience.'"
+    answer: "Wagish is the Founder of Chessmatic and the Director of Intchess. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT). With a functional fitness background, Wagish champions: 'A sharper strategic mind backed by physical stamina and core resilience.'"
   },
   {
     id: "gen-4",
