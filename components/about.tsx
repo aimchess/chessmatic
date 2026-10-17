@@ -24,7 +24,7 @@ export default function AboutSection() {
               className="relative z-10 w-[85%] rounded-[30px] md:rounded-[60px] overflow-hidden border-4 md:border-8 border-gray-50 shadow-2xl"
             >
               <img 
-                src="/about1.png" 
+                src="/8.png" 
                 alt="Strategic Chess Focus" 
                 className="w-full h-auto grayscale-[0.2]"
               />
@@ -39,7 +39,7 @@ export default function AboutSection() {
               className="absolute -bottom-12 -right-2 md:-right-4 z-20 w-[60%] rounded-[20px] md:rounded-[40px] overflow-hidden border-4 md:border-8 border-white shadow-2xl"
             >
               <img 
-                src="/about2.png" 
+                src="/5.png" 
                 alt="Physical Core Activation" 
                 className="w-full h-auto"
               />
