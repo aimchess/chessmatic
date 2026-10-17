@@ -23,7 +23,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Activity size={18} className="text-sky-500" />,
       footerText: "Singapore’s premier hybrid mind and body protocol.",
-      image: "/pt-page-banner.jpg",
+      image: "team-viral-chess-pt.jpg",
       icon: <Trophy size={20} className="text-white" />
     },
     {
@@ -40,7 +40,7 @@ export default function ProgramsOverview() {
       ],
       footerIcon: <Shield size={18} className="text-sky-500" />,
       footerText: "Customized for adults, busy executives, and competitive players.",
-      image: "/about2.png",
+      image: "/7.png",
       icon: <Shield size={20} className="text-white" />
     },
     {

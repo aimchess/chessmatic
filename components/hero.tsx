@@ -16,7 +16,7 @@ export default function HeroSection() {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-60 sm:opacity-75"
           style={{ 
-            backgroundImage: `url('/hero-adults-chess.jpg')`, 
+            backgroundImage: `url('/4.png')`, 
           }}
         />
         {/* Radial Spotlight: Enhanced contrast for clean text legibility */}

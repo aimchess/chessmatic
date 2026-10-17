@@ -25,7 +25,7 @@ export default function AdultClassesPage() {
       tier: "TRACK 01",
       title: "Beginner & Foundation",
       focus: "Fundamentals, Rules & Board Vision",
-      image: "/adult1.png",
+      image: "/3.png",
       badge: "Foundation Level",
       chess: [
         "Piece dynamics, core rules, and board coordinates",

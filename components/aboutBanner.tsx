@@ -15,7 +15,7 @@ export default function AboutBanner() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
         style={{ 
-          backgroundImage: `url('/about.png')`, 
+          backgroundImage: `url('/1.png')`, 
         }}
       >
         <div className="absolute inset-0 bg-[#1a365d]/70" />

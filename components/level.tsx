@@ -16,7 +16,7 @@ export default function TargetCohorts() {
       tag: "FOUNDATION",
       desc: "Never played before? We build your tactical foundation from zero with structured logic.",
       focus: "Fundamental Rules & Ethics",
-      image: "/adult3.png",
+      image: "/4.png",
       icon: <Shield size={18} className="text-sky-400" />,
       whatsappMsg: "Hi Chessmatic! I'd like to book a trial for the Beginners (Foundation) track. Please share the details and available slots."
     },
