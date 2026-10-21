@@ -1,7 +1,9 @@
 "use client"
 
-import { Users, Building2, UserCheck, ArrowRight, Zap } from "lucide-react"
+import { Users, Building2, UserCheck, ArrowRight, Zap, MessageCircle, ArrowUpRight } from "lucide-react"
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function WhoWeServe() {
   const navy = "#1a365d"
@@ -17,7 +19,10 @@ export default function WhoWeServe() {
       icon: <UserCheck className="w-5 h-5 text-sky-500" />,
       segments: ["Professionals", "Beginners", "Hobby Players"],
       benefit: "Decision Logic",
-      metric: "+85%"
+      metric: "+85%",
+      ctaText: "Book Executive Track",
+      href: "/adult-classes",
+      whatsappMsg: "Hi Chessmatic! I'd like to book / enquire about the Executive Performance track for Adults."
     },
     {
       id: "SEGMENT 02",
@@ -28,7 +33,10 @@ export default function WhoWeServe() {
       icon: <Building2 className="w-5 h-5 text-rose-500" />,
       segments: ["Leadership Labs", "Team Collaboration", "Employee Wellness"],
       benefit: "Culture ROI",
-      metric: "High"
+      metric: "High",
+      ctaText: "Book Corporate Lab",
+      href: "/corporate",
+      whatsappMsg: "Hi Chessmatic! I'd like to book / enquire about Tactical Synergy corporate workshops."
     },
     {
       id: "SEGMENT 03",
@@ -39,7 +47,10 @@ export default function WhoWeServe() {
       icon: <Users className="w-5 h-5 text-amber-500" />,
       segments: ["Curated Events", "Social Experiences", "Elite Networking"],
       benefit: "Social Capital",
-      metric: "Top Tier"
+      metric: "Top Tier",
+      ctaText: "Join Community",
+      href: "/contact",
+      whatsappMsg: "Hi Chessmatic! I'd like to enquire about joining the Modern Connections chess & social community."
     }
   ]
 
@@ -138,6 +149,29 @@ export default function WhoWeServe() {
                       </div>
                    </div>
                 </div>
+
+                {/* CTA ACTIONS */}
+                <div className="mt-6 pt-5 border-t border-slate-100 flex items-center gap-2.5 relative z-10">
+                  <a
+                    href={getWhatsAppUrl(item.whatsappMsg)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 h-11 sm:h-12 rounded-2xl bg-[#1a365d] hover:bg-[#25D366] text-white font-[1000] uppercase tracking-wider text-[10px] sm:text-[11px] shadow-md hover:shadow-emerald-500/20 transition-all duration-300 flex items-center justify-center gap-2 group/btn active:scale-95"
+                  >
+                    <MessageCircle size={15} className="fill-current text-sky-400 group-hover:text-white transition-colors" />
+                    <span>{item.ctaText}</span>
+                    <ArrowRight size={13} className="group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+
+                  <Link
+                    href={item.href}
+                    title={`Explore ${item.title}`}
+                    aria-label={`Explore ${item.title} page`}
+                    className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-slate-50 hover:bg-sky-50 text-[#1a365d] hover:text-sky-600 border border-slate-200/80 flex items-center justify-center transition-all hover:scale-105 active:scale-95 shrink-0 shadow-sm group/link"
+                  >
+                    <ArrowUpRight size={16} strokeWidth={2.5} className="group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                  </Link>
+                </div>
               </div>
             </motion.div>
           ))}
@@ -150,10 +184,15 @@ export default function WhoWeServe() {
           viewport={{ once: true }}
           className="mt-12 md:mt-20 text-center"
         >
-          <button className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-[10px] md:text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 transition-all hover:text-sky-500 hover:gap-5 group">
+          <a
+            href={getWhatsAppUrl("Hi Chessmatic! I'd like to join the community and find out more about your programs.")}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 text-[#1a365d] font-black uppercase text-[10px] md:text-xs tracking-[0.3em] border-b-2 border-sky-500 pb-1 transition-all hover:text-sky-500 hover:gap-5 group"
+          >
             Join the community
             <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
         </motion.div>
       </div>
     </section>
