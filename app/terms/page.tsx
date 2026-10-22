@@ -106,16 +106,31 @@ export default function TermsPage() {
             <div className="flex items-center gap-3">
               <span className="w-8 h-8 rounded-xl bg-[#1a365d] text-white flex items-center justify-center font-[1000] text-xs">03</span>
               <h2 className="text-xl md:text-2xl font-[1000] text-[#1a365d] uppercase tracking-tight">
-                Scheduling, Cancellations & Rescheduling
+                Lesson Attendance, Makeup Policy & Tuition Terms
               </h2>
             </div>
             <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
-                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Private Lesson Rescheduling</h4>
+                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Academy Locations & Attendance</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
-                  We request a minimum of <strong>24 hours' advance notice</strong> to reschedule 1-on-1 private coaching or PT sessions. Late cancellations without prior notification may be charged at the full session rate.
+                  All group or private lessons will be conducted exclusively at official Chessmatic academy studio locations (Woodlands Studio, Singapore) or via authorized online means. For all group and private lessons, students must strictly attend their assigned slot or timing to ensure cohort continuity.
                 </p>
               </div>
+
+              <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Makeup Session Policy & Rescheduling Window</h4>
+                <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
+                  A maximum of <strong>1 makeup lesson</strong> is allowed for every <strong>4 lessons purchased</strong>. Any makeup session must be scheduled at least <strong>1 day (24 hours) prior</strong> to the initial lesson timing. Furthermore, the makeup lesson must be rescheduled to a date <strong>within 1 week</strong> from the original lesson date. Late cancellations or unattended slots without prior notification will be forfeited.
+                </p>
+              </div>
+
+              <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Discounts & Non-Stacking Policy</h4>
+                <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
+                  All kinds of online coaching lessons are subject to a 20% discount. Bulk purchase of 12 or more sessions is subject to a 10% discount, and 24 or more sessions is subject to a 20% discount (calculated on the 4-lesson rates). For private lessons with a non-titled coach, a 20% discount is applicable as well. <strong>Any form of discount stacking is strictly not applicable.</strong>
+                </p>
+              </div>
+
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Corporate Workshop Confirmation</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">

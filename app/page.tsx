@@ -11,6 +11,7 @@ import CompactCTA from "@/components/cta"
 import { motion } from "framer-motion"
 import AwardSection from "@/components/award"
 import PricingSection from "@/components/corpcourse"
+import ChessPricingSection from "@/components/chess-pricing"
 
 export default function HomePage() {
   
@@ -69,6 +70,8 @@ export default function HomePage() {
           </div>
 
           <PricingSection/>
+
+          <ChessPricingSection/>
 
           {/* 5. IMPACT: The Proof */}
           <TransformationSection />

@@ -231,9 +231,16 @@ export default function OperationalOfferings() {
 
         {/* 3. MARKETING FOOTER */}
         <div className="mt-16 text-center">
-           <p className="text-slate-400 font-bold italic text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+           <p className="text-slate-400 font-bold italic text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-4">
              “Available across in-person and digital formats with custom scheduling for adults, executives, and organizations.”
            </p>
+           <a 
+             href="#pricing"
+             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-[#1a365d] hover:border-sky-400 hover:text-sky-600 shadow-sm text-xs font-black uppercase tracking-wider transition-all"
+           >
+             <span>Explore Official Coaching Fees & Packages</span>
+             <ChevronRight size={14} />
+           </a>
         </div>
       </div>
     </section>

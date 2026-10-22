@@ -25,6 +25,18 @@ const faqs = [
   {
     question: "Where are the in-person sessions held in Singapore?",
     answer: "We operate out of our studio in Woodlands, Singapore, and we also provide on-site corporate facilitation for businesses across Singapore."
+  },
+  {
+    question: "What are your coaching rates and packages?",
+    answer: "For in-person training with our accredited FIDE Masters, 4-lesson packages are $600 for Private (1-on-1), $250 for Small Group (2-4 Pax), and $200 for Large Group (5-8 Pax). Single per-lesson rates are $200 (Private), $80 (Small Group), and $70 (Large Group). Initial 1-on-1 skill assessments are $100."
+  },
+  {
+    question: "Do you offer discounts for online lessons or bulk bookings?",
+    answer: "Yes! All online coaching lessons receive an automatic 20% discount. In addition, bulk purchases receive 10% off for 12+ sessions and 20% off for 24+ sessions (applied to the 4-lesson rate). Private lessons with non-titled coaches also enjoy a 20% discount. (Discounts are non-stackable)."
+  },
+  {
+    question: "What is your makeup and rescheduling policy?",
+    answer: "Students are allowed a maximum of 1 makeup session for every 4 lessons purchased. Rescheduling requests must be submitted at least 1 day (24 hours) in advance, and the makeup session must be completed within 1 week of the original lesson date."
   }
 ]
 

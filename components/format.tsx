@@ -192,6 +192,15 @@ export default function TrainingFormatsGrid() {
           <p className="mt-4 text-slate-400 font-bold uppercase tracking-[0.25em] text-[10px] sm:text-xs">
             Available for Chess + PT • Chess Separate • PT Separate
           </p>
+          <div className="mt-4 flex items-center justify-center gap-3">
+            <a 
+              href="#pricing" 
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-sky-50 text-sky-700 hover:bg-sky-100 text-xs font-black uppercase tracking-wider transition-all border border-sky-200/60 shadow-sm"
+            >
+              <span>View Official Price List</span>
+              <ArrowRight size={13} />
+            </a>
+          </div>
         </div>
 
         {/* RESPONSIVE 3-COLUMN / 2-COLUMN GRID */}

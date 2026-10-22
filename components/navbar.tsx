@@ -15,6 +15,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/adult-classes", label: "Adult Classes" },
+    { href: "/pricing", label: "Pricing" },
     { href: "/pt", label: "PT" },
     { href: "/corporate", label: "Corporate" },
     { href: "/blog", label: "Blog" },

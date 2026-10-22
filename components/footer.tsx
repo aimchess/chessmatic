@@ -79,6 +79,7 @@ export function Footer() {
               {[
                 { label: "Home", href: "/" },
                 { label: "Adult Classes", href: "/adult-classes" },
+                { label: "Tuition & Pricing", href: "/pricing" },
                 { label: "PT (Physical Training)", href: "/pt" },
                 { label: "Corporate Labs", href: "/corporate" },
                 { label: "Strategic Blog", href: "/blog" },

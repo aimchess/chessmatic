@@ -15,6 +15,7 @@ import TrainingFormats from "@/components/format"
 import BenefitsSection from "@/components/benefit"
 import CommunityAndSchedule from "@/components/final"
 import CoachesSection from "@/components/coaches"
+import ChessPricingSection from "@/components/chess-pricing"
 
 export default function AdultClassesPage() {
   const navy = "#1a365d"
@@ -172,6 +173,8 @@ export default function AdultClassesPage() {
       <CommunityAndSchedule/>
 
       <CoachesSection />
+
+      <ChessPricingSection />
 
       {/* FINAL RESPONSIVE CTA */}
       <section className="py-16 md:py-24 bg-white flex justify-center px-4 sm:px-6">
