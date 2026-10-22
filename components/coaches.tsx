@@ -31,6 +31,27 @@ export default function CoachesSection() {
         "Online Group Workshops",
         "Tactical Calculation Stamina"
       ]
+    },
+    {
+      name: "FM Dino Ballecer",
+      title: "FIDE Master (FM) & Certified FIDE Instructor",
+      badge: "FIDE Master & Certified FIDE Instructor",
+      image: "/dino.png",
+      experience: "20+ Years Coaching",
+      rating: "Peak FIDE 2434",
+      bio: "FIDE Master (peak rating 2434), Certified FIDE Instructor since 2017, and accredited trainer with the Singapore Chess Federation. Architect of a dynamic, adaptive coaching system that nurtures players from novice to Grandmaster level, guiding school teams to national championships and adults to rapid rating breakthroughs.",
+      achievements: [
+        "Official FIDE Master (Peak Rating 2434)",
+        "Certified FIDE Instructor (Since 2017)",
+        "2x International Master (IM) Title Norms",
+        "National Inter-School Champion Coach"
+      ],
+      specialties: [
+        "Novice to Master Progression",
+        "Tournament Strategy & Psychology",
+        "Adaptive & Inclusive Coaching",
+        "Accelerated FIDE Rating Growth"
+      ]
     }
   ]
 
