@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Dynamic blog post slugs from blog page
   const blogSlugs = [
+    'never-too-late-to-play-chess',
     'cognitive-benefits-of-chess',
     'science-of-chess-pt',
     'boardroom-tactics',

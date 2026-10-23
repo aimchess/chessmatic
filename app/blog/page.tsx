@@ -9,8 +9,16 @@ import Link from "next/link"
 
 const categories = ["All Insights", "Chess Strategy", "Cognitive Fitness", "Corporate ROI", "Wellness"]
 
-// DATA INTEGRATED WITH YOUR PROVIDED CONTENT
 const blogs = [
+  {
+    id: "never-too-late-to-play-chess",
+    title: "Why It’s Never Too Late to Play Chess: The Ultimate Brain Booster for Adults and Seniors",
+    excerpt: "Think chess is only for prodigies? Explore how the chessboard serves as the ultimate brain workout, building cognitive reserve, slashing dementia risk, and keeping older minds sharp.",
+    category: "Cognitive Fitness",
+    readTime: "8 min",
+    image: "/adult-chess.png",
+    impact: "Longevity & Health"
+  },
   {
     id: "cognitive-benefits-of-chess",
     title: "🧠 Cognitive Benefits of Chess: Beyond the Game",
