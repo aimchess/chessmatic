@@ -158,7 +158,7 @@ export default function TermsPage() {
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Singapore PDPA Compliance</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
-                  All personal data, identity documentation, and user photography are governed strictly under our <Link href="/privacy" className="text-sky-500 font-bold underline">PDPA Policy</Link>. For any inquiries, reach our Data Protection Officer at <a href="mailto:dpo@chessmatic.com" className="text-sky-500 font-bold underline">dpo@chessmatic.com</a>.
+                  All personal data, identity documentation, and user photography are governed strictly under our <Link href="/privacy" className="text-sky-500 font-bold underline">PDPA Policy</Link>. For any inquiries, reach our Data Protection Officer at <a href="mailto:info@chessmatic.com" className="text-sky-500 font-bold underline">info@chessmatic.com</a>.
                 </p>
               </div>
             </div>

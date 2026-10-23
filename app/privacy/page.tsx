@@ -149,11 +149,11 @@ export default function PrivacyPage() {
                     <strong>Attention:</strong> Data Protection Officer, Chessmatic SG Team
                   </p>
                   <p className="text-sky-400 font-bold text-sm flex items-center gap-2">
-                    <Mail size={16} /> <a href="mailto:dpo@chessmatic.com" className="hover:underline">dpo@chessmatic.com</a>
+                    <Mail size={16} /> <a href="mailto:info@chessmatic.com" className="hover:underline">info@chessmatic.com</a>
                   </p>
                 </div>
                 <a 
-                  href="mailto:dpo@chessmatic.com"
+                  href="mailto:info@chessmatic.com"
                   className="px-6 py-3 rounded-full bg-sky-500 hover:bg-sky-400 text-white text-xs font-[1000] uppercase tracking-widest transition-all shadow-lg shrink-0"
                 >
                   Contact DPO
