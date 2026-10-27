@@ -19,6 +19,10 @@ export default function ChessPricingSection() {
   const isOnline = deliveryMode === "online"
   const isPackage = billingCycle === "package4"
 
+  const formatPrice = (val: number) => {
+    return val % 1 !== 0 ? val.toFixed(2) : val.toString()
+  }
+
   const plans = [
     {
       id: "assessment",
@@ -29,7 +33,7 @@ export default function ChessPricingSection() {
       icon: <HelpCircle className="w-4 h-4 text-sky-500" />,
       price: isOnline ? 80 : 100,
       priceLabel: "single test",
-      unitPrice: "60-min diagnostic",
+      unitPrice: "60-min diagnostic evaluation",
       highlight: false,
       popular: false,
       features: [
@@ -47,12 +51,12 @@ export default function ChessPricingSection() {
       badgeColor: "bg-amber-50 text-amber-900 border-amber-200",
       icon: <Award className="w-4 h-4 text-amber-500" />,
       price: isPackage 
-        ? (isOnline ? 480 : 600) 
+        ? (isOnline ? 120 : 150) 
         : (isOnline ? 160 : 200),
-      priceLabel: isPackage ? "4 lessons" : "per lesson",
+      priceLabel: "lesson",
       unitPrice: isPackage 
-        ? (isOnline ? "$120 / lesson" : "$150 / lesson (Save $200)")
-        : "Standard session",
+        ? (isOnline ? "Billed as $480 for 4 lessons" : "Billed as $600 for 4 lessons (Save $200)")
+        : "Single session drop-in",
       highlight: true,
       popular: true,
       features: [
@@ -70,12 +74,12 @@ export default function ChessPricingSection() {
       badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
       icon: <Users className="w-4 h-4 text-emerald-500" />,
       price: isPackage 
-        ? (isOnline ? 200 : 250) 
+        ? (isOnline ? 50 : 62.5) 
         : (isOnline ? 64 : 80),
-      priceLabel: isPackage ? "4 lessons" : "per lesson",
+      priceLabel: "lesson",
       unitPrice: isPackage 
-        ? (isOnline ? "$50 / lesson" : "$62.50 / lesson (Save $70)")
-        : "Standard session",
+        ? (isOnline ? "Billed as $200 for 4 lessons" : "Billed as $250 for 4 lessons (Save $70)")
+        : "Single session drop-in",
       highlight: false,
       popular: false,
       features: [
@@ -93,12 +97,12 @@ export default function ChessPricingSection() {
       badgeColor: "bg-purple-50 text-purple-800 border-purple-200",
       icon: <Users className="w-4 h-4 text-purple-500" />,
       price: isPackage 
-        ? (isOnline ? 160 : 200) 
+        ? (isOnline ? 40 : 50) 
         : (isOnline ? 56 : 70),
-      priceLabel: isPackage ? "4 lessons" : "per lesson",
+      priceLabel: "lesson",
       unitPrice: isPackage 
-        ? (isOnline ? "$40 / lesson" : "$50 / lesson (Save $80)")
-        : "Standard session",
+        ? (isOnline ? "Billed as $160 for 4 lessons" : "Billed as $200 for 4 lessons (Save $80)")
+        : "Single session drop-in",
       highlight: false,
       popular: false,
       features: [
@@ -172,7 +176,7 @@ export default function ChessPricingSection() {
                     : "text-slate-600 hover:text-[#1a365d]"
                 }`}
               >
-                <span>4 Lessons</span>
+                <span>4-Lesson Pack</span>
                 <span className={`text-[8px] font-black px-1.5 py-0.2 rounded-full ${
                   billingCycle === "package4" ? "bg-emerald-400 text-[#1a365d]" : "bg-emerald-100 text-emerald-800"
                 }`}>
@@ -187,14 +191,14 @@ export default function ChessPricingSection() {
                     : "text-slate-600 hover:text-[#1a365d]"
                 }`}
               >
-                Per Lesson
+                Single Lesson
               </button>
             </div>
           </div>
         </div>
 
         {/* COMPACT PRICING CARDS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 mb-4">
           {plans.map((plan) => (
             <motion.div
               key={plan.id}
@@ -236,7 +240,7 @@ export default function ChessPricingSection() {
                   <div className="flex items-baseline gap-1">
                     <span className="text-[10px] font-black text-slate-400">SGD</span>
                     <span className="text-2xl sm:text-3xl font-[1000] text-[#1a365d] tracking-tight">
-                      ${plan.price}
+                      ${formatPrice(plan.price)}
                     </span>
                     <span className="text-[10px] font-bold text-slate-500 ml-0.5">
                       / {plan.priceLabel}
@@ -286,16 +290,30 @@ export default function ChessPricingSection() {
           ))}
         </div>
 
+        {/* POLICY FOOTNOTE */}
+        <div className="text-center text-slate-500 text-[11px] font-semibold mb-6 flex items-center justify-center gap-1.5">
+          <ShieldCheck size={14} className="text-sky-500 shrink-0" />
+          <span>
+            {billingCycle === "package4" 
+              ? "* The reflected pricing is for a minimum purchase of 4 lessons." 
+              : "* Single session drop-in rate. 4-lesson packages available with bundled savings."}
+          </span>
+        </div>
+
         {/* COMPACT DISCOUNTS & POLICY RIBBON */}
         <div className="p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex flex-col md:flex-row items-center justify-between gap-4 text-xs">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-slate-600 text-[11px] font-semibold text-center md:text-left">
+            <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <strong>Tuition Terms:</strong> The reflected pricing is for a minimum purchase of 4 lessons.
+            </span>
             <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />
               <strong>Online Lessons:</strong> 20% off
             </span>
             <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <strong>Bulk Savings:</strong> 12+ sessions (10% off) • 24+ sessions (20% off)
+              <span className="w-1.5 h-1.5 rounded-full bg-indigo-500" />
+              <strong>Bulk Savings:</strong> 12+ (10% off) • 24+ (20% off)
             </span>
             <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />

@@ -111,6 +111,13 @@ export default function TermsPage() {
             </div>
             <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
+                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Tuition Pricing & Minimum Purchase Requirement</h4>
+                <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
+                  <strong>The reflected pricing is for a minimum purchase of 4 lessons.</strong> All regular private and small/large group coaching packages are structured and billed on a 4-lesson bundle basis to guarantee cohort continuity, dedicated master coach scheduling, and consistent curriculum progression.
+                </p>
+              </div>
+
+              <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Academy Locations & Attendance</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
                   All group or private lessons will be conducted exclusively at official Chessmatic academy studio locations (Woodlands Studio, Singapore) or via authorized online means. For all group and private lessons, students must strictly attend their assigned slot or timing to ensure cohort continuity.

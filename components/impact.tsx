@@ -12,14 +12,6 @@ export default function TransformationSection() {
 
   const testimonials = [
     {
-      name: "Marcus Chen",
-      role: "Investment Analyst • Member since 2023",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200&auto=format&fit=crop",
-      text: "I used to struggle with mental fatigue by 3 PM. Chessmatic rewired my workday. The combination of functional PT and blitz chess taught me how to find calm in high-pressure financial markets.",
-      joinedCount: 42,
-      category: "Analysts"
-    },
-    {
       name: "Sarah Lim",
       role: "Project Manager • Member since 2022",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",

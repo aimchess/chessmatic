@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     question: "What are your coaching rates and packages?",
-    answer: "For in-person training with our accredited FIDE Masters, 4-lesson packages are $600 for Private (1-on-1), $250 for Small Group (2-4 Pax), and $200 for Large Group (5-8 Pax). Single per-lesson rates are $200 (Private), $80 (Small Group), and $70 (Large Group). Initial 1-on-1 skill assessments are $100."
+    answer: "For in-person training with our accredited FIDE Masters, tuition rates are $150/lesson for Private (1-on-1), $62.50/lesson for Small Group (2-4 Pax), and $50/lesson for Large Group (5-8 Pax). Please note that the reflected pricing is for a minimum purchase of 4 lessons ($600, $250, and $200 per 4-lesson bundle respectively). Single per-lesson drop-in rates are $200 (Private), $80 (Small Group), and $70 (Large Group). Initial 1-on-1 skill assessments are $100."
   },
   {
     question: "Do you offer discounts for online lessons or bulk bookings?",
