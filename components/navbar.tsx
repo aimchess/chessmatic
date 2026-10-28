@@ -15,6 +15,7 @@ export function Navbar() {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/adult-classes", label: "Adult Classes" },
+    { href: "/coaches", label: "Coaches" },
     { href: "/pricing", label: "Pricing" },
     { href: "/pt", label: "PT" },
     { href: "/corporate", label: "Corporate" },
@@ -72,7 +73,7 @@ export function Navbar() {
                 key={item.href}
                 href={item.href}
                 className={`
-                  relative px-6 py-2.5 text-[13px] font-bold transition-all duration-300 rounded-full
+                  relative px-4 xl:px-5 py-2 text-[12px] xl:text-[13px] font-bold transition-all duration-300 rounded-full
                   ${isActive 
                     ? "bg-white text-[#1a365d] shadow-[0_2px_10px_rgba(0,0,0,0.08)]" 
                     : "text-gray-500 hover:text-[#1a365d]"
