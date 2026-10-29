@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { 
   Building2, Users, Target, Zap, ShieldCheck, 
   TrendingUp, MessageCircle, Globe, Brain, 
-  Dumbbell, CheckCircle2, ArrowRight, Play,
+  CheckCircle2, ArrowRight, Play,
   Calendar, FileText, LayoutGrid, Award, Search
 } from "lucide-react"
 import { Button } from "@/components/ui/button"

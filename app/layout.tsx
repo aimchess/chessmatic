@@ -11,19 +11,19 @@ const jakarta = Plus_Jakarta_Sans({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: {
-    default: 'Chessmatic | Where Mind & Body Train Together | Singapore',
+    default: 'Chessmatic | Premier Adult Chess Academy | Singapore',
     template: '%s | Chessmatic Strategic Lab',
   },
   description:
-    'Singapore’s premier performance lab combining adult chess coaching, physical conditioning (PT), Chess + PT hybrid programs, and strategic corporate workshops.',
+    'Singapore’s premier chess academy combining adult chess coaching, master-level tactics, structured progression, and strategic corporate workshops.',
   keywords: [
     'Chessmatic',
-    'Chess and PT Singapore',
-    'Personal Training Singapore',
+    'Adult Chess Singapore',
+    'Chess Coaching Singapore',
     'Adult Chess Classes Singapore',
     'Corporate Workshops Singapore',
     'Strategic Thinking Workshop',
-    'Mental Fitness',
+    'Cognitive Performance',
     'Executive Coaching Singapore',
     'Cognitive Training',
     'Team Building Singapore',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
     follow: true,
   },
   openGraph: {
-    title: 'Chessmatic - Strategic Mind & Body Training',
-    description: 'Transform your strategic logic and physical conditioning in Singapore’s first hybrid training lab.',
+    title: 'Chessmatic - Strategic Adult Chess Academy',
+    description: 'Master strategic logic, tactical calculation, and tournament-grade chess in Singapore’s premier adult academy.',
     url: 'https://www.chessmatic.sg',
     siteName: 'Chessmatic',
     images: [
@@ -85,7 +85,7 @@ export default function RootLayout({
                 name: 'Chessmatic',
                 url: 'https://www.chessmatic.sg',
                 logo: 'https://www.chessmatic.sg/logo.jpg',
-                description: 'A modern performance lab in Singapore combining chess strategy with physical wellness and personal training.',
+                description: 'A premier adult chess academy in Singapore combining strategic logic, tactical mastery, and cognitive performance.',
                 address: {
                   '@type': 'PostalAddress',
                   streetAddress: 'Woodlands Studio', // Update with actual full address
@@ -123,7 +123,7 @@ export default function RootLayout({
                     name: 'What training tracks are offered?',
                     acceptedAnswer: {
                       '@type': 'Answer',
-                      text: 'We provide 3 distinct tracks: Chess + PT (integrated hybrid), Chess Separate (pure strategy & mastery), and PT Separate (dedicated physical training).'
+                      text: 'We provide structured adult chess tracks: Beginner Fundamentals, Intermediate Positional Strategy, Advanced Tactical Mastery, and Corporate Strategy Workshops.'
                     }
                   },
                   {

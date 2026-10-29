@@ -11,53 +11,53 @@ export default function ProgramsOverview() {
   const programs = [
     {
       id: "/01",
-      level: "HYBRID TRACK",
-      title: "Chess + PT",
-      description: "Our signature dual-task performance protocol combining strategic chess coaching with functional physical conditioning.",
-      motto: "“TRAIN THE MIND AND BODY SIMULTANEOUSLY FOR UNMATCHED COMPOSURE.”",
+      level: "FOUNDATIONS & LOGIC",
+      title: "Beginner Foundations",
+      description: "Master essential rules, board geometry, core tactical motifs, piece coordination, and fundamental checkmating patterns.",
+      motto: "“BUILD THE TACTICAL INTUITION THAT ANCHORS EVERY WINNING GAME.”",
       features: [
-        "Tactical calculation & deep opening mastery",
-        "Functional physical training & core stability",
-        "Pressure management & stamina conditioning",
-        "Available across 1-on-1 and group formats"
-      ],
-      footerIcon: <Activity size={18} className="text-sky-500" />,
-      footerText: "Singapore’s premier hybrid mind and body protocol.",
-      image: "team-viral-chess-pt.jpg",
-      icon: <Trophy size={20} className="text-white" />
-    },
-    {
-      id: "/02",
-      level: "PURE CHESS",
-      title: "Chess Separate",
-      description: "Structured adult-focused chess learning designed to establish tactical depth, calculation velocity, and opening repertoire.",
-      motto: "“FROM RECREATIONAL LOGIC TO MASTER-LEVEL TOURNAMENT EXECUTION.”",
-      features: [
-        "Beginner to Advanced structured progression",
-        "Positional analysis & tactical calculation",
-        "Opening repertoire customization",
-        "Private lessons, online batches & group workshops"
+        "Core piece coordination & board visualization",
+        "Fundamental tactical patterns (pins, forks, skewers)",
+        "Essential opening principles without rote memorization",
+        "Endgame fundamentals & king activity"
       ],
       footerIcon: <Shield size={18} className="text-sky-500" />,
-      footerText: "Customized for adults, busy executives, and competitive players.",
-      image: "/7.png",
+      footerText: "Ideal for beginners and adult returners.",
+      image: "/adult1.jpg",
       icon: <Shield size={20} className="text-white" />
     },
     {
-      id: "/03",
-      level: "PHYSICAL TRAINING",
-      title: "PT Separate",
-      description: "Dedicated personal training (PT) tailored for functional strength, core stability, postural correction, and overall fitness.",
-      motto: "“BUILD THE PHYSICAL ENDURANCE THAT ANCHORS PEAK PERFORMANCE.”",
+      id: "/02",
+      level: "TACTICAL & STRATEGIC DEPTH",
+      title: "Intermediate Mastery",
+      description: "Structured adult-focused chess designed to establish deep positional understanding, calculation velocity, and custom repertoire.",
+      motto: "“FROM RECREATIONAL LOGIC TO MASTER-LEVEL TOURNAMENT EXECUTION.”",
       features: [
-        "1-on-1 & small group functional PT",
-        "Core stability & posture alignment",
-        "Cardiovascular stamina & strength programming",
-        "In-studio and virtual coaching formats"
+        "Positional evaluation & strategic pawn structures",
+        "Deep tactical calculation & candidate moves",
+        "Personalized opening repertoire with White & Black",
+        "Complex rook and minor piece endgames"
       ],
-      footerIcon: <Users size={18} className="text-sky-500" />,
-      footerText: "Custom-calibrated based on your physical assessment.",
-      image: "/pt-page-banner.jpg",
+      footerIcon: <Trophy size={18} className="text-sky-500" />,
+      footerText: "Customized for competitive players & club rated adults.",
+      image: "/7.png",
+      icon: <Trophy size={20} className="text-white" />
+    },
+    {
+      id: "/03",
+      level: "CORPORATE & EXECUTIVE",
+      title: "Executive Strategic Labs",
+      description: "High-impact chess masterclasses for leaders and corporate teams connecting board strategy to leadership, risk mitigation, and execution.",
+      motto: "“TRANSFORM BOARDROOM DECISION-MAKING THROUGH 64 SQUARES OF LOGIC.”",
+      features: [
+        "Strategic foresight & resource allocation",
+        "High-stakes composure under time limits",
+        "Interactive team tournaments & simultaneous exhibitions",
+        "Bespoke workshops at your office or Woodlands studio"
+      ],
+      footerIcon: <Building2 size={18} className="text-sky-500" />,
+      footerText: "Customized for executive leadership & corporate teams.",
+      image: "/corp-strategy.jpg",
       icon: <Building2 size={20} className="text-white" />
     }
   ]

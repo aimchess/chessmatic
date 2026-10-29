@@ -38,18 +38,18 @@ export default function HeroSection() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 mb-6 sm:mb-8 shadow-xl">
             <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
             <span className="text-white text-[10px] sm:text-[11px] font-black uppercase tracking-[0.25em]">
-              Singapore’s Hybrid Performance Lab
+              Singapore’s Premier Adult Chess Academy
             </span>
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-[1000] text-white leading-[1.08] sm:leading-[1] tracking-tighter mb-6 sm:mb-8 italic">
-            Where Mind & <br /> 
-            <span style={{ color: cyan }}>Body</span> Train Together
+            Where Strategy & <br /> 
+            <span style={{ color: cyan }}>Mastery</span> Meet Together
           </h1>
           
           <p className="text-base sm:text-lg lg:text-xl text-slate-200 leading-relaxed font-medium mb-8 sm:mb-12 max-w-3xl mx-auto opacity-95">
             Chessmatic brings a modern performance concept to Singapore by 
-            combining <span className="text-white font-bold">chess strategy, personal physical training (PT), and corporate leadership labs</span> for adults and organizations.
+            combining <span className="text-white font-bold">structured adult chess strategy, tactical calculation depth, and corporate leadership labs</span> for adults and organizations.
           </p>
 
           {/* 3-BUTTON CTA GROUP */}
@@ -78,12 +78,12 @@ export default function HeroSection() {
 
             <Button asChild variant="ghost" className="w-full sm:w-auto text-white/90 hover:text-white hover:bg-white/10 px-8 py-6 rounded-full text-sm font-bold flex items-center justify-center gap-3 transition-all underline decoration-sky-500/60 underline-offset-8">
               <a 
-                href={getWhatsAppUrl("Hi Chessmatic! I'm interested in exploring your Personal Training (PT) and Chess+PT Hybrid programs.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I'm interested in exploring your Adult Chess Coaching and masterclasses.")}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Target size={18} className="text-sky-400" />
-                Explore PT
+                View Programs
               </a>
             </Button>
           </div>

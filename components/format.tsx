@@ -63,7 +63,7 @@ export default function TrainingFormatsGrid() {
       id: "FMT-02",
       title: "Private Lessons",
       tag: "1-ON-1 IN STUDIO",
-      desc: "Personalized in-person coaching in our Woodlands Studio tailored to your unique pace, opening repertoire, and physical goals.",
+      desc: "Personalized in-person coaching in our Woodlands Studio tailored to your unique pace, opening repertoire, and rating goals.",
       icon: <User size={20} />,
       color: "bg-blue-600",
       outcome: "Maximum Precision",
@@ -76,13 +76,13 @@ export default function TrainingFormatsGrid() {
         "Full diagnostic audit of your calculation velocity, weaknesses, and habits",
         "Bespoke opening repertoire engineered specifically for your style",
         "Move-by-move deconstruction of your recent tournament and online games",
-        "Integrated dual-task training (mind-body posture & endurance conditioning)"
+        "In-depth calculation training (candidate moves & pattern recognition)"
       ],
       inclusions: [
         "Tailored developmental roadmap updated after every session",
         "Private annotated PGN repertoire database built for you",
         "Asynchronous coach messaging support for quick game checks between lessons",
-        "Physical ergonomic & stamina calibration exercises"
+        "Tactical calculation & endgame technique exercises"
       ]
     },
     {
@@ -149,18 +149,18 @@ export default function TrainingFormatsGrid() {
       duration: "Half-Day / Full-Day / Multi-Week Series",
       location: "On-site at Client Office / Retreat / Woodlands Studio",
       batchSize: "Custom Cohorts (10 to 100+ Participants)",
-      idealFor: "Corporate teams, executive leadership retreats, HR wellness days, and companies looking for strategic team bonding.",
+      idealFor: "Corporate teams, executive leadership retreats, offsite strategic retreats, and companies looking for high-impact team bonding.",
       highlights: [
         "Executive Decision-Making: Translating chess calculation into business strategy",
-        "Viral 2v2 Plank Chess Relays: Physical endurance meets high-pressure chess",
+        "Tactical Consultation Matches: Collaborative calculation under tournament clocks",
         "Turnkey Corporate Tournaments with custom branding, trophies & medals",
         "Composure Under Pressure: Stress management and decision agility"
       ],
       inclusions: [
         "Customized workshop curriculum aligned with corporate KPIs & themes",
-        "All tournament chess equipment, digital timers, and wellness gear provided",
+        "All tournament chess equipment, digital timers, and strategic challenge worksheets provided",
         "High-res event photography, video highlights, and certificates of completion",
-        "Corporate wellness follow-up guides & internal chess club toolkit"
+        "Corporate strategic follow-up guides & internal chess club toolkit"
       ]
     }
   ]
@@ -190,7 +190,7 @@ export default function TrainingFormatsGrid() {
             Training <span style={{ color: cyan }}>Formats.</span>
           </motion.h2>
           <p className="mt-4 text-slate-400 font-bold uppercase tracking-[0.25em] text-[10px] sm:text-xs">
-            Available for Chess + PT • Chess Separate • PT Separate
+            Available across Private • Online • Group Batches • Corporate Workshops
           </p>
           <div className="mt-4 flex items-center justify-center gap-3">
             <a 

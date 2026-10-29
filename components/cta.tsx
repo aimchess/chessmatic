@@ -42,7 +42,7 @@ export default function CompactCTA() {
                 Ready to Join the <span style={{ color: cyan }}>Elite Lab?</span>
               </h2>
               <p className="text-slate-500 font-medium text-lg max-w-xl">
-                Experience Singapore’s first hybrid challenge where strategic logic meets physical core stability. 
+                Experience Singapore’s premier adult chess academy where strategic logic meets tactical calculation mastery.
               </p>
             </div>
 

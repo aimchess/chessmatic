@@ -76,7 +76,7 @@ export default function WhyCompaniesChoose() {
               </h2>
 
               <p className="text-slate-500 text-base md:text-lg font-medium leading-relaxed max-w-xl mx-auto lg:mx-0">
-                Chessmatic delivers a modern performance concept to Singapore. We don't just facilitate workshops; we rewire team logic through high-intensity mental and physical fusion.
+                Chessmatic delivers a modern strategic masterclass concept to Singapore. We don't just facilitate workshops; we rewire team decision logic, tactical communication, and crisis composure.
               </p>
             </div>
 
@@ -111,7 +111,7 @@ export default function WhyCompaniesChoose() {
                <div className="inline-flex items-center gap-3 px-5 md:px-6 py-3 rounded-xl md:rounded-2xl bg-[#f8fafc] border border-slate-100">
                   <ShieldCheck size={18} className="text-sky-500 shrink-0" />
                   <p className="text-[#1a365d] text-[9px] md:text-[10px] font-black uppercase tracking-widest text-left">
-                    Safe & Inclusive for <span className="text-sky-500">All Fitness Levels</span>
+                    Designed for <span className="text-sky-500">All Skill Levels & Backgrounds</span>
                   </p>
                </div>
             </div>

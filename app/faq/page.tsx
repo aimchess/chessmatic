@@ -6,7 +6,7 @@ import {
   Search, ChevronDown, HelpCircle, MessageCircle, 
   Brain, Dumbbell, Users, Building2, Calendar, 
   Sparkles, CheckCircle2, ArrowRight, ShieldCheck,
-  Zap, Trophy, PhoneCall
+  Zap, Trophy, PhoneCall, Target
 } from "lucide-react"
 import { getWhatsAppUrl } from "@/lib/whatsapp"
 import Link from "next/link"
@@ -23,8 +23,8 @@ const FAQ_SECTIONS = [
   { id: "all", label: "All Questions", icon: Sparkles },
   { id: "general", label: "Methodology & Lab", icon: Brain },
   { id: "chess", label: "Adult Chess", icon: Trophy },
-  { id: "pt", label: "Fitness & PT", icon: Dumbbell },
-  { id: "hybrid", label: "Hybrid & Plank Chess", icon: Zap },
+  { id: "strategy", label: "Strategy & Tactics", icon: Target },
+  { id: "tournaments", label: "Tournament & Ratings", icon: Trophy },
   { id: "corporate", label: "Corporate Workshops", icon: Building2 },
   { id: "formats", label: "Formats & Booking", icon: Calendar },
 ]
@@ -36,13 +36,13 @@ const FAQ_DATA: FAQItem[] = [
     section: "general",
     tag: "Concept",
     question: "What is Chessmatic and how does the hybrid methodology work?",
-    answer: "Chessmatic is Singapore's premier mind-and-body training lab founded by Wagish (Director of Intchess). We pioneer a dual-track standard: pairing tactical chess calculation with functional physical conditioning (PT). By training physical stamina alongside deep calculation, we eliminate cognitive fatigue and stabilize decision-making under intense pressure."
+    answer: "Chessmatic is Singapore's premier adult chess academy founded by Wagish (Director of Intchess). We specialize in adult-focused chess mastery: pairing structured opening repertoires, positional calculation, and tactical composure. By training candidate-move discipline and tactical velocity, we eliminate blunders and elevate decision-making under intense tournament clock pressure."
   },
   {
     id: "gen-2",
     section: "general",
     tag: "Studio",
-    question: "Where are the physical coaching sessions conducted in Singapore?",
+    question: "Where are the in-person coaching sessions conducted in Singapore?",
     answer: "Our primary training facility is our dedicated studio in Woodlands, Singapore. We also conduct on-site corporate training workshops and private executive sessions across corporate offices in Singapore."
   },
   {
@@ -50,14 +50,14 @@ const FAQ_DATA: FAQItem[] = [
     section: "general",
     tag: "Founder",
     question: "Who leads the training and curriculum at Chessmatic?",
-    answer: "Wagish is the Founder of Chessmatic and the Director of Intchess. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT). With a functional fitness background, Wagish champions: 'A sharper strategic mind backed by physical stamina and core resilience.'"
+    answer: "Wagish is the Founder of Chessmatic and the Director of Intchess. In Singapore, he pioneers high-performance adult chess coaching and tactical masterclasses. Wagish champions: 'A sharper strategic mind backed by deep calculation, positional foresight, and calm composure under pressure.'"
   },
   {
     id: "gen-4",
     section: "general",
     tag: "Beginners",
-    question: "Do I need any prior chess or fitness experience to get started?",
-    answer: "None at all. Over 40% of our adult students are either complete beginners or players returning after decades away. Every program starts with an initial baseline assessment to calibrate coaching and fitness intensity to your exact level."
+    question: "Do I need any prior chess experience to get started?",
+    answer: "None at all. Over 40% of our adult students are either complete beginners or players returning after decades away. Every program starts with an initial baseline assessment to calibrate coaching to your exact level."
   },
 
   // SECTION: Adult Chess Coaching
@@ -90,59 +90,51 @@ const FAQ_DATA: FAQItem[] = [
     answer: "Absolutely. 1-on-1 private lessons frequently include full game diagnostics where we pinpoint recurring blunder habits, time trouble triggers, and tactical blind spots."
   },
 
-  // SECTION: Fitness & PT
+  // SECTION: Strategy & Tactics
   {
-    id: "pt-1",
-    section: "pt",
-    tag: "Personal Training",
-    question: "Can I enrol exclusively in Personal Training (PT) without chess?",
-    answer: "Yes. We offer pure Personal Training (PT Separate) focusing on functional strength, core stability, postural correction, mobility recovery, and cardiovascular stamina tailored to desk-bound professionals."
+    id: "strat-1",
+    section: "strategy",
+    tag: "Tactics",
+    question: "What chess calculation techniques do you teach?",
+    answer: "We train players in systematic candidate-move generation, blunder-check protocols, calculation trees, and visualization of forced variations (checks, captures, threats)."
   },
   {
-    id: "pt-2",
-    section: "pt",
-    tag: "Assessments",
-    question: "What does the initial physical fitness assessment involve?",
-    answer: "We evaluate your postural alignment, core endurance, hip/shoulder mobility, and cardiovascular baseline. This ensures your customized workout protocol is safe, progressive, and injury-preventative."
+    id: "strat-2",
+    section: "strategy",
+    tag: "Repertoire",
+    question: "How do you tailor opening repertoires for adults?",
+    answer: "Adult players thrive on understanding strategic ideas rather than memorizing endless lines. We construct customized, sound opening repertoires suited to your natural playstyle."
   },
   {
-    id: "pt-3",
-    section: "pt",
-    tag: "Desk Ergonomics",
-    question: "How does the training help with desk fatigue and back stiffness?",
-    answer: "Our conditioning protocols specifically target the posterior chain, thoracic mobility, and deep core stabilizers to counteract long hours of sitting, neck strain, and workplace fatigue."
-  },
-
-  // SECTION: Hybrid & Plank Chess
-  {
-    id: "hyb-1",
-    section: "hybrid",
-    tag: "Plank Chess",
-    question: "What is Plank Chess and how is it played?",
-    answer: "Plank Chess is our signature dual-stress modality. Players maintain an active isometric plank while analyzing the board, calculating tactical variations, and executing moves against a digital chess clock. It trains mental composure while under severe physical lactic fatigue."
-  },
-  {
-    id: "hyb-2",
-    section: "hybrid",
-    tag: "Team Relays",
-    question: "How does the 2v2 Plank Chess Team Challenge work?",
-    answer: "In the 2v2 relay format, teammates alternate turns between holding core plank holds and stepping up to calculate and execute tactical moves. If one teammate drops from their plank, the clock penalty kicks in—making team communication and pacing critical."
-  },
-  {
-    id: "hyb-3",
-    section: "hybrid",
-    tag: "Neuroscience",
-    question: "What is the science behind combining chess calculation with physical exertion?",
-    answer: "Physical exercise elevates brain-derived neurotrophic factor (BDNF), improves oxygen flow to the prefrontal cortex, and trains the sympathetic nervous system to remain calm during adrenaline surges—directly translating to sharper decision-making in high-stress work scenarios."
+    id: "strat-3",
+    section: "strategy",
+    tag: "Endgames",
+    question: "Why is endgame mastery emphasized in adult coaching?",
+    answer: "Most adult games are won or lost in simplified positions. We build complete fluency in fundamental king and pawn endings, rook endgames, and practical winning conversion."
   },
 
+  // SECTION: Tournament & Ratings
+  {
+    id: "tourn-1",
+    section: "tournaments",
+    tag: "FIDE Ratings",
+    question: "Can you help adults achieve a FIDE or national chess rating?",
+    answer: "Yes. Our curriculum prepares adult players for official Singapore Chess Federation (SCF) and FIDE-rated classical, rapid, and blitz tournaments."
+  },
+  {
+    id: "tourn-2",
+    section: "tournaments",
+    tag: "Time Management",
+    question: "How do you help adults overcome time trouble panic?",
+    answer: "We run simulated clock pressure drills and teach clock allocation strategies so you maintain objective composure when seconds remain."
+  },
   // SECTION: Corporate Workshops
   {
     id: "corp-1",
     section: "corporate",
     tag: "B2B Modules",
     question: "What corporate workshop formats does Chessmatic offer?",
-    answer: "We offer 5 primary B2B experiential modules: 1) Strategic Workshops (problem solving & logic), 2) Team Challenges (2v2 Plank Chess relays), 3) Company Tournaments (in-house Swiss events), 4) Executive Sessions (C-suite stress testing), and 5) Social Chess Events (mindful networking)."
+    answer: "We offer 5 primary B2B experiential modules: 1) Strategic Workshops (problem solving & logic), 2) Tactical Team Relays (rapid consultation challenges), 3) Company Tournaments (in-house Swiss events), 4) Executive Sessions (C-suite stress testing), and 5) Social Chess Events (mindful networking)."
   },
   {
     id: "corp-2",
@@ -243,7 +235,7 @@ export default function FAQPage() {
             transition={{ delay: 0.2 }}
             className="text-slate-300 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed mb-10"
           >
-            Everything you need to know about our adult chess coaching, functional PT, hybrid Plank Chess training, and corporate workshops in Singapore.
+            Everything you need to know about our adult chess coaching, master-led training, opening repertoires, and corporate workshops in Singapore.
           </motion.p>
 
           {/* REAL-TIME SEARCH BAR */}
@@ -259,7 +251,7 @@ export default function FAQPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search questions (e.g., Wagish, Plank Chess, Corporate, Woodlands)..."
+                placeholder="Search questions (e.g., Wagish, Opening, Corporate, Woodlands)..."
                 className="w-full h-14 md:h-16 pl-14 pr-12 rounded-full bg-white text-[#1a365d] placeholder:text-slate-400 font-semibold text-sm md:text-base shadow-2xl focus:outline-none focus:ring-4 focus:ring-sky-400/40 transition-all"
               />
               {searchQuery && (
@@ -441,13 +433,13 @@ export default function FAQPage() {
                 <span style={{ color: cyan }}>Chat With Wagish & Team.</span>
               </h2>
               <p className="text-slate-300 text-xs sm:text-sm max-w-md font-medium">
-                Reach out on WhatsApp for instant guidance on lesson schedules, custom PT plans, or corporate team proposals.
+                Reach out on WhatsApp for instant guidance on lesson schedules, custom chess roadmaps, or corporate team proposals.
               </p>
             </div>
 
             <div className="relative z-10 shrink-0 flex flex-col sm:flex-row gap-4 w-full md:w-auto">
               <a
-                href={getWhatsAppUrl("Hi Chessmatic! I have a question regarding coaching / PT programs.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I have a question regarding adult chess coaching programs.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"

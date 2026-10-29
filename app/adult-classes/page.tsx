@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { 
   Check, Users, ArrowRight, Zap, 
-  Dumbbell, Brain, Trophy, Target, MessageCircle
+  Brain, Trophy, Target, MessageCircle
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { getWhatsAppUrl } from "@/lib/whatsapp"

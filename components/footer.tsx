@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 import { 
   Mail, Phone, MapPin, Facebook, Instagram, 
   Youtube, MessageCircle, ArrowRight, Brain, 
-  Zap, Users, Target, BicepsFlexed 
+  Zap, Users, Target 
 } from "lucide-react"
 import Link from "next/link"
 
@@ -49,11 +49,11 @@ export function Footer() {
                 <h3 className="text-xl md:text-2xl font-[1000] text-white tracking-tighter leading-none">
                   CHESS<span style={{ color: cyan }}>MATIC</span>
                 </h3>
-                <p className="text-[8px] md:text-[9px] font-black tracking-[0.25em] text-white/40 uppercase mt-1">Mind & Body Wellness</p>
+                <p className="text-[8px] md:text-[9px] font-black tracking-[0.25em] text-white/40 uppercase mt-1">Strategic Chess Academy</p>
               </div>
             </Link>
             <p className="text-slate-300/70 text-sm leading-relaxed max-w-xs">
-              Singapore’s premier strategic wellness concept. We rewire minds and stabilize bodies through elite tactical training.
+              Singapore’s premier adult chess academy. We cultivate strategic depth, tactical mastery, and calm decision-making under pressure.
             </p>
             <div className="flex gap-4">
               {[
@@ -81,7 +81,6 @@ export function Footer() {
                 { label: "Adult Classes", href: "/adult-classes" },
                 { label: "Coaches & Faculty", href: "/coaches" },
                 { label: "Tuition & Pricing", href: "/pricing" },
-                { label: "PT (Physical Training)", href: "/pt" },
                 { label: "Corporate Labs", href: "/corporate" },
                 { label: "Strategic Blog", href: "/blog" },
                 { label: "About Us", href: "/about" },
@@ -105,12 +104,7 @@ export function Footer() {
             </h4>
             <div className="space-y-4">
               {[
-                { 
-                  icon: <BicepsFlexed size={15} className="text-emerald-400" />, 
-                  label: "Physical Fitness & Health", 
-                  href: "/pt" 
-                },
-                { icon: <Zap size={14} className="text-rose-500" />, label: "Mental Endurance", href: "/pt" },
+                { icon: <Zap size={14} className="text-rose-500" />, label: "Mental Endurance", href: "/adult-classes" },
                 { icon: <Target size={14} className="text-sky-500" />, label: "Tactical Logic", href: "/adult-classes" },
                 { icon: <Users size={14} className="text-amber-500" />, label: "Corporate Synergy", href: "/corporate" },
                 { icon: <Brain size={14} className="text-indigo-400" />, label: "Cognitive Focus", href: "/about" }
@@ -152,7 +146,7 @@ export function Footer() {
             </div>
 
             <Button asChild className="bg-[#25D366] hover:bg-[#20B858] text-white w-full max-w-[280px] sm:max-w-none mx-auto rounded-2xl py-6 md:py-7 shadow-xl shadow-green-900/20 active:scale-95 transition-all">
-              <a href="https://wa.me/6585805046?text=Hi%20Chessmatic!%20I'd%20like%20to%20inquire%20about%20your%20coaching%20and%20PT%20programs." target="_blank" rel="noopener noreferrer" className="font-black uppercase tracking-widest text-[10px] flex items-center justify-center">
+              <a href="https://wa.me/6585805046?text=Hi%20Chessmatic!%20I'd%20like%20to%20inquire%20about%20your%20adult%20chess%20coaching%20programs." target="_blank" rel="noopener noreferrer" className="font-black uppercase tracking-widest text-[10px] flex items-center justify-center">
                 <MessageCircle className="w-4 h-4 mr-2 fill-white" />
                 Live WhatsApp
               </a>

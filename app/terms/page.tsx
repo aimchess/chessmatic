@@ -3,7 +3,7 @@ import { FileText, ArrowLeft, ShieldCheck, CheckCircle2, Mail, Award, Lock } fro
 
 export const metadata = {
   title: "Terms & Conditions | Chessmatic Platform & Studio (Singapore)",
-  description: "Official Terms and Conditions for Chessmatic platform, in-studio coaching, personal training, and corporate workshops.",
+  description: "Official Terms and Conditions for Chessmatic platform, in-studio chess coaching, private masterclasses, and corporate workshops.",
 }
 
 export default function TermsPage() {
@@ -77,19 +77,19 @@ export default function TermsPage() {
             </div>
           </section>
 
-          {/* 2. PHYSICAL TRAINING & HEALTH PROTOCOLS */}
+          {/* 2. STUDIO STANDARDS & FAIR PLAY PROTOCOLS */}
           <section className="space-y-4">
             <div className="flex items-center gap-3">
               <span className="w-8 h-8 rounded-xl bg-sky-500 text-white flex items-center justify-center font-[1000] text-xs">02</span>
               <h2 className="text-xl md:text-2xl font-[1000] text-[#1a365d] uppercase tracking-tight">
-                Studio Health, Physical Training (PT) & Safety
+                Studio Standards & Fair Play Protocols
               </h2>
             </div>
             <div className="space-y-3 pl-2 sm:pl-11 pt-2">
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
-                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Health & Fitness Clearance</h4>
+                <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Fair Play & Etiquette</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
-                  Participants engaging in physical conditioning, personal training (PT), and hybrid Plank Chess challenges confirm that they are physically fit to participate. Any existing medical conditions or injuries must be declared to coaches prior to session commencement.
+                  Participants attending sessions at our Woodlands Studio agree to adhere to standard FIDE chess etiquette, respect coaches and fellow participants, and maintain a quiet, focused environment during game analysis and tournament simulations.
                 </p>
               </div>
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
@@ -159,7 +159,7 @@ export default function TermsPage() {
               <div className="p-4 md:p-5 rounded-2xl bg-slate-50 border border-slate-200/80">
                 <h4 className="text-[#1a365d] text-sm font-black uppercase tracking-tight mb-1">Proprietary Training Methodologies</h4>
                 <p className="text-slate-600 text-xs md:text-sm font-medium leading-relaxed">
-                  All training materials, tactical calculation modules, proprietary Plank Chess rules, and analysis reports developed by Chessmatic remain the exclusive intellectual property of Chessmatic.
+                  All training materials, tactical calculation modules and analysis reports developed by Chessmatic remain the exclusive intellectual property of Chessmatic.
                 </p>
               </div>
               <div className="p-4 md:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-sm">

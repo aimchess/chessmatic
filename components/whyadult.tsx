@@ -15,8 +15,8 @@ export default function CompactDifferentiation() {
     },
     {
       id: "2",
-      title: "Chess + PT Integration",
-      desc: "Singapore’s premier mental and physical fusion training. Build functional strength, posture, and blitz stamina.",
+      title: "Master-Led Coaching",
+      desc: "Singapore’s premier adult training under titled coaches. Build opening mastery, deep calculation, and endgame technique.",
       color: "bg-sky-500", // Cyan
       icon: <Zap size={16} />,
       side: "right"
@@ -24,7 +24,7 @@ export default function CompactDifferentiation() {
     {
       id: "3",
       title: "Corporate Synergy",
-      desc: "Interactive experiences translating chessboard tactics into actionable leadership ROI and HR wellness.",
+      desc: "Interactive experiences translating chessboard tactics into actionable leadership ROI and strategic team synergy.",
       color: "bg-indigo-500", // Indigo
       icon: <Building2 size={16} />,
       side: "left"

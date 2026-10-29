@@ -59,7 +59,7 @@ export default function CorporateBanner() {
           </h1>
           <p className="text-slate-300 font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed px-4">
             Elite <span className="text-white">Team Performance</span> & <br className="hidden sm:block" />
-            Strategic Wellness Labs for Modern Corporate Culture.
+            Strategic Masterclass Workshops for Modern Corporate Teams.
           </p>
         </motion.div>
       </div>

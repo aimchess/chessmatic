@@ -17,7 +17,7 @@ export default function CorporateProcess() {
     { label: "SMEs", icon: <Building size={16} />, code: "SME-02" },
     { label: "Enterprises", icon: <Building2 size={16} />, code: "ENT-03" },
     { label: "Leadership", icon: <UserCheck size={16} />, code: "EXEC-04" },
-    { label: "HR Wellness", icon: <Heart size={16} />, code: "WELL-05" },
+    { label: "Strategic Teams", icon: <Target size={16} />, code: "STRAT-05" },
     { label: "Innovation", icon: <Lightbulb size={16} />, code: "INN-06" },
     { label: "Engagement", icon: <Users size={16} />, code: "TEAM-07" },
   ]
@@ -40,7 +40,7 @@ export default function CorporateProcess() {
     {
       step: "03",
       title: "Facilitation",
-      desc: "Live Mind & Body session execution at your office or our studio.",
+      desc: "Live Strategic Chess session execution at your office or our studio.",
       status: "Active",
       icon: <Play size={20} />
     },
@@ -173,7 +173,7 @@ export default function CorporateProcess() {
         className="mt-12 text-center"
       >
         <a 
-          href={getWhatsAppUrl("Hi Chessmatic! I'd like to book an initial consultation for our corporate team's chess & wellness program.")}
+          href={getWhatsAppUrl("Hi Chessmatic! I'd like to book an initial consultation for our corporate team's chess strategy workshop.")}
           target="_blank"
           rel="noopener noreferrer"
         >

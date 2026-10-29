@@ -25,9 +25,9 @@ export default function CorporateEventsGrid() {
       inclusions: [
         "Corporate Strategy Keynote",
         "Hand & Brain Mini-Games",
-        "Desk Ergonomics Session"
+        "Strategic Communication Drills"
       ],
-      deliverable: "Digital Wellness Guide",
+      deliverable: "Strategic Decision-Making Guide",
       highlight: false
     },
     {
@@ -37,7 +37,7 @@ export default function CorporateEventsGrid() {
       duration: "Half-Day (4 Hours)",
       capacity: "15 - 40 Pax",
       image: "/corp-strategy.jpg",
-      desc: "Our signature retreat. Blends Swiss-system tournaments with grandmaster breathing protocols.",
+      desc: "Our signature retreat. Blends Swiss-system tournaments with tactical consultation challenges.",
       inclusions: [
         "'Blind Spot' Team Tournament",
         "Tactical Stress-Test Workshop",
@@ -57,7 +57,7 @@ export default function CorporateEventsGrid() {
       inclusions: [
         "Simul Challenge vs Master",
         "Peak Performance Coaching",
-        "Premium Mobility Recovery"
+        "Grandmaster Post-Mortem Debrief"
       ],
       deliverable: "Executive Wooden Gift Boxes",
       highlight: false
@@ -85,7 +85,7 @@ export default function CorporateEventsGrid() {
             Corporate <span style={{ color: cyan }}>Bonding.</span>
           </h2>
           <p className="mt-6 text-slate-500 font-medium text-lg max-w-2xl mx-auto">
-            Stop doing trust falls. Build high-performing teams through the ultimate game of strategic logic and physical composure.
+            Stop doing trust falls. Build high-performing teams through the ultimate game of strategic logic and high-pressure calculation.
           </p>
         </div>
 

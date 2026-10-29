@@ -17,7 +17,6 @@ export function Navbar() {
     { href: "/adult-classes", label: "Adult Classes" },
     { href: "/coaches", label: "Coaches" },
     { href: "/pricing", label: "Pricing" },
-    { href: "/pt", label: "PT" },
     { href: "/corporate", label: "Corporate" },
     { href: "/blog", label: "Blog" },
     { href: "/about", label: "About Us" },
@@ -59,7 +58,7 @@ export function Navbar() {
               Chess<span style={{ color: cyan }}>matic</span>
             </h1>
             <p className="text-[8px] sm:text-[9px] text-gray-400 font-semibold tracking-[0.12em] uppercase mt-1">
-              Mind & Body Wellness
+              Strategic Chess Academy
             </p>
           </div>
         </Link>

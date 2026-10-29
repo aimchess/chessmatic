@@ -61,7 +61,7 @@ export default function ContactCTA() {
 
             {/* SECONDARY: CLASSES */}
             <a
-              href={getWhatsAppUrl("Hi Chessmatic! I'd like to book chess classes / PT hybrid sessions.")}
+              href={getWhatsAppUrl("Hi Chessmatic! I'd like to book adult chess coaching sessions.")}
               target="_blank"
               rel="noopener noreferrer"
             >

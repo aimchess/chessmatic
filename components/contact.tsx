@@ -17,7 +17,7 @@ export default function ContactSection() {
   const [fullName, setFullName] = useState("")
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
-  const [inquiryType, setInquiryType] = useState("Chess + PT Hybrid")
+  const [inquiryType, setInquiryType] = useState("Adult Chess Coaching")
   const [message, setMessage] = useState("")
 
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -199,9 +199,9 @@ export default function ContactSection() {
                       onChange={(e) => setInquiryType(e.target.value)}
                       className="w-full bg-white border border-gray-200 rounded-xl md:rounded-2xl px-5 py-3.5 md:py-4 text-sm focus:outline-none focus:border-sky-500 transition-all shadow-sm appearance-none cursor-pointer"
                     >
-                        <option>Chess + PT Hybrid</option>
-                        <option>Adult Chess Coaching (Separate)</option>
-                        <option>Personal Training / PT (Separate)</option>
+                        <option>Adult Chess Coaching</option>
+                        <option>Private 1-on-1 Lessons</option>
+                        <option>Adult Group Classes</option>
                         <option>Corporate Workshop / Booking</option>
                         <option>Private 1-on-1 Lessons</option>
                         <option>Online Coaching</option>

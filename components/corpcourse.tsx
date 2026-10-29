@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { 
-  Trophy, Dumbbell, Users, Target, ShieldCheck, Zap, 
+  Trophy, Users, Target, ShieldCheck, Zap, 
   ChevronRight, Laptop, User, Building2, Layers, MessageCircle
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -17,29 +17,29 @@ export default function OperationalOfferings() {
   const tracks = [
     {
       tier: "Track 01",
-      title: "Chess + PT",
-      focus: "Integrated Dual-Task Protocol",
-      desc: "Our signature high-performance fusion combining strategic chess coaching with functional physical training (PT).",
-      chess: ["Tactical calculation & opening mastery", "Endgame technique & master game analysis"],
-      fitness: ["Functional core stability & posture", "Personalized fitness conditioning & stamina"],
-      highlight: true
-    },
-    {
-      tier: "Track 02",
-      title: "Chess Separate",
-      focus: "Pure Strategic Mastery",
-      desc: "Structured, adult-focused chess instruction for beginners through advanced tournament players.",
-      chess: ["Customized opening repertoire", "Positional understanding & calculation", "Tournament preparation & game review"],
-      fitness: ["Available in Private, Online, and Group formats"],
+      title: "Beginner Foundations",
+      focus: "Tactical & Board Logic",
+      desc: "For adults starting out or returning to chess. Focuses on blunder prevention, core tactics, and solid opening principles.",
+      chess: ["Piece coordination & board geometry", "Essential tactical patterns (pins, forks, skewers)"],
+      mastery: ["Opening principles without memorization", "Basic checkmating nets & endgame concepts"],
       highlight: false
     },
     {
+      tier: "Track 02",
+      title: "Intermediate Mastery",
+      focus: "Positional Strategy & Repertoire",
+      desc: "Structured adult-focused instruction for advancing players establishing strategic depth and candidate-move discipline.",
+      chess: ["Customized opening repertoire (White & Black)", "Positional understanding & pawn structure evaluation"],
+      mastery: ["Calculation velocity & candidate moves", "Tournament preparation & clock management"],
+      highlight: true
+    },
+    {
       tier: "Track 03",
-      title: "PT Separate",
-      focus: "Personal Physical Training",
-      desc: "Dedicated 1-on-1 and small group personal training designed for strength, mobility, and endurance.",
-      chess: ["Custom workout programming", "Form correction & injury prevention"],
-      fitness: ["Core stability & cardiovascular health", "Progressive strength & stamina goals"],
+      title: "Corporate Strategy",
+      focus: "Executive Leadership & Decision-Making",
+      desc: "Bespoke corporate workshops translating 64 squares into leadership composure, foresight, and risk mitigation.",
+      chess: ["Interactive business strategy simulations", "Time-pressured crisis decision games"],
+      mastery: ["Team-building chess relays & consultation", "Keynotes on strategic foresight & execution"],
       highlight: false
     }
   ]
@@ -117,7 +117,7 @@ export default function OperationalOfferings() {
           </h2>
           <p className="mt-4 text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px]">
             {activeTab === 'tracks' 
-              ? "Chess + PT • Chess Separate • PT Separate" 
+              ? "Beginner • Intermediate • Corporate Strategy" 
               : "Private • Online • Group • Workshops • Corporates"
             }
           </p>
@@ -134,7 +134,7 @@ export default function OperationalOfferings() {
               >
                 {pkg.highlight && (
                   <div className="absolute top-0 inset-x-0 bg-sky-500 text-center py-2 text-[9px] font-black uppercase tracking-[0.3em] text-white rounded-t-[45px]">
-                    Signature Hybrid Track
+                    Signature Performance Track
                   </div>
                 )}
                 <div className="mb-6 pt-4">
@@ -159,7 +159,7 @@ export default function OperationalOfferings() {
                           <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1 shrink-0" /> {item}
                         </li>
                       ))}
-                      {pkg.fitness.map((item, idx) => (
+                      {pkg.mastery.map((item, idx) => (
                         <li key={`fit-${idx}`} className={`flex items-start gap-3 text-[12px] font-bold leading-tight ${pkg.highlight ? 'text-slate-200' : 'text-slate-600'}`}>
                           <div className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1 shrink-0" /> {item}
                         </li>

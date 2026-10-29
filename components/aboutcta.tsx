@@ -47,7 +47,7 @@ export default function CompactCTA() {
               </h2>
               
               <p className="text-slate-300 font-medium text-lg max-w-xl">
-                Experience Singapore’s first hybrid training where mental chess logic meets physical core stability. 
+                Experience Singapore’s premier adult chess academy where tactical calculation meets strategic foresight.
               </p>
             </div>
 
@@ -88,11 +88,11 @@ export default function CompactCTA() {
           <div className="absolute bottom-8 right-12 hidden xl:flex items-center gap-6 opacity-30">
              <div className="flex items-center gap-2">
                 <Target size={12} className="text-sky-400" />
-                <span className="text-white text-[8px] font-black uppercase tracking-widest">Mind</span>
+                <span className="text-white text-[8px] font-black uppercase tracking-widest">Tactics</span>
              </div>
              <div className="flex items-center gap-2">
                 <Zap size={12} className="text-sky-400" />
-                <span className="text-white text-[8px] font-black uppercase tracking-widest">Body</span>
+                <span className="text-white text-[8px] font-black uppercase tracking-widest">Strategy</span>
              </div>
           </div>
         </motion.div>

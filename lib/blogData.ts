@@ -198,35 +198,35 @@ export const blogPosts: Record<string, BlogPost> = {
     targetProfile: "Adults, Executives & Competitive Players",
     deliveryMode: "Woodlands Studio & Virtual Coaching"
   },
-  "science-of-chess-pt": {
-    id: "science-of-chess-pt",
-    title: "💪 The Science of Chess + PT: Dual-Task Performance",
-    emoji: "💪",
-    category: "Wellness",
+  "science-of-chess-mastery": {
+    id: "science-of-chess-mastery",
+    title: "♟️ The Science of Chess Mastery: Tactical Depth & Resilience",
+    emoji: "♟️",
+    category: "Chess Strategy",
     readTime: "10 min read",
     image: "/adult1.jpg",
     impact: "Stress Regulation",
-    intro: "Chess + PT is Chessmatic’s signature cognitive + physical dual‑task training system. It combines structured physical conditioning with rapid‑decision chess, creating a training effect impossible to achieve alone.",
-    subIntro: "Chess + PT trains the mind and body to perform under controlled stress — a skill that transfers directly to work, leadership, and daily life.",
+    intro: "Strategic chess is Chessmatic’s premier cognitive training system. It combines structured tactical calculation with rapid-decision chess under clock pressure, creating profound mental stamina and analytical depth.",
+    subIntro: "High-level chess trains the mind to perform under controlled stress — a capability that transfers directly to high-stakes leadership and daily decision-making.",
     sections: [
       {
-        title: "ENHANCED FOCUS & ENDURANCE",
+        title: "TACTICAL CLARITY & RESILIENCE",
         icon: "⭐",
-        desc: "Physical conditioning elevates heart rate and breathing, simulating high-pressure tactical scenarios where emotional control is paramount.",
+        desc: "Intense clock pressure and sharp tactical positions simulate high-pressure scenarios where objective calculation and composure are paramount.",
         bullets: [
-          "Cognitive control under physical exertion",
-          "Impulse regulation when heart rate is elevated",
-          "Strategic clarity despite systemic muscular fatigue",
-          "Stress adaptability calibrated in real time"
+          "Cognitive control under intense clock pressure",
+          "Impulse regulation against tempting but flawed moves",
+          "Strategic clarity in complex multi-piece imbalances",
+          "Analytical composure calibrated in real time"
         ]
       },
       {
-        title: "NEURO-MOTOR SYNERGY",
+        title: "POSITIONAL FORESIGHT",
         icon: "⚡",
-        desc: "Calculating chess tactics while maintaining isometric plank positions or physical tension teaches the central nervous system to remain composed under somatic stress.",
+        desc: "Calculating candidate variations while evaluating pawn structures teaches players to remain composed and objective across long tournament games.",
         bullets: [
-          "Breath control and diaphragm stabilization under load",
-          "Core stability & spinal alignment preventing desk fatigue",
+          "Disciplined candidate-move calculation under pressure",
+          "Deep opening repertoire and endgame precision",
           "Mental resilience during extended periods of deep work",
           "Composure translation to boardroom discussions"
         ]
@@ -234,10 +234,10 @@ export const blogPosts: Record<string, BlogPost> = {
     ],
     takeaways: [
       { title: "Stress Inoculation", desc: "Calibrate mental composure so complex calculations stay sharp under elevated heart rates." },
-      { title: "Postural Stamina", desc: "Eliminate desk fatigue and neck strain through targeted core and spinal alignment." },
+      { title: "Analytical Discipline", desc: "Systematically calculate candidate moves and eliminate blunders before committing." },
       { title: "Executive Resilience", desc: "Develop the stamina needed to maintain peak decision quality throughout long workdays." }
     ],
-    targetProfile: "Corporate Leaders, Desk Workers & Athletes",
+    targetProfile: "Adults, Corporate Leaders & Competitive Players",
     deliveryMode: "Woodlands Studio & Corporate Offsites"
   },
   "boardroom-tactics": {

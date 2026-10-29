@@ -7,7 +7,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogSlugs = [
     'never-too-late-to-play-chess',
     'cognitive-benefits-of-chess',
-    'science-of-chess-pt',
+    'science-of-chess-mastery',
     'boardroom-tactics',
     'deep-work-protocol',
     'opening-theory-adults',
@@ -47,18 +47,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/pt`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/plank-chess`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,

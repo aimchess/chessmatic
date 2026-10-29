@@ -76,7 +76,7 @@ export default function CommunityAndSchedule() {
             <div className="relative z-10 space-y-6 md:space-y-8">
               <h3 className="text-white text-2xl md:text-3xl font-[1000] uppercase tracking-tight italic">The Elite Network.</h3>
               <p className="text-slate-300 text-base md:text-lg leading-relaxed font-medium">
-                Chessmatic is a hub for like-minded achievers. Our <span className="text-white font-bold">Social Chess Evenings</span> and community tournaments foster a wellness culture that prioritizes both growth and relaxation.
+                Chessmatic is a hub for like-minded achievers. Our <span className="text-white font-bold">Social Chess Evenings</span> and community tournaments foster a vibrant intellectual community that prioritizes both mastery and connection.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6">
@@ -128,7 +128,7 @@ export default function CommunityAndSchedule() {
             </p>
             <div className="pt-4">
               <a
-                href={getWhatsAppUrl("Hi Chessmatic! I'd like to check real-time availability and booking slots for coaching / PT sessions.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to check real-time availability and booking slots for chess coaching sessions.")}
                 target="_blank"
                 rel="noopener noreferrer"
               >

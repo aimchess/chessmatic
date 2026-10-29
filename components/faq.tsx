@@ -7,20 +7,20 @@ import Link from "next/link"
 
 const faqs = [
   {
-    question: "Do I need prior experience to join Chess + PT or separate classes?",
-    answer: "Not at all. We cater to all skill levels from complete beginners to advanced competitors. Whether you are learning piece movement or looking for intensive 1-on-1 PT and chess strategy, sessions are calibrated to your level."
+    question: "Do I need prior experience to join adult chess classes?",
+    answer: "Not at all. We cater to all skill levels from complete beginners to advanced competitors. Whether you are learning piece movement or looking for intensive 1-on-1 tournament strategy, sessions are calibrated to your level."
   },
   {
-    question: "Can I take Chess and PT separately?",
-    answer: "Yes! We offer Chess + PT (combined hybrid), Chess Separate (pure chess coaching), and PT Separate (dedicated personal fitness training)."
+    question: "What chess skill levels do you teach?",
+    answer: "We offer structured tracks across Beginner Foundations, Intermediate Tactical Calculation, Advanced Tournament Mastery, and Executive Corporate Strategy."
   },
   {
     question: "What formats do you offer for coaching?",
     answer: "We offer 5 primary formats: Group Coaching Workshops, Private Lessons (1-on-1 in-studio), Online Private Lessons (1-on-1 virtual), Online Group Lessons (virtual batches), and Corporate team sessions."
   },
   {
-    question: "Is there a specific fitness level required for the PT sessions?",
-    answer: "Our physical personal training (PT) activations are customized based on an initial fitness and postural assessment to ensure safe and effective progression for everyone."
+    question: "What can I expect in my first chess session?",
+    answer: "Every new adult player undergoes a comprehensive diagnostic evaluation covering calculation velocity, tactical awareness, board visualization, and opening habits, followed by a personalized developmental roadmap."
   },
   {
     question: "Where are the in-person sessions held in Singapore?",

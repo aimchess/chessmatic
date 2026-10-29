@@ -61,15 +61,15 @@ export default function FounderSection() {
 
               <div className="space-y-3 text-slate-600 text-sm md:text-base leading-relaxed font-medium">
                 <p>
-                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic</span> and the Director of <span className="text-[#1a365d] font-bold">Intchess</span>. In Singapore, he pioneers high-performance chess training alongside physical conditioning (PT).
+                  Wagish is the Founder of <span className="text-[#1a365d] font-bold">Chessmatic</span> and the Director of <span className="text-[#1a365d] font-bold">Intchess</span>. In Singapore, he pioneers high-performance adult chess coaching and tactical masterclasses.
                 </p>
                 
                 <p>
-                  With a background in functional physical training, Wagish champions a dual-track standard: <span className="text-sky-600 italic font-black">"A sharper strategic mind backed by physical stamina and core resilience."</span>
+                  With years of competitive chess expertise and leadership coaching, Wagish champions a structured standard: <span className="text-sky-600 italic font-black">"A sharper strategic mind backed by deep calculation, positional foresight, and calm composure."</span>
                 </p>
 
                 <p>
-                  He offers comprehensive programs in Chess, Personal Training (PT), and hybrid Chess + PT across private lessons, group workshops, online batches, and corporate engagements at our <span className="text-[#1a365d] font-bold underline decoration-sky-500 decoration-2 underline-offset-4">Woodlands Studio</span>.
+                  He offers comprehensive programs in Chess across private 1-on-1 lessons, group workshops, online batches, and corporate engagements at our <span className="text-[#1a365d] font-bold underline decoration-sky-500 decoration-2 underline-offset-4">Woodlands Studio</span>.
                 </p>
               </div>
             </motion.div>

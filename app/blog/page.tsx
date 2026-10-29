@@ -29,9 +29,9 @@ const blogs = [
     impact: "Executive Function"
   },
   {
-    id: "science-of-chess-pt",
-    title: "💪 The Science of Chess + PT: Dual-Task Performance",
-    excerpt: "The signature Chessmatic training system. How combining physical conditioning with rapid decision making rewires stress tolerance.",
+    id: "science-of-chess-mastery",
+    title: "♟️ The Science of Chess Mastery: Tactical Depth & Resilience",
+    excerpt: "The Chessmatic calculation methodology. How deep tactical calculation, candidate move discipline, and composure rewire stress tolerance.",
     category: "Wellness",
     readTime: "10 min",
     image: "/adult1.jpg",

@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Play, TrendingUp, Zap, Heart, Brain, Quote, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"
+import { Play, TrendingUp, Zap, Heart, Brain, Quote, ArrowRight, ShieldCheck, ChevronLeft, ChevronRight, MessageCircle, Target } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { getWhatsAppUrl } from "@/lib/whatsapp"
@@ -15,7 +15,7 @@ export default function TransformationSection() {
       name: "Sarah Lim",
       role: "Project Manager • Member since 2022",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop",
-      text: "The split-second decision making required in Chess + PT has translated perfectly to my agile project environment. My focus levels have never been sharper during high-stakes sprints.",
+      text: "The split-second decision making required in high-intensity chess has translated perfectly to my agile project environment. My focus levels have never been sharper during high-stakes sprints.",
       joinedCount: 28,
       category: "Managers"
     },
@@ -23,7 +23,7 @@ export default function TransformationSection() {
       name: "David Teo",
       role: "HR Director • Corporate Partner",
       image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop",
-      text: "Our corporate wellness engagement shot up after introducing Chessmatic. It's the first time our team actually looked forward to a strategy workshop. Truly a superpower for synergy.",
+      text: "Our corporate team engagement shot up after introducing Chessmatic. It's the first time our team actually looked forward to a strategy workshop. Truly a superpower for synergy.",
       joinedCount: 15,
       category: "Executives"
     }
@@ -38,7 +38,7 @@ export default function TransformationSection() {
     { label: "Focus Improvement", value: "94%", icon: <Brain size={14} /> },
     { label: "Stress Reduction", value: "40%", icon: <Zap size={14} /> },
     { label: "Team Synergy", value: "+65%", icon: <TrendingUp size={14} /> },
-    { label: "Physical Stability", value: "88%", icon: <Heart size={14} /> },
+    { label: "Calculation Speed", value: "88%", icon: <Target size={14} /> },
   ]
 
   return (

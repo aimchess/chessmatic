@@ -30,7 +30,7 @@ export default function AboutSection() {
               />
             </motion.div>
 
-            {/* Bottom Image (The "Body") */}
+            {/* Bottom Image (Tactical Focus) */}
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function AboutSection() {
             >
               <img 
                 src="/5.png" 
-                alt="Physical Core Activation" 
+                alt="Tactical Calculation Analysis" 
                 className="w-full h-auto"
               />
             </motion.div>
@@ -90,7 +90,7 @@ export default function AboutSection() {
                   At <span className="text-[#1a365d] font-bold">Chessmatic</span>, we believe chess is more than just a game—it’s a powerful lab for building elite confidence, sharpening tactical calculation, and fostering mental resilience.
                 </p>
                 <p>
-                  We bring a modern lifestyle concept to Singapore by combining <span className="text-[#1a365d] font-bold">chess, fitness, and social wellness</span>. Our curriculum is designed not just to teach the fundamentals, but to inspire critical performance on the board and beyond.
+                  We bring a modern chess coaching academy to Singapore focusing on <span className="text-[#1a365d] font-bold">strategic mastery, critical thinking, and cognitive endurance</span>. Our curriculum is designed not just to teach the fundamentals, but to inspire critical performance on the board and beyond.
                 </p>
               </div>
             </motion.div>
@@ -99,7 +99,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
                {[
                  "Executive Decision Making",
-                 "Physical Core Stability",
+                 "Tactical Pattern Recognition",
                  "Mental Endurance Labs",
                  "Social Strategic Growth"
                ].map((point, i) => (

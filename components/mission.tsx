@@ -53,7 +53,7 @@ export default function MissionVision() {
               </div>
               <h3 className="text-xl sm:text-2xl font-[1000] text-[#1a365d] uppercase tracking-tighter mb-4">Our Mission</h3>
               <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">
-                To help adults and corporate teams build stronger minds, healthier bodies, and meaningful social connections through a unique combination of chess and physical wellness.
+                To empower adults and corporate teams with strategic clarity, tactical calculation mastery, and calm decision-making through world-class chess coaching.
               </p>
             </div>
 
@@ -81,7 +81,7 @@ export default function MissionVision() {
               </div>
               <h3 className="text-xl sm:text-2xl font-[1000] text-[#1a365d] uppercase tracking-tighter mb-4">Our Vision</h3>
               <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-medium">
-                To redefine adult wellness in Singapore by establishing the first strategic performance laboratory where mental fitness and physical core stability are trained together.
+                To lead adult chess education across Singapore by creating an inspiring academy where tactical precision, cognitive endurance, and strategic foresight are mastered.
               </p>
             </div>
 
@@ -95,7 +95,7 @@ export default function MissionVision() {
 
         {/* VALUE PILLS */}
         <div className="mt-16 md:mt-20 flex flex-wrap justify-center gap-2 sm:gap-4">
-           {['Innovation', 'Wellness', 'Discipline', 'Community'].map((val, i) => (
+           {['Strategic Depth', 'Tactical Mastery', 'Discipline', 'Community'].map((val, i) => (
              <motion.span 
                key={i} 
                initial={{ opacity: 0, scale: 0.9 }}

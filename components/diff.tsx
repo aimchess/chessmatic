@@ -18,11 +18,11 @@ export default function WhatMakesUsDifferent() {
       side: "left"
     },
     {
-      title: "Chess + PT Hybrid",
-      desc: "Our signature dual-task protocol. Build physical endurance and core strength while managing high-pressure chess calculations.",
+      title: "Tactical Depth & Composure",
+      desc: "Our signature calculation protocol. Build sharp pattern recognition and composure while managing high-pressure tournament clocks.",
       icon: <Zap className="text-white w-5 h-5" />,
       iconBg: "bg-[#1a365d]",
-      tag: "THE HYBRID PROTOCOL",
+      tag: "TACTICAL EXCELLENCE",
       side: "left"
     },
     {
@@ -35,7 +35,7 @@ export default function WhatMakesUsDifferent() {
     },
     {
       title: "Premium Atmosphere",
-      desc: "Train in a calm, high-end studio environment designed to simulate real-world strategic focus and wellness.",
+      desc: "Train in a calm, high-end studio environment designed to simulate real-world strategic focus and tournament-grade conditions.",
       icon: <Star className="text-white w-5 h-5" />,
       iconBg: "bg-sky-400",
       tag: "MODERN LAB STANDARDS",
@@ -113,7 +113,7 @@ export default function WhatMakesUsDifferent() {
                    <img 
                      src="/central.png" // Use your logo knight or a sketch-style icon
                      alt="Chessmatic Anchor"
-                     className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(26,54,93,0.15)]"
+                     className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(26,54,93,0.15)] mix-blend-multiply"
                    />
                 </div>
              </motion.div>

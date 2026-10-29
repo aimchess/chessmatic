@@ -57,8 +57,8 @@ export default function AboutBanner() {
             Our <span style={{ color: cyan }}>Mission.</span>
           </h1>
           <p className="text-slate-300 font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] text-[10px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-relaxed px-4">
-            Redefining <span className="text-white">Adult Wellness</span> Through <br className="hidden sm:block" />
-            Strategic Intelligence & Physical Stability.
+            Redefining <span className="text-white">Adult Chess Education</span> Through <br className="hidden sm:block" />
+            Strategic Intelligence & Cognitive Mastery.
           </p>
         </motion.div>
       </div>
@@ -107,7 +107,7 @@ export default function AboutBanner() {
           </div>
           <div className="pr-2">
             <p className="text-white/40 text-[9px] font-black uppercase tracking-widest leading-none mb-1">Methodology</p>
-            <p className="text-sky-400 font-bold text-xs tracking-tight">Mind & Body</p>
+            <p className="text-sky-400 font-bold text-xs tracking-tight">Tactical Strategy</p>
           </div>
         </motion.div>
       </div>

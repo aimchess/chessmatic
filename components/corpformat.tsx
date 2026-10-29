@@ -18,11 +18,11 @@ const experiences = [
     image: "/comp.png"
   },
   {
-    title: "Team Challenges (2v2 Plank Chess)",
+    title: "Tactical Team Relays",
     tag: "Module 02",
-    desc: "High-energy group-based chess and wellness relays featuring our viral 2 v 2 Plank Chess Challenge—testing physical stamina, core resilience, and rapid strategic coordination under pressure.",
+    desc: "High-energy group-based chess challenges featuring tactical consultation matches—testing team foresight, calculation under clock limits, and rapid strategic coordination.",
     icon: <Users size={20} />,
-    image: "/plank1.png"
+    image: "/connect.jpg"
   },
   {
     title: "Company Tournaments",
@@ -41,7 +41,7 @@ const experiences = [
   {
     title: "Social Chess Events",
     tag: "Module 05",
-    desc: "Casual and wellness-focused social gatherings that combine chess, networking, mindfulness, and interactive activities to create a relaxed yet intellectually stimulating atmosphere.",
+    desc: "Casual and community-focused social gatherings that combine casual chess, networking, puzzle challenges, and interactive team activities to create a relaxed yet intellectually stimulating atmosphere.",
     icon: <Coffee size={20} />,
     image: "/adult1.png"
   }
