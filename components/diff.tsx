@@ -113,7 +113,6 @@ export default function WhatMakesUsDifferent() {
                    <img 
                      src="/central.png" // Use your logo knight or a sketch-style icon
                      alt="Chessmatic Anchor"
-                     className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(26,54,93,0.15)]"
                      className="w-full h-full object-contain filter drop-shadow-[0_20px_50px_rgba(26,54,93,0.15)] mix-blend-multiply"
                    />
                 </div>

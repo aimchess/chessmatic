@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { 
   Check, Sparkles, Users, ShieldCheck, 
   HelpCircle, MessageCircle, ArrowRight,
-  Award, MapPin, Laptop, Package, Clock, 
+  Award, MapPin, Laptop, 
   CheckCircle2, ChevronDown, ChevronUp
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -14,18 +14,16 @@ import { getWhatsAppUrl } from "@/lib/whatsapp"
 
 export default function ChessPricingSection() {
   const [deliveryMode, setDeliveryMode] = useState<"inPerson" | "online">("inPerson")
-  const [billingCycle, setBillingCycle] = useState<"package4" | "perLesson">("package4")
   const [showTable, setShowTable] = useState(false)
 
   const cyan = "#0ea5e9"
   const isOnline = deliveryMode === "online"
-  const isPackage = billingCycle === "package4"
 
   const formatPrice = (val: number) => {
     return val % 1 !== 0 ? val.toFixed(2) : val.toString()
   }
 
-  // Pricing Data
+  // Pricing Data - Per-lesson display with 4-lesson bundle specification
   const plans = [
     {
       id: "assessment",
@@ -34,11 +32,11 @@ export default function ChessPricingSection() {
       badge: "Diagnostic",
       badgeColor: "bg-sky-50 text-sky-700 border-sky-200",
       icon: <HelpCircle className="w-5 h-5 text-sky-500" />,
-      // Assessment is always a single 60-min test
-      price: isOnline ? 80 : 100,
+      ratePerLesson: isOnline ? 80 : 100,
+      totalPackagePrice: isOnline ? 80 : 100,
       periodLabel: "Single Evaluation",
-      perLesson: "60-min skill evaluation",
-      savingsTag: null,
+      rateUnit: "/ evaluation",
+      packageNote: "60-min skill evaluation",
       highlight: false,
       popular: false,
       features: [
@@ -55,18 +53,12 @@ export default function ChessPricingSection() {
       badge: "Faculty Highlight",
       badgeColor: "bg-amber-50 text-amber-900 border-amber-200",
       icon: <Award className="w-5 h-5 text-amber-500" />,
-      // 4-Lesson total: $600 in-person or $480 online
-      // Single lesson: $200 in-person or $160 online
-      price: isPackage 
-        ? (isOnline ? 480 : 600) 
-        : (isOnline ? 160 : 200),
-      periodLabel: isPackage ? "4-Lesson Pack" : "Single Lesson",
-      perLesson: isPackage 
-        ? (isOnline ? "Just $120 / lesson" : "Just $150 / lesson") 
-        : "Pay-as-you-go drop-in",
-      savingsTag: isPackage 
-        ? (isOnline ? "Save $160 vs Single" : "Save $200 vs Single") 
-        : (isOnline ? "💡 4-pack is $480 ($120/ea)" : "💡 4-pack is $600 ($150/ea)"),
+      // 4-Lesson total: $600 in-person ($150/ea) or $480 online ($120/ea)
+      ratePerLesson: isOnline ? 120 : 150,
+      totalPackagePrice: isOnline ? 480 : 600,
+      periodLabel: "4-Lesson Pack",
+      rateUnit: "/ lesson",
+      packageNote: isOnline ? "Billed as $480 for 4 lessons" : "Billed as $600 for 4 lessons",
       highlight: true,
       popular: true,
       features: [
@@ -74,7 +66,7 @@ export default function ChessPricingSection() {
         "Tailored opening repertoire & game review",
         "Async WhatsApp game checks between lessons"
       ],
-      whatsappMsg: `Hi Chessmatic! I'd like to enroll in (Titled Coach) Private 1-on-1 coaching (${isPackage ? (isOnline ? "4-Lesson Pack - $480" : "4-Lesson Pack - $600") : (isOnline ? "Single Lesson - $160" : "Single Lesson - $200")}, ${isOnline ? "Online" : "In-Person"}). Please share coach availability.`
+      whatsappMsg: `Hi Chessmatic! I'd like to enroll in (Titled Coach) Private 1-on-1 coaching (${isOnline ? "$120/lesson - $480 for 4 lessons (Online)" : "$150/lesson - $600 for 4 lessons (In-Person)"}). Please share coach availability.`
     },
     {
       id: "small-group",
@@ -83,18 +75,12 @@ export default function ChessPricingSection() {
       badge: "High Synergy",
       badgeColor: "bg-emerald-50 text-emerald-800 border-emerald-200",
       icon: <Users className="w-5 h-5 text-emerald-500" />,
-      // 4-Lesson total: $250 in-person or $200 online
-      // Single lesson: $80 in-person or $64 online
-      price: isPackage 
-        ? (isOnline ? 200 : 250) 
-        : (isOnline ? 64 : 80),
-      periodLabel: isPackage ? "4-Lesson Pack" : "Single Lesson",
-      perLesson: isPackage 
-        ? (isOnline ? "Just $50 / lesson" : "Just $62.50 / lesson") 
-        : "Pay-as-you-go drop-in",
-      savingsTag: isPackage 
-        ? (isOnline ? "Save $56 vs Single" : "Save $70 vs Single") 
-        : (isOnline ? "💡 4-pack is $200 ($50/ea)" : "💡 4-pack is $250 ($62.50/ea)"),
+      // 4-Lesson total: $250 in-person ($62.50/ea) or $200 online ($50/ea)
+      ratePerLesson: isOnline ? 50 : 62.5,
+      totalPackagePrice: isOnline ? 200 : 250,
+      periodLabel: "4-Lesson Pack",
+      rateUnit: "/ lesson",
+      packageNote: isOnline ? "Billed as $200 for 4 lessons" : "Billed as $250 for 4 lessons",
       highlight: false,
       popular: false,
       features: [
@@ -102,7 +88,7 @@ export default function ChessPricingSection() {
         "Timed clock sparring & critical review",
         "Dynamic endgame & tactical drills"
       ],
-      whatsappMsg: `Hi Chessmatic! I'd like to join Small Group (2 to 4 Pax) coaching (${isPackage ? (isOnline ? "4-Lesson Pack - $200" : "4-Lesson Pack - $250") : (isOnline ? "Single Lesson - $64" : "Single Lesson - $80")}, ${isOnline ? "Online" : "In-Person"}). Please share upcoming cohort schedules.`
+      whatsappMsg: `Hi Chessmatic! I'd like to join Small Group (2 to 4 Pax) coaching (${isOnline ? "$50/lesson - $200 for 4 lessons (Online)" : "$62.50/lesson - $250 for 4 lessons (In-Person)"}). Please share upcoming cohort schedules.`
     },
     {
       id: "large-group",
@@ -111,18 +97,12 @@ export default function ChessPricingSection() {
       badge: "Best Value",
       badgeColor: "bg-purple-50 text-purple-800 border-purple-200",
       icon: <Users className="w-5 h-5 text-purple-500" />,
-      // 4-Lesson total: $200 in-person or $160 online
-      // Single lesson: $70 in-person or $56 online
-      price: isPackage 
-        ? (isOnline ? 160 : 200) 
-        : (isOnline ? 56 : 70),
-      periodLabel: isPackage ? "4-Lesson Pack" : "Single Lesson",
-      perLesson: isPackage 
-        ? (isOnline ? "Just $40 / lesson" : "Just $50 / lesson") 
-        : "Pay-as-you-go drop-in",
-      savingsTag: isPackage 
-        ? (isOnline ? "Save $64 vs Single" : "Save $80 vs Single") 
-        : (isOnline ? "💡 4-pack is $160 ($40/ea)" : "💡 4-pack is $200 ($50/ea)"),
+      // 4-Lesson total: $200 in-person ($50/ea) or $160 online ($40/ea)
+      ratePerLesson: isOnline ? 40 : 50,
+      totalPackagePrice: isOnline ? 160 : 200,
+      periodLabel: "4-Lesson Pack",
+      rateUnit: "/ lesson",
+      packageNote: isOnline ? "Billed as $160 for 4 lessons" : "Billed as $200 for 4 lessons",
       highlight: false,
       popular: false,
       features: [
@@ -130,7 +110,7 @@ export default function ChessPricingSection() {
         "Opening themes & tactical puzzle sets",
         "Arena tournaments with coach review"
       ],
-      whatsappMsg: `Hi Chessmatic! I'd like to enroll in Large Group (5 to 8 Pax) coaching (${isPackage ? (isOnline ? "4-Lesson Pack - $160" : "4-Lesson Pack - $200") : (isOnline ? "Single Lesson - $56" : "Single Lesson - $70")}, ${isOnline ? "Online" : "In-Person"}). Please share dates and details.`
+      whatsappMsg: `Hi Chessmatic! I'd like to enroll in Large Group (5 to 8 Pax) coaching (${isOnline ? "$40/lesson - $160 for 4 lessons (Online)" : "$50/lesson - $200 for 4 lessons (In-Person)"}). Please share dates and details.`
     }
   ]
 
@@ -150,97 +130,51 @@ export default function ChessPricingSection() {
             Academy <span style={{ color: cyan }}>Price List.</span>
           </h2>
           <p className="text-slate-500 font-medium text-xs sm:text-base mt-2">
-            Switch between location and package below to view live pricing.
+            Switch between in-person Woodlands Studio and online interactive coaching below.
           </p>
         </div>
 
         {/* =========================================================
-            SIMPLE & RESPONSIVE FILTER SWITCHER
-            Clear labels, large touch targets, 100% mobile friendly
+            CLEAN LOCATION SWITCHER (IN-PERSON VS ONLINE)
            ========================================================= */}
-        <div className="max-w-2xl mx-auto mb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 bg-white p-3 sm:p-4 rounded-3xl border-2 border-slate-200/90 shadow-md">
-            
-            {/* 1. LOCATION SWITCHER */}
-            <div className="space-y-1.5">
-              <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center gap-1 px-1">
-                <MapPin size={12} className="text-sky-500" />
-                1. Select Location
-              </span>
-              <div className="grid grid-cols-2 gap-1.5 bg-slate-100 p-1.5 rounded-2xl">
-                <button
-                  type="button"
-                  onClick={() => setDeliveryMode("inPerson")}
-                  className={`py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
-                    deliveryMode === "inPerson"
-                      ? "bg-[#1a365d] text-white shadow-md scale-[1.02]"
-                      : "text-slate-600 hover:text-[#1a365d] hover:bg-white/60"
-                  }`}
-                >
-                  <MapPin size={13} className={deliveryMode === "inPerson" ? "text-sky-400" : "text-slate-400"} />
-                  <span>In-Person</span>
-                </button>
+        <div className="max-w-md mx-auto mb-10">
+          <div className="bg-white p-3 sm:p-4 rounded-3xl border-2 border-slate-200/90 shadow-md">
+            <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center justify-center gap-1.5 px-1 mb-2">
+              <MapPin size={12} className="text-sky-500" />
+              Select Coaching Mode
+            </span>
+            <div className="grid grid-cols-2 gap-2 bg-slate-100 p-1.5 rounded-2xl">
+              <button
+                type="button"
+                onClick={() => setDeliveryMode("inPerson")}
+                className={`py-3 px-3 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
+                  deliveryMode === "inPerson"
+                    ? "bg-[#1a365d] text-white shadow-md scale-[1.02]"
+                    : "text-slate-600 hover:text-[#1a365d] hover:bg-white/60"
+                }`}
+              >
+                <MapPin size={13} className={deliveryMode === "inPerson" ? "text-sky-400" : "text-slate-400"} />
+                <span>In-Person</span>
+              </button>
 
-                <button
-                  type="button"
-                  onClick={() => setDeliveryMode("online")}
-                  className={`py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
-                    deliveryMode === "online"
-                      ? "bg-sky-500 text-white shadow-md scale-[1.02]"
-                      : "text-slate-600 hover:text-sky-600 hover:bg-white/60"
-                  }`}
-                >
-                  <Laptop size={13} />
-                  <span>Online</span>
-                  <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${
-                    deliveryMode === "online" ? "bg-white text-sky-600" : "bg-sky-200 text-sky-800"
-                  }`}>
-                    -20%
-                  </span>
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={() => setDeliveryMode("online")}
+                className={`py-3 px-3 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
+                  deliveryMode === "online"
+                    ? "bg-sky-500 text-white shadow-md scale-[1.02]"
+                    : "text-slate-600 hover:text-sky-600 hover:bg-white/60"
+                }`}
+              >
+                <Laptop size={13} />
+                <span>Online</span>
+                <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${
+                  deliveryMode === "online" ? "bg-white text-sky-600" : "bg-sky-200 text-sky-800"
+                }`}>
+                  -20%
+                </span>
+              </button>
             </div>
-
-            {/* 2. PACKAGE SWITCHER */}
-            <div className="space-y-1.5">
-              <span className="text-[10px] font-black uppercase tracking-wider text-slate-400 flex items-center gap-1 px-1">
-                <Package size={12} className="text-emerald-500" />
-                2. Select Package
-              </span>
-              <div className="grid grid-cols-2 gap-1.5 bg-slate-100 p-1.5 rounded-2xl">
-                <button
-                  type="button"
-                  onClick={() => setBillingCycle("package4")}
-                  className={`py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
-                    billingCycle === "package4"
-                      ? "bg-[#1a365d] text-white shadow-md scale-[1.02]"
-                      : "text-slate-600 hover:text-[#1a365d] hover:bg-white/60"
-                  }`}
-                >
-                  <Package size={13} className={billingCycle === "package4" ? "text-emerald-400" : "text-slate-400"} />
-                  <span>4 Lessons</span>
-                  <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${
-                    billingCycle === "package4" ? "bg-emerald-400 text-[#1a365d]" : "bg-emerald-200 text-emerald-800"
-                  }`}>
-                    Best
-                  </span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setBillingCycle("perLesson")}
-                  className={`py-3 px-2 rounded-xl text-xs font-black uppercase tracking-wider transition-all duration-200 flex items-center justify-center gap-1.5 cursor-pointer select-none ${
-                    billingCycle === "perLesson"
-                      ? "bg-[#1a365d] text-white shadow-md scale-[1.02]"
-                      : "text-slate-600 hover:text-[#1a365d] hover:bg-white/60"
-                  }`}
-                >
-                  <Clock size={13} className={billingCycle === "perLesson" ? "text-amber-400" : "text-slate-400"} />
-                  <span>Single</span>
-                </button>
-              </div>
-            </div>
-
           </div>
 
           {/* ACTIVE STATUS INDICATOR */}
@@ -251,7 +185,7 @@ export default function ChessPricingSection() {
             </span>
             <span>•</span>
             <span className="text-[#1a365d] font-black underline decoration-emerald-500 decoration-2">
-              {billingCycle === "package4" ? "4-Lesson Pack Total Pricing" : "Single Lesson Rates"}
+              Per-Lesson Rates (4-Lesson Bundle)
             </span>
           </div>
         </div>
@@ -297,37 +231,28 @@ export default function ChessPricingSection() {
                   
                   {/* Period tag */}
                   <div className="flex items-center justify-between text-[9px] font-black uppercase tracking-wider text-slate-400 mb-1">
-                    <span>Total Fee</span>
-                    <span className={`px-2 py-0.5 rounded-md ${
-                      isPackage ? "bg-emerald-100 text-emerald-800" : "bg-slate-200 text-slate-700"
-                    }`}>
+                    <span>{plan.id === "assessment" ? "Diagnostic Fee" : "Fee Per Lesson"}</span>
+                    <span className="px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800">
                       {plan.periodLabel}
                     </span>
                   </div>
 
-                  {/* Big Headline Price */}
+                  {/* Big Headline Price - PER LESSON RATE */}
                   <div className="flex items-baseline gap-1">
                     <span className="text-xs font-black text-slate-400">SGD</span>
                     <span className="text-3xl sm:text-4xl font-[1000] text-[#1a365d] tracking-tight leading-none">
-                      ${formatPrice(plan.price)}
+                      ${formatPrice(plan.ratePerLesson)}
                     </span>
                     <span className="text-[10px] font-black text-slate-500 uppercase tracking-wider ml-1">
-                      {isPackage && plan.id !== "assessment" ? "total (4 lessons)" : `/ ${plan.periodLabel.toLowerCase()}`}
+                      {plan.rateUnit}
                     </span>
                   </div>
 
-                  {/* Sub breakdown */}
-                  <div className="text-xs font-black text-sky-600 mt-2 flex items-center gap-1.5">
+                  {/* Sub breakdown - States that it is for 4 lessons */}
+                  <div className="text-xs font-black text-sky-700 mt-2 flex items-center gap-1.5">
                     <CheckCircle2 size={13} className="text-sky-500 shrink-0" />
-                    <span>{plan.perLesson}</span>
+                    <span>{plan.packageNote}</span>
                   </div>
-
-                  {/* Savings Badge */}
-                  {plan.savingsTag && (
-                    <div className="mt-2 pt-2 border-t border-slate-200/80 text-[10px] font-black text-emerald-700">
-                      {plan.savingsTag}
-                    </div>
-                  )}
                 </div>
 
                 {/* Features */}
@@ -400,10 +325,8 @@ export default function ChessPricingSection() {
                   <thead>
                     <tr className="bg-slate-50 text-[#1a365d] text-[10px] font-black uppercase tracking-wider border-b border-slate-200">
                       <th className="py-3 px-4">Track</th>
-                      <th className="py-3 px-4 bg-sky-50 text-sky-900">In-Person (4-Pack)</th>
-                      <th className="py-3 px-4">In-Person (Single)</th>
-                      <th className="py-3 px-4 bg-emerald-50 text-emerald-900">Online 4-Pack (-20%)</th>
-                      <th className="py-3 px-4">Online Single</th>
+                      <th className="py-3 px-4 bg-sky-50 text-sky-900">In-Person (Woodlands Studio)</th>
+                      <th className="py-3 px-4 bg-emerald-50 text-emerald-900">Online Interactive (-20%)</th>
                       <th className="py-3 px-4 text-right">Action</th>
                     </tr>
                   </thead>
@@ -411,12 +334,10 @@ export default function ChessPricingSection() {
                     <tr>
                       <td className="py-3 px-4">
                         <strong className="text-[#1a365d]">1-on-1 Assessment</strong>
-                        <p className="text-[10px] text-slate-400">60-min test</p>
+                        <p className="text-[10px] text-slate-400">60-min diagnostic test</p>
                       </td>
-                      <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">$100 (Single)</td>
-                      <td className="py-3 px-4 text-slate-700">$100</td>
-                      <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">$80 (Single)</td>
-                      <td className="py-3 px-4 text-slate-700">$80</td>
+                      <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">$100 (Single Evaluation)</td>
+                      <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">$80 (Single Evaluation)</td>
                       <td className="py-3 px-4 text-right">
                         <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-[10px] font-black py-1 px-3">
                           <a href={getWhatsAppUrl("Hi Chessmatic! I'd like to book an Assessment.")} target="_blank" rel="noopener noreferrer">Book</a>
@@ -426,16 +347,14 @@ export default function ChessPricingSection() {
                     <tr>
                       <td className="py-3 px-4">
                         <strong className="text-[#1a365d]">(Titled Coach) Private</strong>
-                        <p className="text-[10px] text-slate-400">1-on-1 Mentorship</p>
+                        <p className="text-[10px] text-slate-400">1-on-1 Mentorship (4 Lessons)</p>
                       </td>
                       <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">
-                        $600 <span className="text-[10px] font-bold text-slate-500">($150/ea)</span>
+                        $150 <span className="text-[10px] font-bold text-slate-500">/ lesson ($600 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$200</td>
                       <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">
-                        $480 <span className="text-[10px] font-bold text-slate-500">($120/ea)</span>
+                        $120 <span className="text-[10px] font-bold text-slate-500">/ lesson ($480 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$160</td>
                       <td className="py-3 px-4 text-right">
                         <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-[10px] font-black py-1 px-3">
                           <a href={getWhatsAppUrl("Hi Chessmatic! I'd like to book Private coaching.")} target="_blank" rel="noopener noreferrer">Book</a>
@@ -445,16 +364,14 @@ export default function ChessPricingSection() {
                     <tr>
                       <td className="py-3 px-4">
                         <strong className="text-[#1a365d]">Small Group (2-4 Pax)</strong>
-                        <p className="text-[10px] text-slate-400">Semi-Private Cohort</p>
+                        <p className="text-[10px] text-slate-400">Semi-Private Cohort (4 Lessons)</p>
                       </td>
                       <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">
-                        $250 <span className="text-[10px] font-bold text-slate-500">($62.50/ea)</span>
+                        $62.50 <span className="text-[10px] font-bold text-slate-500">/ lesson ($250 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$80</td>
                       <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">
-                        $200 <span className="text-[10px] font-bold text-slate-500">($50/ea)</span>
+                        $50 <span className="text-[10px] font-bold text-slate-500">/ lesson ($200 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$64</td>
                       <td className="py-3 px-4 text-right">
                         <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-[10px] font-black py-1 px-3">
                           <a href={getWhatsAppUrl("Hi Chessmatic! I'd like to book Small Group coaching.")} target="_blank" rel="noopener noreferrer">Book</a>
@@ -464,16 +381,14 @@ export default function ChessPricingSection() {
                     <tr>
                       <td className="py-3 px-4">
                         <strong className="text-[#1a365d]">Large Group (5-8 Pax)</strong>
-                        <p className="text-[10px] text-slate-400">Weekly Workshops</p>
+                        <p className="text-[10px] text-slate-400">Weekly Workshops (4 Lessons)</p>
                       </td>
                       <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">
-                        $200 <span className="text-[10px] font-bold text-slate-500">($50/ea)</span>
+                        $50 <span className="text-[10px] font-bold text-slate-500">/ lesson ($200 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$70</td>
                       <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">
-                        $160 <span className="text-[10px] font-bold text-slate-500">($40/ea)</span>
+                        $40 <span className="text-[10px] font-bold text-slate-500">/ lesson ($160 for 4)</span>
                       </td>
-                      <td className="py-3 px-4 text-slate-700">$56</td>
                       <td className="py-3 px-4 text-right">
                         <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-[10px] font-black py-1 px-3">
                           <a href={getWhatsAppUrl("Hi Chessmatic! I'd like to book Large Group coaching.")} target="_blank" rel="noopener noreferrer">Book</a>
@@ -491,9 +406,7 @@ export default function ChessPricingSection() {
         <div className="text-center text-slate-500 text-[11px] font-semibold mb-6 flex items-center justify-center gap-1.5">
           <ShieldCheck size={14} className="text-sky-500 shrink-0" />
           <span>
-            {billingCycle === "package4" 
-              ? "* Reflected pricing is for a 4-lesson bundle (minimum purchase). Single session drop-in rates also available." 
-              : "* Single session drop-in rate. 4-lesson packages available with bundled savings up to $200."}
+            * Reflected pricing is for a 4-lesson bundle (minimum purchase requirement). Structured for consistent progression and cohort continuity.
           </span>
         </div>
 
