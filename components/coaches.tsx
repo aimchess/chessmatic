@@ -103,52 +103,6 @@ export default function CoachesSection() {
         "Executive & Advanced Adult Coaching"
       ]
     },
-    {
-      name: "NM Edgar Reggie Olay",
-      title: "National Master (NM) & Senior Chess Trainer",
-      badge: "National Master & 3x IM Norms",
-      titleBadge: "National Master",
-      roleBadge: "Senior Trainer",
-      image: "/reggie-olay.jpg",
-      experience: "20+ Years Competitive & Coaching",
-      rating: "Peak FIDE 2398",
-      bio: "Prominent Filipino National Master hailing from Kidapawan and Davao City, with a celebrated career in the Southeast Asian chess circuit. Earned 3 International Master (IM) norms (completing his final norm at the 2009 Subic International Open). Now based in Singapore as an esteemed professional trainer, Coach Reggie empowers adults and competitive juniors with razor-sharp tactical foresight, aggressive board control, and tournament composure.",
-      achievements: [
-        "Peak FIDE Rating: 2398",
-        "3x International Master (IM) Norms",
-        "Subic International Open Final IM Norm",
-        "Trainer to Singapore Junior Champions"
-      ],
-      specialties: [
-        "Dynamic Tactical Sharpness",
-        "Competitive Tournament Prep",
-        "Calculation Velocity & Composure",
-        "Tailored Private Mentorship"
-      ]
-    },
-    {
-      name: "FM Kesavananda Krishna Chitrada",
-      title: "FIDE Master (FM), FIDE Trainer (FT) & World Champion",
-      badge: "FIDE Master & IPCA World Champion",
-      titleBadge: "FIDE Master",
-      roleBadge: "FIDE Trainer",
-      image: "/krishna-chitrada.jpg",
-      experience: "20+ Years Elite Coaching",
-      rating: "Peak FIDE 2300+",
-      bio: "Accomplished FIDE Master and certified FIDE Trainer (FT), champion of the 17th IPCA World Individual Chess Championship, and Founder & Chief Coach of Mastermove Chess Academy in Singapore. Celebrated for a modern training philosophy fusing deep strategic comprehension, cognitive psychology, and AI-assisted analysis over rote opening memorization.",
-      achievements: [
-        "17th IPCA World Individual Champion",
-        "Official Certified FIDE Trainer (FT)",
-        "Founder & Chief Coach (Mastermove Academy)",
-        "Cognitive & AI-Integrated Strategy Pioneer"
-      ],
-      specialties: [
-        "Deep Positional Comprehension",
-        "Anti-Memorization Strategic Principles",
-        "AI-Assisted Game Diagnostics",
-        "Executive & Advanced Adult Coaching"
-      ]
-    }
   ]
 
   return (
