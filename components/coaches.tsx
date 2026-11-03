@@ -15,6 +15,8 @@ export default function CoachesSection() {
       name: "FM Arlan Cabe",
       title: "FIDE Master (FM) & Senior Chess Coach",
       badge: "FIDE Master & Champion",
+      titleBadge: "FIDE Master",
+      roleBadge: "Senior Coach",
       image: "/arlan-cabe.jpg",
       experience: "15+ Years Coaching",
       rating: "Master Strength",
@@ -36,6 +38,8 @@ export default function CoachesSection() {
       name: "FM Dino Ballecer",
       title: "FIDE Master (FM) & Certified FIDE Instructor",
       badge: "FIDE Master & Certified FIDE Instructor",
+      titleBadge: "FIDE Master",
+      roleBadge: "Certified Instructor",
       image: "/dino.png",
       experience: "20+ Years Coaching",
       rating: "Peak FIDE 2434",
@@ -51,6 +55,98 @@ export default function CoachesSection() {
         "Tournament Strategy & Psychology",
         "Adaptive & Inclusive Coaching",
         "Accelerated FIDE Rating Growth"
+      ]
+    },
+    {
+      name: "NM Edgar Reggie Olay",
+      title: "National Master (NM) & Senior Chess Trainer",
+      badge: "National Master & 3x IM Norms",
+      titleBadge: "National Master",
+      roleBadge: "Senior Trainer",
+      image: "/nm-edgar.png",
+      experience: "20+ Years Competitive & Coaching",
+      rating: "Peak FIDE 2398",
+      bio: "Prominent Filipino National Master hailing from Kidapawan and Davao City, with a celebrated career in the Southeast Asian chess circuit. Earned 3 International Master (IM) norms (completing his final norm at the 2009 Subic International Open). Now based in Singapore as an esteemed professional trainer, Coach Reggie empowers adults and competitive juniors with razor-sharp tactical foresight, aggressive board control, and tournament composure.",
+      achievements: [
+        "Peak FIDE Rating: 2398",
+        "3x International Master (IM) Norms",
+        "Subic International Open Final IM Norm",
+        "Trainer to Singapore Junior Champions"
+      ],
+      specialties: [
+        "Dynamic Tactical Sharpness",
+        "Competitive Tournament Prep",
+        "Calculation Velocity & Composure",
+        "Tailored Private Mentorship"
+      ]
+    },
+    {
+      name: "FM Kesavananda Krishna Chitrada",
+      title: "FIDE Master (FM), FIDE Trainer (FT) & World Champion",
+      badge: "FIDE Master & IPCA World Champion",
+      titleBadge: "FIDE Master",
+      roleBadge: "FIDE Trainer",
+      image: "/krishna.png",
+      experience: "20+ Years Elite Coaching",
+      rating: "Peak FIDE 2300+",
+      bio: "Accomplished FIDE Master and certified FIDE Trainer (FT), champion of the 17th IPCA World Individual Chess Championship, and Founder & Chief Coach of Mastermove Chess Academy in Singapore. Celebrated for a modern training philosophy fusing deep strategic comprehension, cognitive psychology, and AI-assisted analysis over rote opening memorization.",
+      achievements: [
+        "17th IPCA World Individual Champion",
+        "Official Certified FIDE Trainer (FT)",
+        "Founder & Chief Coach (Mastermove Academy)",
+        "Cognitive & AI-Integrated Strategy Pioneer"
+      ],
+      specialties: [
+        "Deep Positional Comprehension",
+        "Anti-Memorization Strategic Principles",
+        "AI-Assisted Game Diagnostics",
+        "Executive & Advanced Adult Coaching"
+      ]
+    },
+    {
+      name: "NM Edgar Reggie Olay",
+      title: "National Master (NM) & Senior Chess Trainer",
+      badge: "National Master & 3x IM Norms",
+      titleBadge: "National Master",
+      roleBadge: "Senior Trainer",
+      image: "/reggie-olay.jpg",
+      experience: "20+ Years Competitive & Coaching",
+      rating: "Peak FIDE 2398",
+      bio: "Prominent Filipino National Master hailing from Kidapawan and Davao City, with a celebrated career in the Southeast Asian chess circuit. Earned 3 International Master (IM) norms (completing his final norm at the 2009 Subic International Open). Now based in Singapore as an esteemed professional trainer, Coach Reggie empowers adults and competitive juniors with razor-sharp tactical foresight, aggressive board control, and tournament composure.",
+      achievements: [
+        "Peak FIDE Rating: 2398",
+        "3x International Master (IM) Norms",
+        "Subic International Open Final IM Norm",
+        "Trainer to Singapore Junior Champions"
+      ],
+      specialties: [
+        "Dynamic Tactical Sharpness",
+        "Competitive Tournament Prep",
+        "Calculation Velocity & Composure",
+        "Tailored Private Mentorship"
+      ]
+    },
+    {
+      name: "FM Kesavananda Krishna Chitrada",
+      title: "FIDE Master (FM), FIDE Trainer (FT) & World Champion",
+      badge: "FIDE Master & IPCA World Champion",
+      titleBadge: "FIDE Master",
+      roleBadge: "FIDE Trainer",
+      image: "/krishna-chitrada.jpg",
+      experience: "20+ Years Elite Coaching",
+      rating: "Peak FIDE 2300+",
+      bio: "Accomplished FIDE Master and certified FIDE Trainer (FT), champion of the 17th IPCA World Individual Chess Championship, and Founder & Chief Coach of Mastermove Chess Academy in Singapore. Celebrated for a modern training philosophy fusing deep strategic comprehension, cognitive psychology, and AI-assisted analysis over rote opening memorization.",
+      achievements: [
+        "17th IPCA World Individual Champion",
+        "Official Certified FIDE Trainer (FT)",
+        "Founder & Chief Coach (Mastermove Academy)",
+        "Cognitive & AI-Integrated Strategy Pioneer"
+      ],
+      specialties: [
+        "Deep Positional Comprehension",
+        "Anti-Memorization Strategic Principles",
+        "AI-Assisted Game Diagnostics",
+        "Executive & Advanced Adult Coaching"
       ]
     }
   ]
@@ -71,7 +167,7 @@ export default function CoachesSection() {
             Learn From Certified <span style={{ color: cyan }}>Grandmasters & FIDE Masters.</span>
           </h2>
           <p className="text-slate-500 font-medium text-sm sm:text-base mt-4">
-            Our coaching team features certified FIDE Masters and seasoned tournament champions dedicated to accelerating your tactical acumen.
+            Our coaching team features certified FIDE Masters, World Champions, and seasoned tournament titleholders dedicated to accelerating your tactical acumen.
           </p>
         </div>
 
@@ -100,12 +196,12 @@ export default function CoachesSection() {
                     {/* Floating Title Stamp */}
                     <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/20 shadow-md flex items-center gap-1.5">
                       <Star size={12} className="text-amber-500 fill-amber-500" />
-                      <span className="text-[#1a365d] text-[9px] font-[1000] uppercase tracking-wider">FIDE Master</span>
+                      <span className="text-[#1a365d] text-[9px] font-[1000] uppercase tracking-wider">{coach.titleBadge}</span>
                     </div>
 
                     <div className="absolute bottom-3 left-3 right-3 text-center">
                       <span className="inline-block bg-[#1a365d]/90 backdrop-blur-md text-sky-400 text-[9px] font-black uppercase tracking-widest px-3 py-1 rounded-lg border border-white/10">
-                        Senior Coach
+                        {coach.roleBadge}
                       </span>
                     </div>
                   </div>

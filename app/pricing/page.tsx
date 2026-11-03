@@ -1,8 +1,9 @@
 import { Metadata } from "next"
 import ChessPricingSection from "@/components/chess-pricing"
+import ClassScheduleSection from "@/components/class-schedule"
 import FAQSection from "@/components/faq"
 import CompactCTA from "@/components/cta"
-import { Trophy, ShieldCheck, Sparkles, CheckCircle2 } from "lucide-react"
+import { Trophy, ShieldCheck, Sparkles, CheckCircle2, Calendar } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "Official Price List & Coaching Fees | Chessmatic Singapore",
@@ -58,11 +59,24 @@ export default function PricingPage() {
               <span>Bulk Savings Up to 20%</span>
             </div>
           </div>
+
+          <div className="mt-6 flex justify-center">
+            <a 
+              href="#schedule" 
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#187595]/10 text-[#187595] hover:bg-[#187595] hover:text-white transition-all text-xs font-black uppercase tracking-wider border border-[#187595]/20 shadow-sm"
+            >
+              <Calendar size={14} />
+              <span>View Woodlands & Online Class Schedule</span>
+            </a>
+          </div>
         </div>
       </section>
 
       {/* CORE PRICING COMPONENT */}
       <ChessPricingSection />
+
+      {/* WOODLANDS & ONLINE CLASS SCHEDULE */}
+      <ClassScheduleSection />
 
       {/* FAQ SECTION */}
       <FAQSection />

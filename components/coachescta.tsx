@@ -21,8 +21,8 @@ export default function CoachesCTA() {
       icon: <Trophy size={18} className="text-sky-400" />
     },
     {
-      title: "FIDE Master Mentorship",
-      desc: "Direct study with FM Dino Ballecer & FM Arlan Cabe",
+      title: "Master Faculty Mentorship",
+      desc: "Direct study with FM Dino Ballecer, FM Arlan Cabe, NM Reggie Olay & FM Krishna Chitrada",
       icon: <ShieldCheck size={18} className="text-emerald-400" />
     }
   ]
@@ -101,7 +101,7 @@ export default function CoachesCTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               {/* PRIMARY: WHATSAPP BOOKING */}
               <a
-                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / FM Arlan Cabe / Founder Wagish). Please share available slots.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / FM Arlan Cabe / NM Reggie Olay / FM Krishna Chitrada / Founder Wagish). Please share available slots.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"

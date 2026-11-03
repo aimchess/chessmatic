@@ -7,13 +7,15 @@ import CoachesCTA from "@/components/coachescta"
 export const metadata: Metadata = {
   title: "Master Faculty & Coaches | Chessmatic Singapore",
   description:
-    "Meet Chessmatic's world-class coaching faculty in Singapore. Train under accredited FIDE Masters FM Dino Ballecer, FM Arlan Cabe, and Founder Wagish. Book private 1-on-1 lessons, group cohorts, and strategy diagnostics.",
+    "Meet Chessmatic's world-class coaching faculty in Singapore. Train under accredited FIDE Masters FM Dino Ballecer, FM Arlan Cabe, NM Edgar Reggie Olay, FM Kesavananda Krishna Chitrada, and Founder Wagish. Book private 1-on-1 lessons, group cohorts, and strategy diagnostics.",
   keywords: [
     "Chess coaches Singapore",
     "FIDE Master coach Singapore",
     "Chessmatic coaches",
     "FM Dino Ballecer",
     "FM Arlan Cabe",
+    "NM Edgar Reggie Olay",
+    "FM Kesavananda Krishna Chitrada",
     "Wagish Chessmatic",
     "Adult chess trainer Singapore",
     "Woodlands chess coach",
