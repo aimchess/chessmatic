@@ -12,6 +12,7 @@ import { motion } from "framer-motion"
 import AwardSection from "@/components/award"
 import PricingSection from "@/components/corpcourse"
 import ChessPricingSection from "@/components/chess-pricing"
+import AcademyLocations from "@/components/locations"
 
 export default function HomePage() {
   
@@ -72,6 +73,9 @@ export default function HomePage() {
           <PricingSection/>
 
           <ChessPricingSection/>
+
+          {/* ACADEMY LOCATIONS */}
+          <AcademyLocations />
 
           {/* 5. IMPACT: The Proof */}
           <TransformationSection />

@@ -16,13 +16,13 @@ export default function CoachesCTA() {
       icon: <Zap size={18} className="text-amber-400" />
     },
     {
-      title: "Woodlands Studio & Online",
-      desc: "In-person Singapore lab or interactive virtual sessions",
+      title: "Woodlands Studio, Punggol, Jurong West & Online",
+      desc: "Primary studio in Woodlands, plus hubs in Punggol, Jurong West & online",
       icon: <Trophy size={18} className="text-sky-400" />
     },
     {
       title: "Master Faculty Mentorship",
-      desc: "Direct study with FM Dino Ballecer, FM Arlan Cabe, NM Reggie Olay & FM Krishna Chitrada",
+      desc: "Direct study with FM Dino Ballecer, IM Arlan Cabe, NM Reggie Olay & FM Krishna Chitrada",
       icon: <ShieldCheck size={18} className="text-emerald-400" />
     }
   ]
@@ -101,7 +101,7 @@ export default function CoachesCTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               {/* PRIMARY: WHATSAPP BOOKING */}
               <a
-                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / FM Arlan Cabe / NM Reggie Olay / FM Krishna Chitrada / Founder Wagish). Please share available slots.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / IM Arlan Cabe / NM Reggie Olay / FM Krishna Chitrada / Founder Wagish). Please share available slots.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"

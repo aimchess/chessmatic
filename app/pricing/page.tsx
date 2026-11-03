@@ -1,6 +1,7 @@
 import { Metadata } from "next"
 import ChessPricingSection from "@/components/chess-pricing"
 import ClassScheduleSection from "@/components/class-schedule"
+import AcademyLocations from "@/components/locations"
 import FAQSection from "@/components/faq"
 import CompactCTA from "@/components/cta"
 import { Trophy, ShieldCheck, Sparkles, CheckCircle2, Calendar } from "lucide-react"
@@ -77,6 +78,9 @@ export default function PricingPage() {
 
       {/* WOODLANDS & ONLINE CLASS SCHEDULE */}
       <ClassScheduleSection />
+
+      {/* ACADEMY LOCATIONS */}
+      <AcademyLocations />
 
       {/* FAQ SECTION */}
       <FAQSection />

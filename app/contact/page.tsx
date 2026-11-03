@@ -15,6 +15,7 @@ import { sendContactEmail } from "@/app/actions/sendEmail" // Import the action
 import ContactBanner from "@/components/contactBanner"
 import ContactSection from "@/components/contact"
 import FAQSection from "@/components/faq"
+import AcademyLocations from "@/components/locations"
 import ContactCTA from "@/components/contactcta"
 
 export default function ContactPage() {
@@ -68,6 +69,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-white">
       <ContactBanner/>
       <ContactSection/>
+      <AcademyLocations />
       <FAQSection/>
       <ContactCTA/>
     </div>

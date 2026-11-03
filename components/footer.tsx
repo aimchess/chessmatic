@@ -85,6 +85,7 @@ export function Footer() {
                 { label: "Strategic Blog", href: "/blog" },
                 { label: "About Us", href: "/about" },
                 { label: "FAQs & Knowledge", href: "/faq" },
+                { label: "Make a Payment", href: "/payments" },
                 { label: "Contact Lab", href: "/contact" }
               ].map((link) => (
                 <li key={link.label}>
@@ -128,7 +129,7 @@ export function Footer() {
               <Link href="/contact" className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4 group">
                 <MapPin className="text-sky-400 shrink-0 group-hover:scale-110 transition-transform" size={18} />
                 <p className="text-slate-300 group-hover:text-white transition-colors text-[13px] font-medium leading-relaxed italic">
-                  Woodlands Studio,<br className="hidden sm:block" /> Singapore
+                  <span className="text-emerald-400 font-bold">Primary:</span> Woodlands Studio<br/><span className="text-slate-400 text-xs">Hubs: Punggol &bull; Jurong West</span>
                 </p>
               </Link>
               <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">

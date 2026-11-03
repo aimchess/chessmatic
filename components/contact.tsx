@@ -113,7 +113,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="text-white/40 text-[8px] md:text-[9px] font-black uppercase tracking-widest mb-1">Location</p>
-                    <p className="text-white font-bold text-sm">Woodlands Premium Studio,<br/> Singapore</p>
+                    <p className="text-white font-bold text-sm"><span className="text-emerald-400 font-black">Primary:</span> Woodlands Studio<br/><span className="text-sky-300 font-medium text-xs">Other Hubs:</span> Punggol &bull; Jurong West</p>
                   </div>
                 </div>
 

@@ -53,12 +53,12 @@ export default function ChessPricingSection() {
       badge: "Faculty Highlight",
       badgeColor: "bg-amber-50 text-amber-900 border-amber-200",
       icon: <Award className="w-5 h-5 text-amber-500" />,
-      // 4-Lesson total: $600 in-person ($150/ea) or $480 online ($120/ea)
-      ratePerLesson: isOnline ? 120 : 150,
-      totalPackagePrice: isOnline ? 480 : 600,
+      // 4-Lesson total: $480 in-person ($120/ea) or $320 online ($80/ea)
+      ratePerLesson: isOnline ? 80 : 120,
+      totalPackagePrice: isOnline ? 320 : 480,
       periodLabel: "4-Lesson Pack",
       rateUnit: "/ lesson",
-      packageNote: isOnline ? "Billed as $480 for 4 lessons" : "Billed as $600 for 4 lessons",
+      packageNote: isOnline ? "Billed as $320 for 4 lessons" : "Billed as $480 for 4 lessons",
       highlight: true,
       popular: true,
       features: [
@@ -66,7 +66,7 @@ export default function ChessPricingSection() {
         "Tailored opening repertoire & game review",
         "Async WhatsApp game checks between lessons"
       ],
-      whatsappMsg: `Hi Chessmatic! I'd like to enroll in (Titled Coach) Private 1-on-1 coaching (${isOnline ? "$120/lesson - $480 for 4 lessons (Online)" : "$150/lesson - $600 for 4 lessons (In-Person)"}). Please share coach availability.`
+      whatsappMsg: `Hi Chessmatic! I'd like to enroll in (Titled Coach) Private 1-on-1 coaching (${isOnline ? "$80/lesson - $320 for 4 lessons (Online)" : "$120/lesson - $480 for 4 lessons (In-Person)"}). Please share coach availability.`
     },
     {
       id: "small-group",
@@ -350,10 +350,10 @@ export default function ChessPricingSection() {
                         <p className="text-[10px] text-slate-400">1-on-1 Mentorship (4 Lessons)</p>
                       </td>
                       <td className="py-3 px-4 bg-sky-50/40 font-black text-[#1a365d]">
-                        $150 <span className="text-[10px] font-bold text-slate-500">/ lesson ($600 for 4)</span>
+                        $120 <span className="text-[10px] font-bold text-slate-500">/ lesson ($480 for 4)</span>
                       </td>
                       <td className="py-3 px-4 bg-emerald-50/40 font-black text-emerald-800">
-                        $120 <span className="text-[10px] font-bold text-slate-500">/ lesson ($480 for 4)</span>
+                        $80 <span className="text-[10px] font-bold text-slate-500">/ lesson ($320 for 4)</span>
                       </td>
                       <td className="py-3 px-4 text-right">
                         <Button asChild size="sm" className="bg-[#25D366] hover:bg-[#20ba59] text-white rounded-xl text-[10px] font-black py-1 px-3">
@@ -415,7 +415,7 @@ export default function ChessPricingSection() {
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-slate-600 text-[11px] font-semibold text-center md:text-left">
             <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <strong>Tuition Terms:</strong> 4-lesson bundles guarantee cohort continuity.
+              <strong>Tuition Terms:</strong> 4-lesson bundles guarantee cohort continuity. View official <a href="/payments" className="text-sky-600 underline font-bold">Bank Transfer & PayNow Details</a>.
             </span>
             <span className="inline-flex items-center gap-1.5 text-[#1a365d] font-bold">
               <span className="w-1.5 h-1.5 rounded-full bg-sky-500" />

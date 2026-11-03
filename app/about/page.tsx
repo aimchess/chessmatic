@@ -14,6 +14,7 @@ import FounderSection from "@/components/founder"
 import CoachesSection from "@/components/coaches"
 import WhoWeServe from "@/components/who"
 import CompactCTA from "@/components/cta"
+import AcademyLocations from "@/components/locations"
 import AwardSection from "@/components/award"
 
 export default function AboutPage() {
@@ -27,6 +28,7 @@ export default function AboutPage() {
       <CoachesSection/>
       <AwardSection/>
       <WhoWeServe/>
+      <AcademyLocations />
       <CompactCTA/>
     </div>
   )

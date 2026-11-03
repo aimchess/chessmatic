@@ -16,6 +16,7 @@ import BenefitsSection from "@/components/benefit"
 import CommunityAndSchedule from "@/components/final"
 import CoachesSection from "@/components/coaches"
 import ChessPricingSection from "@/components/chess-pricing"
+import AcademyLocations from "@/components/locations"
 
 export default function AdultClassesPage() {
   const navy = "#1a365d"
@@ -175,6 +176,9 @@ export default function AdultClassesPage() {
       <CoachesSection />
 
       <ChessPricingSection />
+
+      {/* ACADEMY LOCATIONS */}
+      <AcademyLocations />
 
       {/* FINAL RESPONSIVE CTA */}
       <section className="py-16 md:py-24 bg-white flex justify-center px-4 sm:px-6">

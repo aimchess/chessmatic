@@ -67,15 +67,15 @@ export default function ClassScheduleSection() {
     },
     {
       time: "7:30 - 8:30 pm",
-      period: "Evening Batch",
-      title: "Keep Your Mind Active",
-      audience: "Adults & Seniors",
-      tag: "Cognitive Agility",
-      tagColor: "bg-teal-50 text-teal-800 border-teal-200",
-      theme: "teal",
-      accent: "#0284c7",
-      desc: "Unwind your Saturday night with stimulating tactical exercises, memory activation, and analytical peer games.",
-      whatsappMsg: "Hi Chessmatic! I'd like to book the Saturday 7:30-8:30pm slot for 'Keep Your Mind Active' (Adults & Seniors) at Woodlands Studio."
+      period: "Saturday Night Tournament",
+      title: "Keep Your Mind Active (Casual Tournament)",
+      audience: "Adults & Seniors • 2 Rounds (10 + 5 min Rapid)",
+      tag: "Weekly Arena",
+      tagColor: "bg-amber-50 text-amber-900 border-amber-200",
+      theme: "tournament",
+      accent: "#f59e0b",
+      desc: "Weekly casual Saturday night tournament for our Keep Your Mind Active cohort. 2 friendly rapid rounds with a 10 min + 5 sec increment clock to sharpen tactical alertness, calculation composure, and active mental focus.",
+      whatsappMsg: "Hi Chessmatic! I'd like to sign up for the Saturday night Casual Tournament (7:30-8:30pm, 2 rounds 10+5 min) for the Keep Your Mind Active program at Woodlands Studio."
     }
   ]
 
@@ -161,7 +161,9 @@ export default function ClassScheduleSection() {
                   <div 
                     key={i}
                     className={`rounded-2xl p-5 sm:p-6 transition-all duration-300 border relative group overflow-hidden ${
-                      slot.theme === "teal"
+                      slot.theme === "tournament"
+                        ? "bg-gradient-to-br from-[#0c2a4d] via-[#103d6d] to-[#095780] text-white border-amber-400/40 shadow-xl shadow-sky-950/20 hover:shadow-2xl hover:scale-[1.01] ring-1 ring-amber-400/30"
+                        : slot.theme === "teal"
                         ? "bg-gradient-to-br from-[#0c4a6e] to-[#0369a1] text-white border-sky-700/40 shadow-lg shadow-sky-950/10 hover:shadow-xl hover:scale-[1.01]"
                         : "bg-gradient-to-br from-[#0f2138] to-[#1e394f] text-white border-slate-700/40 shadow-lg shadow-slate-950/10 hover:shadow-xl hover:scale-[1.01]"
                     }`}
@@ -250,7 +252,9 @@ export default function ClassScheduleSection() {
                   <div 
                     key={i}
                     className={`rounded-2xl p-5 sm:p-6 transition-all duration-300 border relative group overflow-hidden ${
-                      slot.theme === "teal"
+                      slot.theme === "tournament"
+                        ? "bg-gradient-to-br from-[#0c2a4d] via-[#103d6d] to-[#095780] text-white border-amber-400/40 shadow-xl shadow-sky-950/20 hover:shadow-2xl hover:scale-[1.01] ring-1 ring-amber-400/30"
+                        : slot.theme === "teal"
                         ? "bg-gradient-to-br from-[#0c4a6e] to-[#0369a1] text-white border-sky-700/40 shadow-lg shadow-sky-950/10 hover:shadow-xl hover:scale-[1.01]"
                         : "bg-gradient-to-br from-[#0f2138] to-[#1e394f] text-white border-slate-700/40 shadow-lg shadow-slate-950/10 hover:shadow-xl hover:scale-[1.01]"
                     }`}
@@ -292,7 +296,7 @@ export default function ClassScheduleSection() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-between w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white text-white hover:text-[#1a365d] transition-all text-xs font-black uppercase tracking-wider group-hover:bg-white group-hover:text-[#1a365d]"
                     >
-                      <span>Book Saturday Slot</span>
+                      <span>{slot.theme === "tournament" ? "Join Saturday Tournament" : "Book Saturday Slot"}</span>
                       <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
                     </a>
                   </div>
@@ -386,7 +390,7 @@ export default function ClassScheduleSection() {
                 </Button>
               </a>
               <p className="text-slate-400 text-[10px] text-center mt-2.5">
-                No classes on Sundays • Public holiday timings may vary
+                No classes on Sundays â¢ Public holiday timings may vary
               </p>
             </div>
 

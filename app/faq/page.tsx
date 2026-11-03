@@ -43,7 +43,7 @@ const FAQ_DATA: FAQItem[] = [
     section: "general",
     tag: "Studio",
     question: "Where are the in-person coaching sessions conducted in Singapore?",
-    answer: "Our primary training facility is our dedicated studio in Woodlands, Singapore. We also conduct on-site corporate training workshops and private executive sessions across corporate offices in Singapore."
+    answer: "Our primary training studio is located in Woodlands, Singapore. We also conduct coaching sessions at our regional hubs in Punggol and Jurong West, alongside on-site corporate training workshops across Singapore offices."
   },
   {
     id: "gen-3",
@@ -157,7 +157,7 @@ const FAQ_DATA: FAQItem[] = [
     section: "formats",
     tag: "Coaching Modes",
     question: "What formats can I book for lessons?",
-    answer: "We offer 5 flexible delivery formats: 1) In-Studio Private Lessons (Woodlands), 2) In-Studio Group Workshops, 3) Online 1-on-1 Virtual Coaching, 4) Online Group Batches, and 5) Corporate On-Site Engagements."
+    answer: "We offer flexible delivery formats: 1) In-Studio Coaching at our Primary Woodlands Studio, 2) In-Person Sessions at Punggol & Jurong West hubs, 3) Online 1-on-1 Virtual Coaching, 4) Online Group Batches, and 5) Corporate On-Site Engagements."
   },
   {
     id: "fmt-2",
@@ -251,7 +251,7 @@ export default function FAQPage() {
                 type="text"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search questions (e.g., Wagish, Opening, Corporate, Woodlands)..."
+                placeholder="Search questions (e.g., Woodlands, Punggol, Jurong West, Wagish, Opening)..."
                 className="w-full h-14 md:h-16 pl-14 pr-12 rounded-full bg-white text-[#1a365d] placeholder:text-slate-400 font-semibold text-sm md:text-base shadow-2xl focus:outline-none focus:ring-4 focus:ring-sky-400/40 transition-all"
               />
               {searchQuery && (

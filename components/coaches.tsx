@@ -12,18 +12,18 @@ export default function CoachesSection() {
 
   const coaches = [
     {
-      name: "FM Arlan Cabe",
-      title: "FIDE Master (FM) & Senior Chess Coach",
-      badge: "FIDE Master & Champion",
-      titleBadge: "FIDE Master",
+      name: "IM Arlan Cabe",
+      title: "International Master (IM) & Senior Chess Coach",
+      badge: "International Master & Champion",
+      titleBadge: "International Master",
       roleBadge: "Senior Coach",
       image: "/arlan-cabe.jpg",
       experience: "15+ Years Coaching",
       rating: "Master Strength",
-      bio: "Multi-time tournament champion and accredited FIDE Master. Coach Arlan coaches ambitious adults, competitive tournament players, and executive students across deep opening theory, dynamic tactical visualization, and endgame precision.",
+      bio: "Multi-time tournament champion and accredited International Master. Coach Arlan coaches ambitious adults, competitive tournament players, and executive students across deep opening theory, dynamic tactical visualization, and endgame precision.",
       achievements: [
         "1st Place Tournament Champion",
-        "Official FIDE Master (FM) Titleist",
+        "Official International Master (IM) Titleist",
         "Senior Trainer for Intchess Asia",
         "Expert in Adult Repertoire & Psychology"
       ],
@@ -38,7 +38,7 @@ export default function CoachesSection() {
       name: "FM Dino Ballecer",
       title: "FIDE Master (FM) & Certified FIDE Instructor",
       badge: "FIDE Master & Certified FIDE Instructor",
-      titleBadge: "FIDE Master",
+      titleBadge: "International Master",
       roleBadge: "Certified Instructor",
       image: "/dino.png",
       experience: "20+ Years Coaching",
@@ -84,22 +84,22 @@ export default function CoachesSection() {
       name: "FM Kesavananda Krishna Chitrada",
       title: "FIDE Master (FM), FIDE Trainer (FT) & World Champion",
       badge: "FIDE Master & IPCA World Champion",
-      titleBadge: "FIDE Master",
+      titleBadge: "International Master",
       roleBadge: "FIDE Trainer",
       image: "/krishna.png",
       experience: "20+ Years Elite Coaching",
       rating: "Peak FIDE 2300+",
-      bio: "Accomplished FIDE Master and certified FIDE Trainer (FT), champion of the 17th IPCA World Individual Chess Championship, and Founder & Chief Coach of Mastermove Chess Academy in Singapore. Celebrated for a modern training philosophy fusing deep strategic comprehension, cognitive psychology, and AI-assisted analysis over rote opening memorization.",
+      bio: "Accomplished FIDE Master and certified FIDE Trainer (FT), champion of the 17th IPCA World Individual Chess Championship, and Founder & Chief Coach of Mastermove Chess Academy in Singapore. Celebrated for a modern training philosophy fusing deep strategic comprehension, positional psychology, and structured game analysis over rote opening memorization.",
       achievements: [
         "17th IPCA World Individual Champion",
         "Official Certified FIDE Trainer (FT)",
         "Founder & Chief Coach (Mastermove Academy)",
-        "Cognitive & AI-Integrated Strategy Pioneer"
+        "Cognitive & Strategic Pattern Pioneer"
       ],
       specialties: [
         "Deep Positional Comprehension",
         "Anti-Memorization Strategic Principles",
-        "AI-Assisted Game Diagnostics",
+        "In-Depth Tactical Game Diagnostics",
         "Executive & Advanced Adult Coaching"
       ]
     },
