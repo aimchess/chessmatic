@@ -103,6 +103,30 @@ export default function CoachesSection() {
         "Executive & Advanced Adult Coaching"
       ]
     },
+    {
+      name: "Chandradhar Rajeev Nair",
+      title: "Arena Grandmaster (AGM), FSI & National Arbiter",
+      badge: "AGM • FSI • SCF-MOE Certified",
+      titleBadge: "Arena Grandmaster",
+      roleBadge: "SCF-MOE Instructor",
+      image: "/chandradhar-rajeev.jpg",
+      experience: "Scholastic & Adult Coach",
+      rating: "1550 FIDE Rating",
+      bio: "Certified FIDE School Instructor (FSI) and Arena Grandmaster (AGM) representing Singapore. Certified under the Singapore Chess Federation and Ministry of Education (SCF-MOE Instructor) and serving as an active National Arbiter (NA). Passionate about cultivating disciplined calculation, tournament protocol, tactical awareness, and confident competitive foundations for adult improvers and youth.",
+      achievements: [
+        "Arena Grandmaster (AGM)",
+        "FIDE School Instructor (FSI)",
+        "SCF-MOE Certified Instructor",
+        "Official FIDE National Arbiter (NA)",
+        "1550 FIDE Rating (Active Competition)"
+      ],
+      specialties: [
+        "Foundational Calculation & Tactics",
+        "Tournament Rules & Arbiter Protocol",
+        "SCF-MOE Youth & Adult Syllabus",
+        "Rapid & Blitz Decision Making"
+      ]
+    },
   ]
 
   return (

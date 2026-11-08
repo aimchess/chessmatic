@@ -22,7 +22,7 @@ export default function CoachesCTA() {
     },
     {
       title: "Master Faculty Mentorship",
-      desc: "Direct study with FM Dino Ballecer, IM Arlan Cabe, NM Reggie Olay & FM Krishna Chitrada",
+      desc: "Direct study with FM Dino Ballecer, IM Arlan Cabe, NM Reggie Olay, FM Krishna Chitrada & AGM Chandradhar Rajeev Nair",
       icon: <ShieldCheck size={18} className="text-emerald-400" />
     }
   ]
@@ -101,7 +101,7 @@ export default function CoachesCTA() {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
               {/* PRIMARY: WHATSAPP BOOKING */}
               <a
-                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / IM Arlan Cabe / NM Reggie Olay / FM Krishna Chitrada / Founder Wagish). Please share available slots.")}
+                href={getWhatsAppUrl("Hi Chessmatic! I'd like to book a coaching session / consultation with your master faculty (FM Dino Ballecer / IM Arlan Cabe / NM Reggie Olay / FM Krishna Chitrada / AGM Chandradhar Rajeev Nair / Founder Wagish). Please share available slots.")}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto"
