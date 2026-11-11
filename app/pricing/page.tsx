@@ -38,7 +38,7 @@ export default function PricingPage() {
           </div>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-[1000] text-[#1a365d] tracking-tighter leading-tight uppercase italic mb-6">
-            Academy Tuition & <span style={{ color: cyan }}>Lesson Rates.</span>
+            Chess Coaching, Classes & <span style={{ color: cyan }}>Programme Fees.</span>
           </h1>
 
           <p className="text-slate-600 text-sm sm:text-base md:text-lg max-w-2xl mx-auto font-medium leading-relaxed">
