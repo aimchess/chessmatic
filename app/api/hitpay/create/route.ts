@@ -39,11 +39,9 @@ export async function POST(req: NextRequest) {
     formData.append("redirect_url", redirectUrl)
     formData.append("webhook", webhookUrl)
 
-    // Accept popular Singapore & global methods
-    formData.append("payment_methods[]", "paynow_online")
-    formData.append("payment_methods[]", "card")
-    formData.append("payment_methods[]", "grabpay")
-    formData.append("payment_methods[]", "shopeepay")
+    // Note: Do not hardcode payment_methods[]. When omitted, HitPay automatically
+    // presents all active methods verified and enabled for your merchant account
+    // (e.g. PayNow, Cards, etc.) and avoids rejection errors for unactivated methods like grabpay/shopeepay.
 
     const res = await fetch(`${apiUrl}/payment-requests`, {
       method: "POST",
